@@ -1,0 +1,50 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-title>{{ 'PAGES.CLIENTS.TITLE' | translate }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen class="ion-padding page-shell">
+  <ion-card class="form-card">
+    <ion-card-header>
+      <ion-card-title>Add Client Note</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item lines="full" class="form-item">
+        <ion-label position="stacked">{{ 'PAGES.CLIENTS.NAME' | translate }}</ion-label>
+        <ion-input [value]="clientName()" (ionInput)="clientName.set($any($event).detail.value ?? '')"></ion-input>
+      </ion-item>
+      <ion-item lines="full" class="form-item">
+        <ion-label position="stacked">{{ 'PAGES.CLIENTS.NOTE' | translate }}</ion-label>
+        <ion-textarea [value]="noteText()" (ionInput)="noteText.set($any($event).detail.value ?? '')" rows="4"></ion-textarea>
+      </ion-item>
+      <ion-button expand="block" (click)="add()">{{ 'COMMON.ADD' | translate }}</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  @if (!hasClients()) {
+    <div class="empty-state">
+      <ion-icon name="people-outline" class="empty-icon"></ion-icon>
+      <p class="empty-title">No client notes yet</p>
+      <p class="empty-desc">Save quick context for mobility limits, pacing, or cue reminders.</p>
+    </div>
+  }
+
+  <div class="client-list">
+    @for (note of notes(); track note.id) {
+      <ion-card class="client-card">
+        <ion-card-header>
+          <div class="client-header-row">
+            <ion-card-title class="client-name">{{ note.clientName }}</ion-card-title>
+            <ion-button fill="clear" size="small" color="danger" (click)="remove(note.id)">
+              <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
+            </ion-button>
+          </div>
+        </ion-card-header>
+        <ion-card-content>
+          <p class="client-notes">{{ note.note }}</p>
+        </ion-card-content>
+      </ion-card>
+    }
+  </div>
+</ion-content>

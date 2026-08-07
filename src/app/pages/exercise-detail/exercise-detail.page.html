@@ -1,0 +1,149 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/library"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ exercise?.name || ('PAGES.LIBRARY.TITLE' | translate) }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen class="ion-padding page-shell">
+  @if (exercise) {
+    <ion-card class="exercise-hero-card">
+      <ion-card-header>
+        <ion-card-title>{{ exercise.name }}</ion-card-title>
+        <ion-card-subtitle>{{ exercise.category }} · {{ exercise.apparatus }} · {{ exercise.level }} · {{ exercise.durationSeconds }}s</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <p class="exercise-description">{{ exercise.description }}</p>
+
+        @if (exercise.benefits) {
+          <div class="tag-block">
+            <strong>Benefits</strong>
+            <p>{{ exercise.benefits }}</p>
+          </div>
+        }
+
+        @if (exercise.focus) {
+          <div class="tag-block">
+            <strong>Focus</strong>
+            <p>{{ exercise.focus }}</p>
+          </div>
+        }
+
+        <div class="focus-chips">
+          @for (area of exercise.focusAreas; track area) {
+            <ion-chip outline color="primary" class="focus-chip">{{ area }}</ion-chip>
+          }
+        </div>
+
+        @if (exercise.setup) {
+          <div class="tag-block">
+            <strong>Setup</strong>
+            <p>{{ exercise.setup }}</p>
+          </div>
+        }
+
+        @if (exercise.breathing) {
+          <div class="tag-block">
+            <strong>Breathing</strong>
+            <p>{{ exercise.breathing }}</p>
+          </div>
+        }
+
+        @if (exercise.reps) {
+          <div class="tag-block">
+            <strong>Suggested Reps</strong>
+            <p>{{ exercise.reps }}</p>
+          </div>
+        }
+
+        @if (exercise.instructions && exercise.instructions.length > 0) {
+          <div class="tag-block">
+            <strong>Instructions</strong>
+            <ul class="detail-list">
+              @for (step of exercise.instructions; track step) {
+                <li>{{ step }}</li>
+              }
+            </ul>
+          </div>
+        }
+
+        @if (exercise.teachingCues && exercise.teachingCues.length > 0) {
+          <div class="tag-block">
+            <strong>Teaching Cues</strong>
+            <ul class="detail-list">
+              @for (cue of exercise.teachingCues; track cue) {
+                <li>{{ cue }}</li>
+              }
+            </ul>
+          </div>
+        }
+
+        @if (exercise.modifications && exercise.modifications.length > 0) {
+          <div class="tag-block">
+            <strong>Modifications</strong>
+            <ul class="detail-list">
+              @for (item of exercise.modifications; track item) {
+                <li>{{ item }}</li>
+              }
+            </ul>
+          </div>
+        }
+
+        @if (exercise.progressions && exercise.progressions.length > 0) {
+          <div class="tag-block">
+            <strong>Progressions</strong>
+            <ul class="detail-list">
+              @for (item of exercise.progressions; track item) {
+                <li>{{ item }}</li>
+              }
+            </ul>
+          </div>
+        }
+
+        <div class="tag-block">
+          <strong>Cue Tags</strong>
+          <p>{{ exercise.cueTags.join(' • ') }}</p>
+        </div>
+        <div class="tag-block">
+          <strong>Contraindications</strong>
+          @if (exercise.contraindications.length > 0) {
+            <p>{{ exercise.contraindications.join(' • ') }}</p>
+          } @else {
+            <p>{{ exercise.contraindicationsNote || 'No specific contraindication tags provided.' }}</p>
+          }
+        </div>
+
+        @if (exercise.safetyNote) {
+          <div class="tag-block">
+            <strong>Safety Note</strong>
+            <p>{{ exercise.safetyNote }}</p>
+          </div>
+        }
+
+        @if (exercise.whatToAvoid) {
+          <div class="tag-block">
+            <strong>What To Avoid</strong>
+            <p>{{ exercise.whatToAvoid }}</p>
+          </div>
+        }
+
+        @if (exercise.alternativeExercise) {
+          <div class="tag-block">
+            <strong>Alternative Exercise</strong>
+            <p>{{ exercise.alternativeExercise }}</p>
+          </div>
+        }
+      </ion-card-content>
+    </ion-card>
+
+    <ion-button expand="block" (click)="addToFlow()">{{ 'COMMON.ADD' | translate }}</ion-button>
+  } @else {
+    <ion-card>
+      <ion-card-content>
+        <p>Exercise not found.</p>
+      </ion-card-content>
+    </ion-card>
+  }
+</ion-content>

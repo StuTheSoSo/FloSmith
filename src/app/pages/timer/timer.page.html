@@ -1,0 +1,25 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ 'PAGES.TIMER.TITLE' | translate }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <div class="page-shell ion-padding-horizontal">
+  <section class="panel">
+    <h2>{{ 'PAGES.TIMER.TOTAL' | translate }}: {{ totalLabel() }}</h2>
+    <ion-item>
+      <ion-select [value]="selectedPresetId()" (ionChange)="updatePreset($any($event).detail.value)" [label]="'PAGES.TIMER.PRESET' | translate" labelPlacement="stacked">
+        @for (preset of presets; track preset.id) {
+          <ion-select-option [value]="preset.id">{{ preset.name }}</ion-select-option>
+        }
+      </ion-select>
+    </ion-item>
+    <p>{{ 'PAGES.TIMER.TRANSITION' | translate }}: {{ selectedPreset().defaultTransitionSeconds }}s</p>
+    <p>{{ 'PAGES.TIMER.REST' | translate }}: {{ selectedPreset().defaultRestSeconds }}s</p>
+  </section>
+  </div>
+</ion-content>

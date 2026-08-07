@@ -1,0 +1,112 @@
+.program-hero-card {
+  margin-bottom: 1rem;
+}
+
+.program-level-row {
+  margin-bottom: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.program-length,
+.program-description,
+.exercise-meta,
+.goal-value {
+  color: var(--flo-brand-ink);
+}
+
+.goal-callout {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.85rem;
+}
+
+.goal-dot {
+  width: 14px;
+  height: 14px;
+  margin-top: 0.35rem;
+  border-radius: 50%;
+  background: linear-gradient(90deg, var(--ion-color-primary) 0%, var(--ion-color-tertiary) 100%);
+  box-shadow: 0 4px 10px rgba(23, 51, 71, 0.14);
+}
+
+.goal-label,
+.flow-header,
+.section-header {
+  font-weight: 800;
+  color: var(--ion-color-primary);
+}
+
+.focus-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.focus-chip {
+  font-size: 0.82rem;
+  height: 26px;
+  border-radius: 12px;
+  font-weight: 700;
+}
+
+.sequence-flow {
+  margin-bottom: 1rem;
+}
+
+.flow-timeline {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.75rem;
+  margin-top: 0.65rem;
+}
+
+.flow-stage {
+  display: grid;
+  justify-items: center;
+  gap: 0.4rem;
+  padding: 0.8rem;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--flo-surface-a) 60%, var(--flo-surface-b) 100%);
+  border: 1.5px solid var(--flo-border);
+}
+
+.stage-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: linear-gradient(90deg, var(--ion-color-primary) 0%, var(--ion-color-tertiary) 100%);
+}
+
+.exercise-number {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--flo-chip);
+  color: var(--flo-brand-ink);
+  font-weight: 800;
+}
+
+.program-note-card {
+  margin: 1rem 0;
+}
+
+.note-textarea {
+  min-height: 5rem;
+}
+
+.note-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.note-saved {
+  color: var(--ion-color-success);
+  font-weight: 700;
+}

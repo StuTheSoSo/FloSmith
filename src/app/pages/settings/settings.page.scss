@@ -1,0 +1,31 @@
+.page-shell {
+  --padding-start: 14px;
+  --padding-end: 14px;
+}
+
+.disclaimer-card {
+  background: rgba(255, 255, 255, 0.96);
+}
+
+.theme-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 0.5rem 0;
+}
+
+.theme-row ion-chip {
+  cursor: pointer;
+}
+
+.theme-row ion-chip.selected {
+  background: linear-gradient(90deg, var(--ion-color-primary) 60%, var(--ion-color-tertiary) 100%) !important;
+  color: #fff !important;
+  border-color: var(--ion-color-tertiary) !important;
+}
+
+.email-saved-note {
+  color: var(--flo-brand-ink);
+  font-weight: 700;
+  margin-top: 0.5rem;
+}

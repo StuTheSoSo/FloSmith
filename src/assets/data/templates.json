@@ -1,0 +1,3218 @@
+[
+  {
+    "id": "ankylosing_spondylitis_flow",
+    "name": "Ankylosing Spondylitis Flow",
+    "description": "A gentle extension and rib-mobility program to counteract spinal stiffening patterns, with hip opening and thoracic expansion.",
+    "goal": "Maintain spinal extension and chest mobility.",
+    "level": "beginner",
+    "accessLevel": "Free",
+    "apparatus": "Mat",
+    "focusAreas": [
+      "Spinal extension",
+      "Rib mobility",
+      "Hip flexibility"
+    ],
+    "tags": [
+      "beginner",
+      "free",
+      "spinal-extension",
+      "rib-mobility",
+      "hip-flexibility",
+      "style-classical",
+      "profile-mobility"
+    ],
+    "recommendedClassLengthMinutes": 20,
+    "blocks": [
+      {
+        "id": "ankylosing_spondylitis_flow-b-1",
+        "exerciseId": "spine_mobilization",
+        "exerciseName": "Spine Mobilization",
+        "durationSeconds": 70,
+        "transitionSeconds": 15,
+        "restSeconds": 15,
+        "notes": "Use as an opening warm-up and a closing cool-down. Segmental mobility reveals restrictions — note where movement stops and educate the client on finding that area.",
+        "section": "warmup"
+      },
+      {
+        "id": "ankylosing_spondylitis_flow-b-2",
+        "exerciseId": "swan_prep",
+        "exerciseName": "Swan Prep",
+        "durationSeconds": 70,
+        "transitionSeconds": 15,
+        "restSeconds": 15,
+        "notes": "A crucial building block before Swan. Focus on thoracic extension and keep the elbows soft. Watch for cervical hyperextension in clients with neck issues.",
+        "section": "warmup"
+      },
+      {
+        "id": "ankylosing_spondylitis_flow-b-3",
+        "exerciseId": "breaststroke",
+        "exerciseName": "Breaststroke",
+        "durationSeconds": 75,
+        "transitionSeconds": 15,
+        "restSeconds": 15,
+        "notes": "An advanced back extension. Ensure adequate thoracic extension from Swan Prep first. The breath timing — inhale up, exhale circle down — is key to rhythm.",
+        "section": "core"
+      },
+      {
+        "id": "ankylosing_spondylitis_flow-b-4",
+        "exerciseId": "mermaid",
+        "exerciseName": "Mermaid",
+        "durationSeconds": 80,
+        "transitionSeconds": 15,
+        "restSeconds": 20,
+        "notes": "Excellent lateral thoracic stretch. Whether on mat, chair, or box, the foundational cue is the same: grow before bending. Especially valuable for scoliosis work.",
+        "section": "cooldown"
+      },
+      {
+        "id": "ankylosing_spondylitis_flow-b-5",
+        "exerciseId": "shoulder_bridge",
+        "exerciseName": "Shoulder Bridge",
+        "durationSeconds": 75,
+        "transitionSeconds": 15,
+        "restSeconds": 15,
+        "notes": "Build from Pelvic Curl first. The pelvis should be level and the glutes active without gripping. For knee issues, ensure the knees don't drift inward.",
+        "section": "core"
+      },
+      {
+        "id": "ankylosing_spondylitis_flow-b-6",
+        "exerciseId": "spine_stretch_forward",
+        "exerciseName": "Spine Stretch Forward",
+        "durationSeconds": 80,
+        "transitionSeconds": 15,
+        "restSeconds": 20,
+        "notes": "The goal is spinal length, not hamstring stretch. Cue clients to grow taller before reaching. Sit on a folded blanket if the pelvis tips backward.",
+        "section": "cooldown"
+      },
+      {
+        "id": "ankylosing_spondylitis_flow-b-7",
+        "exerciseId": "side_kick",
+        "exerciseName": "Side Kick",
+        "durationSeconds": 75,
+        "transitionSeconds": 15,
+        "restSeconds": 15,
+        "notes": "Stability of the underneath side is the real challenge. Cue the obliques on the supporting side to keep the waist lifted. Watch for internal hip rotation on the kick.",
+        "section": "core"
+      },
+      {
+        "id": "ankylosing_spondylitis_flow-b-8",
+        "exerciseId": "cat_stretch_cadillac",
+        "exerciseName": "Cat Stretch on Cadillac",
+        "durationSeconds": 80,
+        "transitionSeconds": 15,
+        "restSeconds": 20,
+        "notes": "An excellent kneeling spinal mobilizer. The bar guides the spine into flexion and extension with spring support. Particularly useful for warming up stiff thoracic spines.",
+        "section": "cooldown"
+      }
+    ],
+    "deliveryStyle": "classical",
+    "classProfile": "mobility"
+  },
+  {
+    "id": "arthritis_gentle_flow",
+    "name": "Arthritis-Gentle Flow",
+    "description": "A warm, fluid movement session that reduces joint stiffness, builds gentle synovial circulation, and maintains comfortable range of motion.",
+    "goal": "Ease joint stiffness and maintain comfortable range of motion.",
+    "level": "beginner",
+    "accessLevel": "Free",
+    "apparatus": "Mat",
+    "focusAreas": [
+      "Joint mobility",
+      "Gentle warmth",
+      "Fluid movement"
+    ],
+    "tags": [
+      "beginner",
+      "free",
+      "joint-mobility",
+      "gentle-warmth",
+      "fluid-movement",
+      "style-contemporary",
+      "profile-rehab"
+    ],
+    "recommendedClassLengthMinutes": 20,
+    "blocks": [
+      {
+        "id": "arthritis_gentle_flow-b-1",
+        "exerciseId": "shoulder_rolls",
+        "exerciseName": "Shoulder Rolls",
+        "durationSeconds": 70,
+        "transitionSeconds": 20,
+        "restSeconds": 15,
+        "notes": "Use as an entry-point assessment for scapular mobility. Slow, bilateral rolls reveal asymmetry. Cue the breath on the down-phase to encourage parasympathetic response.",
+        "section": "warmup"
+      },
+      {
+        "id": "arthritis_gentle_flow-b-2",
+        "exerciseId": "spine_mobilization",
+        "exerciseName": "Spine Mobilization",
+        "durationSeconds": 70,
+        "transitionSeconds": 20,
+        "restSeconds": 15,
+        "notes": "Use as an opening warm-up and a closing cool-down. Segmental mobility reveals restrictions — note where movement stops and educate the client on finding that area.",
+        "section": "warmup"
+      },
+      {
+        "id": "arthritis_gentle_flow-b-3",
+        "exerciseId": "rolling_like_a_ball",
+        "exerciseName": "Rolling Like a Ball",
+        "durationSeconds": 70,
+        "transitionSeconds": 20,
+        "restSeconds": 15,
+        "notes": "Use this as a spinal massage and proprioceptive reset. Beginners often unroll the shape mid-roll — cue them to hug the knees tight. Contraindicate for osteoporosis and recent spinal surgery.",
+        "section": "warmup"
+      },
+      {
+        "id": "arthritis_gentle_flow-b-4",
+        "exerciseId": "one_leg_circle",
+        "exerciseName": "One Leg Circle",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "The circle is small until stability is established. Cue the opposite inner thigh to stay active. Watch for external hip rotation loss at the bottom of the circle.",
+        "section": "core"
+      },
+      {
+        "id": "arthritis_gentle_flow-b-5",
+        "exerciseId": "side_kick",
+        "exerciseName": "Side Kick",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "Stability of the underneath side is the real challenge. Cue the obliques on the supporting side to keep the waist lifted. Watch for internal hip rotation on the kick.",
+        "section": "core"
+      },
+      {
+        "id": "arthritis_gentle_flow-b-6",
+        "exerciseId": "pelvic_curl",
+        "exerciseName": "Pelvic Curl",
+        "durationSeconds": 70,
+        "transitionSeconds": 20,
+        "restSeconds": 15,
+        "notes": "A foundational exercise for assessing spinal articulation. Watch for the client who rises as a block from T12 — this indicates thoracic rigidity. Cue sequentially.",
+        "section": "warmup"
+      },
+      {
+        "id": "arthritis_gentle_flow-b-7",
+        "exerciseId": "seal",
+        "exerciseName": "Seal",
+        "durationSeconds": 70,
+        "transitionSeconds": 20,
+        "restSeconds": 15,
+        "notes": "The inner-thigh adductor squeeze adds another layer to the rolling massage. Contraindicate for osteoporosis and recent spinal surgery.",
+        "section": "warmup"
+      },
+      {
+        "id": "arthritis_gentle_flow-b-8",
+        "exerciseId": "seated_side_bend",
+        "exerciseName": "Seated Side Bend",
+        "durationSeconds": 80,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "Excellent for assessing lateral thoracic mobility. Watch for one side having significantly more range — address this with extra reps on the tight side. Sit on a block if the pelvis tips.",
+        "section": "cooldown"
+      }
+    ],
+    "deliveryStyle": "contemporary",
+    "classProfile": "rehab"
+  },
+  {
+    "id": "back_friendly_recovery",
+    "name": "Back-Friendly Recovery",
+    "description": "A low-impact session designed to support the low back with neutral spine strength, gentle articulation, and pelvic control.",
+    "goal": "Improve back stability and reduce compressive stress.",
+    "level": "intermediate",
+    "accessLevel": "Pro",
+    "apparatus": "Mat",
+    "focusAreas": [
+      "Low back",
+      "Neutral spine",
+      "Core stability"
+    ],
+    "tags": [
+      "intermediate",
+      "pro",
+      "low-back",
+      "neutral-spine",
+      "core-stability",
+      "style-contemporary",
+      "profile-rehab"
+    ],
+    "recommendedClassLengthMinutes": 20,
+    "blocks": [
+      {
+        "id": "back_friendly_recovery-b-1",
+        "exerciseId": "pelvic_curl",
+        "exerciseName": "Pelvic Curl",
+        "durationSeconds": 70,
+        "transitionSeconds": 20,
+        "restSeconds": 15,
+        "notes": "A foundational exercise for assessing spinal articulation. Watch for the client who rises as a block from T12 — this indicates thoracic rigidity. Cue sequentially.",
+        "section": "warmup"
+      },
+      {
+        "id": "back_friendly_recovery-b-2",
+        "exerciseId": "shoulder_bridge",
+        "exerciseName": "Shoulder Bridge",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "Build from Pelvic Curl first. The pelvis should be level and the glutes active without gripping. For knee issues, ensure the knees don't drift inward.",
+        "section": "core"
+      },
+      {
+        "id": "back_friendly_recovery-b-3",
+        "exerciseId": "rolling_like_a_ball",
+        "exerciseName": "Rolling Like a Ball",
+        "durationSeconds": 70,
+        "transitionSeconds": 20,
+        "restSeconds": 15,
+        "notes": "Use this as a spinal massage and proprioceptive reset. Beginners often unroll the shape mid-roll — cue them to hug the knees tight. Contraindicate for osteoporosis and recent spinal surgery.",
+        "section": "warmup"
+      },
+      {
+        "id": "back_friendly_recovery-b-4",
+        "exerciseId": "spine_stretch_forward",
+        "exerciseName": "Spine Stretch Forward",
+        "durationSeconds": 80,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "The goal is spinal length, not hamstring stretch. Cue clients to grow taller before reaching. Sit on a folded blanket if the pelvis tips backward.",
+        "section": "cooldown"
+      },
+      {
+        "id": "back_friendly_recovery-b-5",
+        "exerciseId": "side_kick_series",
+        "exerciseName": "Side Kick Series",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "Each series variation tests a different hip plane. Teach each separately before flowing. Cue the client to breathe continuously and watch for fatigue-driven pelvic rolling.",
+        "section": "core"
+      }
+    ],
+    "deliveryStyle": "contemporary",
+    "classProfile": "rehab"
+  },
+  {
+    "id": "balance_vestibular",
+    "name": "Balance & Vestibular Stability",
+    "description": "A ground-based proprioception and vestibular adaptation program for dizziness, vertigo, and fall risk — minimising sudden head position changes and prioritising stability.",
+    "goal": "Improve balance, proprioception, and fall prevention.",
+    "level": "beginner",
+    "accessLevel": "Pro",
+    "apparatus": "Mat",
+    "focusAreas": [
+      "Grounded stability",
+      "Proprioception",
+      "Fall prevention"
+    ],
+    "tags": [
+      "beginner",
+      "pro",
+      "grounded-stability",
+      "proprioception",
+      "fall-prevention",
+      "style-contemporary",
+      "profile-rehab"
+    ],
+    "recommendedClassLengthMinutes": 20,
+    "blocks": [
+      {
+        "id": "balance_vestibular-b-1",
+        "exerciseId": "pelvic_curl",
+        "exerciseName": "Pelvic Curl",
+        "durationSeconds": 70,
+        "transitionSeconds": 20,
+        "restSeconds": 15,
+        "notes": "A foundational exercise for assessing spinal articulation. Watch for the client who rises as a block from T12 — this indicates thoracic rigidity. Cue sequentially.",
+        "section": "warmup"
+      },
+      {
+        "id": "balance_vestibular-b-2",
+        "exerciseId": "rolling_like_a_ball",
+        "exerciseName": "Rolling Like a Ball",
+        "durationSeconds": 70,
+        "transitionSeconds": 20,
+        "restSeconds": 15,
+        "notes": "Use this as a spinal massage and proprioceptive reset. Beginners often unroll the shape mid-roll — cue them to hug the knees tight. Contraindicate for osteoporosis and recent spinal surgery.",
+        "section": "warmup"
+      },
+      {
+        "id": "balance_vestibular-b-3",
+        "exerciseId": "shoulder_bridge",
+        "exerciseName": "Shoulder Bridge",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "Build from Pelvic Curl first. The pelvis should be level and the glutes active without gripping. For knee issues, ensure the knees don't drift inward.",
+        "section": "core"
+      },
+      {
+        "id": "balance_vestibular-b-4",
+        "exerciseId": "side_kick",
+        "exerciseName": "Side Kick",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "Stability of the underneath side is the real challenge. Cue the obliques on the supporting side to keep the waist lifted. Watch for internal hip rotation on the kick.",
+        "section": "core"
+      },
+      {
+        "id": "balance_vestibular-b-5",
+        "exerciseId": "one_leg_circle",
+        "exerciseName": "One Leg Circle",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "The circle is small until stability is established. Cue the opposite inner thigh to stay active. Watch for external hip rotation loss at the bottom of the circle.",
+        "section": "core"
+      },
+      {
+        "id": "balance_vestibular-b-6",
+        "exerciseId": "pilates_ring_squeeze",
+        "exerciseName": "Pilates Ring Squeeze",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "Versatile for inner thigh, outer hip, or arm activation. Particularly useful for pelvic floor connection — cue the client to link the pelvic floor with the squeeze.",
+        "section": "core"
+      },
+      {
+        "id": "balance_vestibular-b-7",
+        "exerciseId": "footwork",
+        "exerciseName": "Footwork",
+        "durationSeconds": 70,
+        "transitionSeconds": 20,
+        "restSeconds": 15,
+        "notes": "Footwork is the foundation of Reformer work and an assessment of lower limb alignment. Check that the client's feet are parallel or externally rotated consistently. Adjust spring weight to match ability.",
+        "section": "warmup"
+      },
+      {
+        "id": "balance_vestibular-b-8",
+        "exerciseId": "single_leg_stretch",
+        "exerciseName": "Single Leg Stretch",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "A foundational abdominal exercise. Hands on shin guide, not pull. Cue the rib-to-hip connection on every leg switch. Keep head down for beginners.",
+        "section": "core"
+      }
+    ],
+    "deliveryStyle": "contemporary",
+    "classProfile": "rehab"
+  },
+  {
+    "id": "beginner_mat_foundation",
+    "name": "Beginner Mat Foundation",
+    "description": "A gentle introductory Pilates session focused on core support, spinal articulation, and breath coordination.",
+    "goal": "Build stable core and mat movement confidence.",
+    "level": "beginner",
+    "accessLevel": "Pro",
+    "apparatus": "Mat",
+    "focusAreas": [
+      "Core",
+      "Spinal articulation",
+      "Breath"
+    ],
+    "tags": [
+      "beginner",
+      "pro",
+      "core",
+      "spinal-articulation",
+      "breath",
+      "style-classical",
+      "profile-mobility"
+    ],
+    "recommendedClassLengthMinutes": 20,
+    "blocks": [
+      {
+        "id": "beginner_mat_foundation-b-1",
+        "exerciseId": "the_hundred",
+        "exerciseName": "The Hundred",
+        "durationSeconds": 70,
+        "transitionSeconds": 15,
+        "restSeconds": 15,
+        "notes": "Watch for rib-popping on the inhale and premature shoulder tension. Keep beginners head-down and progress to head-float only once the pelvis is truly stable.",
+        "section": "warmup"
+      },
+      {
+        "id": "beginner_mat_foundation-b-2",
+        "exerciseId": "roll_up",
+        "exerciseName": "Roll Up",
+        "durationSeconds": 75,
+        "transitionSeconds": 15,
+        "restSeconds": 15,
+        "notes": "Cue articulation vertebra by vertebra rather than a hinge. For tight hamstrings, bend the knees slightly and track whether the spine is truly segmenting.",
+        "section": "core"
+      },
+      {
+        "id": "beginner_mat_foundation-b-3",
+        "exerciseId": "spine_stretch_forward",
+        "exerciseName": "Spine Stretch Forward",
+        "durationSeconds": 80,
+        "transitionSeconds": 15,
+        "restSeconds": 20,
+        "notes": "The goal is spinal length, not hamstring stretch. Cue clients to grow taller before reaching. Sit on a folded blanket if the pelvis tips backward.",
+        "section": "cooldown"
+      },
+      {
+        "id": "beginner_mat_foundation-b-4",
+        "exerciseId": "pelvic_curl",
+        "exerciseName": "Pelvic Curl",
+        "durationSeconds": 70,
+        "transitionSeconds": 15,
+        "restSeconds": 15,
+        "notes": "A foundational exercise for assessing spinal articulation. Watch for the client who rises as a block from T12 — this indicates thoracic rigidity. Cue sequentially.",
+        "section": "warmup"
+      },
+      {
+        "id": "beginner_mat_foundation-b-5",
+        "exerciseId": "shoulder_bridge",
+        "exerciseName": "Shoulder Bridge",
+        "durationSeconds": 75,
+        "transitionSeconds": 15,
+        "restSeconds": 15,
+        "notes": "Build from Pelvic Curl first. The pelvis should be level and the glutes active without gripping. For knee issues, ensure the knees don't drift inward.",
+        "section": "core"
+      }
+    ],
+    "deliveryStyle": "classical",
+    "classProfile": "mobility"
+  },
+  {
+    "id": "cardiac_safe_flow",
+    "name": "Cardiac-Safe Flow",
+    "description": "A breath-regulated, moderate-intensity session for hypertension, cardiovascular disease, and cardiac device users — avoiding Valsalva and extremes of exertion.",
+    "goal": "Support cardiovascular health with safe, breath-led movement.",
+    "level": "beginner",
+    "accessLevel": "Pro",
+    "apparatus": "Mat",
+    "focusAreas": [
+      "Breath regulation",
+      "Moderate intensity",
+      "Cardiovascular safety"
+    ],
+    "tags": [
+      "beginner",
+      "pro",
+      "breath-regulation",
+      "moderate-intensity",
+      "cardiovascular-safety",
+      "style-contemporary",
+      "profile-rehab"
+    ],
+    "recommendedClassLengthMinutes": 20,
+    "blocks": [
+      {
+        "id": "cardiac_safe_flow-b-1",
+        "exerciseId": "spine_mobilization",
+        "exerciseName": "Spine Mobilization",
+        "durationSeconds": 70,
+        "transitionSeconds": 20,
+        "restSeconds": 15,
+        "notes": "Use as an opening warm-up and a closing cool-down. Segmental mobility reveals restrictions — note where movement stops and educate the client on finding that area.",
+        "section": "warmup"
+      },
+      {
+        "id": "cardiac_safe_flow-b-2",
+        "exerciseId": "shoulder_rolls",
+        "exerciseName": "Shoulder Rolls",
+        "durationSeconds": 70,
+        "transitionSeconds": 20,
+        "restSeconds": 15,
+        "notes": "Use as an entry-point assessment for scapular mobility. Slow, bilateral rolls reveal asymmetry. Cue the breath on the down-phase to encourage parasympathetic response.",
+        "section": "warmup"
+      },
+      {
+        "id": "cardiac_safe_flow-b-3",
+        "exerciseId": "pelvic_curl",
+        "exerciseName": "Pelvic Curl",
+        "durationSeconds": 70,
+        "transitionSeconds": 20,
+        "restSeconds": 15,
+        "notes": "A foundational exercise for assessing spinal articulation. Watch for the client who rises as a block from T12 — this indicates thoracic rigidity. Cue sequentially.",
+        "section": "warmup"
+      },
+      {
+        "id": "cardiac_safe_flow-b-4",
+        "exerciseId": "rolling_like_a_ball",
+        "exerciseName": "Rolling Like a Ball",
+        "durationSeconds": 70,
+        "transitionSeconds": 20,
+        "restSeconds": 15,
+        "notes": "Use this as a spinal massage and proprioceptive reset. Beginners often unroll the shape mid-roll — cue them to hug the knees tight. Contraindicate for osteoporosis and recent spinal surgery.",
+        "section": "warmup"
+      },
+      {
+        "id": "cardiac_safe_flow-b-5",
+        "exerciseId": "side_kick",
+        "exerciseName": "Side Kick",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "Stability of the underneath side is the real challenge. Cue the obliques on the supporting side to keep the waist lifted. Watch for internal hip rotation on the kick.",
+        "section": "core"
+      },
+      {
+        "id": "cardiac_safe_flow-b-6",
+        "exerciseId": "shoulder_bridge",
+        "exerciseName": "Shoulder Bridge",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "Build from Pelvic Curl first. The pelvis should be level and the glutes active without gripping. For knee issues, ensure the knees don't drift inward.",
+        "section": "core"
+      },
+      {
+        "id": "cardiac_safe_flow-b-7",
+        "exerciseId": "spine_stretch_forward",
+        "exerciseName": "Spine Stretch Forward",
+        "durationSeconds": 80,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "The goal is spinal length, not hamstring stretch. Cue clients to grow taller before reaching. Sit on a folded blanket if the pelvis tips backward.",
+        "section": "cooldown"
+      },
+      {
+        "id": "cardiac_safe_flow-b-8",
+        "exerciseId": "seal",
+        "exerciseName": "Seal",
+        "durationSeconds": 70,
+        "transitionSeconds": 20,
+        "restSeconds": 15,
+        "notes": "The inner-thigh adductor squeeze adds another layer to the rolling massage. Contraindicate for osteoporosis and recent spinal surgery.",
+        "section": "warmup"
+      }
+    ],
+    "deliveryStyle": "contemporary",
+    "classProfile": "rehab"
+  },
+  {
+    "id": "cervical_neck_care",
+    "name": "Cervical & Neck Care",
+    "description": "A cervical-decompression sequence with scapular stability and thoracic opening to relieve neck load and improve upper-body alignment.",
+    "goal": "Reduce cervical compression and improve neck posture.",
+    "level": "beginner",
+    "accessLevel": "Pro",
+    "apparatus": "Mat",
+    "focusAreas": [
+      "Cervical decompression",
+      "Scapular stability",
+      "Thoracic mobility"
+    ],
+    "tags": [
+      "beginner",
+      "pro",
+      "cervical-decompression",
+      "scapular-stability",
+      "thoracic-mobility",
+      "style-contemporary",
+      "profile-mobility"
+    ],
+    "recommendedClassLengthMinutes": 20,
+    "blocks": [
+      {
+        "id": "cervical_neck_care-b-1",
+        "exerciseId": "shoulder_rolls",
+        "exerciseName": "Shoulder Rolls",
+        "durationSeconds": 70,
+        "transitionSeconds": 15,
+        "restSeconds": 15,
+        "notes": "Use as an entry-point assessment for scapular mobility. Slow, bilateral rolls reveal asymmetry. Cue the breath on the down-phase to encourage parasympathetic response.",
+        "section": "warmup"
+      },
+      {
+        "id": "cervical_neck_care-b-2",
+        "exerciseId": "spine_mobilization",
+        "exerciseName": "Spine Mobilization",
+        "durationSeconds": 70,
+        "transitionSeconds": 15,
+        "restSeconds": 15,
+        "notes": "Use as an opening warm-up and a closing cool-down. Segmental mobility reveals restrictions — note where movement stops and educate the client on finding that area.",
+        "section": "warmup"
+      },
+      {
+        "id": "cervical_neck_care-b-3",
+        "exerciseId": "seated_side_bend",
+        "exerciseName": "Seated Side Bend",
+        "durationSeconds": 80,
+        "transitionSeconds": 15,
+        "restSeconds": 20,
+        "notes": "Excellent for assessing lateral thoracic mobility. Watch for one side having significantly more range — address this with extra reps on the tight side. Sit on a block if the pelvis tips.",
+        "section": "cooldown"
+      },
+      {
+        "id": "cervical_neck_care-b-4",
+        "exerciseId": "arm_springs",
+        "exerciseName": "Arm Springs",
+        "durationSeconds": 75,
+        "transitionSeconds": 15,
+        "restSeconds": 15,
+        "notes": "Multiple positions available: supine, seated, kneeling, standing. Start supine to establish scapular connection before progressing to upright. Excellent for rotator cuff activation.",
+        "section": "core"
+      },
+      {
+        "id": "cervical_neck_care-b-5",
+        "exerciseId": "band_arm_series",
+        "exerciseName": "Resistance Band Arm Series",
+        "durationSeconds": 75,
+        "transitionSeconds": 15,
+        "restSeconds": 15,
+        "notes": "A versatile resistance band series that replicates Cadillac arm spring patterns without the apparatus. Excellent travel or home practice option. Adjust band tension with grip width.",
+        "section": "core"
+      },
+      {
+        "id": "cervical_neck_care-b-6",
+        "exerciseId": "pilates_ring_squeeze",
+        "exerciseName": "Pilates Ring Squeeze",
+        "durationSeconds": 75,
+        "transitionSeconds": 15,
+        "restSeconds": 15,
+        "notes": "Versatile for inner thigh, outer hip, or arm activation. Particularly useful for pelvic floor connection — cue the client to link the pelvic floor with the squeeze.",
+        "section": "core"
+      },
+      {
+        "id": "cervical_neck_care-b-7",
+        "exerciseId": "swan_prep",
+        "exerciseName": "Swan Prep",
+        "durationSeconds": 70,
+        "transitionSeconds": 15,
+        "restSeconds": 15,
+        "notes": "A crucial building block before Swan. Focus on thoracic extension and keep the elbows soft. Watch for cervical hyperextension in clients with neck issues.",
+        "section": "warmup"
+      },
+      {
+        "id": "cervical_neck_care-b-8",
+        "exerciseId": "hanging_cadillac",
+        "exerciseName": "Hanging",
+        "durationSeconds": 75,
+        "transitionSeconds": 15,
+        "restSeconds": 15,
+        "notes": "A traction and shoulder girdle decompression exercise. Contraindicate for acute shoulder instability. The minimal weight-bearing version uses the legs to take load off the spine.",
+        "section": "core"
+      }
+    ],
+    "deliveryStyle": "contemporary",
+    "classProfile": "mobility"
+  },
+  {
+    "id": "chronic_pain_fibromyalgia",
+    "name": "Chronic Pain & Fibromyalgia",
+    "description": "A pain-paced, graded movement program for fibromyalgia and chronic pain syndrome — using central sensitisation principles to build movement tolerance gently.",
+    "goal": "Build gentle movement tolerance with pain-pacing principles.",
+    "level": "beginner",
+    "accessLevel": "Pro",
+    "apparatus": "Mat",
+    "focusAreas": [
+      "Pain-paced movement",
+      "Central sensitisation",
+      "Gentle progressive load"
+    ],
+    "tags": [
+      "beginner",
+      "pro",
+      "pain-paced-movement",
+      "central-sensitisation",
+      "gentle-progressive-load",
+      "style-contemporary",
+      "profile-restorative"
+    ],
+    "recommendedClassLengthMinutes": 25,
+    "blocks": [
+      {
+        "id": "chronic_pain_fibromyalgia-b-1",
+        "exerciseId": "spine_mobilization",
+        "exerciseName": "Spine Mobilization",
+        "durationSeconds": 80,
+        "transitionSeconds": 20,
+        "restSeconds": 25,
+        "notes": "Use as an opening warm-up and a closing cool-down. Segmental mobility reveals restrictions — note where movement stops and educate the client on finding that area.",
+        "section": "warmup"
+      },
+      {
+        "id": "chronic_pain_fibromyalgia-b-2",
+        "exerciseId": "shoulder_rolls",
+        "exerciseName": "Shoulder Rolls",
+        "durationSeconds": 80,
+        "transitionSeconds": 20,
+        "restSeconds": 25,
+        "notes": "Use as an entry-point assessment for scapular mobility. Slow, bilateral rolls reveal asymmetry. Cue the breath on the down-phase to encourage parasympathetic response.",
+        "section": "warmup"
+      },
+      {
+        "id": "chronic_pain_fibromyalgia-b-3",
+        "exerciseId": "rolling_like_a_ball",
+        "exerciseName": "Rolling Like a Ball",
+        "durationSeconds": 80,
+        "transitionSeconds": 20,
+        "restSeconds": 25,
+        "notes": "Use this as a spinal massage and proprioceptive reset. Beginners often unroll the shape mid-roll — cue them to hug the knees tight. Contraindicate for osteoporosis and recent spinal surgery.",
+        "section": "warmup"
+      },
+      {
+        "id": "chronic_pain_fibromyalgia-b-4",
+        "exerciseId": "pelvic_curl",
+        "exerciseName": "Pelvic Curl",
+        "durationSeconds": 80,
+        "transitionSeconds": 20,
+        "restSeconds": 25,
+        "notes": "A foundational exercise for assessing spinal articulation. Watch for the client who rises as a block from T12 — this indicates thoracic rigidity. Cue sequentially.",
+        "section": "warmup"
+      },
+      {
+        "id": "chronic_pain_fibromyalgia-b-5",
+        "exerciseId": "seal",
+        "exerciseName": "Seal",
+        "durationSeconds": 80,
+        "transitionSeconds": 20,
+        "restSeconds": 25,
+        "notes": "The inner-thigh adductor squeeze adds another layer to the rolling massage. Contraindicate for osteoporosis and recent spinal surgery.",
+        "section": "warmup"
+      },
+      {
+        "id": "chronic_pain_fibromyalgia-b-6",
+        "exerciseId": "mermaid",
+        "exerciseName": "Mermaid",
+        "durationSeconds": 90,
+        "transitionSeconds": 20,
+        "restSeconds": 30,
+        "notes": "Excellent lateral thoracic stretch. Whether on mat, chair, or box, the foundational cue is the same: grow before bending. Especially valuable for scoliosis work.",
+        "section": "cooldown"
+      },
+      {
+        "id": "chronic_pain_fibromyalgia-b-7",
+        "exerciseId": "spine_stretch_forward",
+        "exerciseName": "Spine Stretch Forward",
+        "durationSeconds": 90,
+        "transitionSeconds": 20,
+        "restSeconds": 30,
+        "notes": "The goal is spinal length, not hamstring stretch. Cue clients to grow taller before reaching. Sit on a folded blanket if the pelvis tips backward.",
+        "section": "cooldown"
+      },
+      {
+        "id": "chronic_pain_fibromyalgia-b-8",
+        "exerciseId": "side_kick",
+        "exerciseName": "Side Kick",
+        "durationSeconds": 85,
+        "transitionSeconds": 20,
+        "restSeconds": 25,
+        "notes": "Stability of the underneath side is the real challenge. Cue the obliques on the supporting side to keep the waist lifted. Watch for internal hip rotation on the kick.",
+        "section": "core"
+      }
+    ],
+    "deliveryStyle": "contemporary",
+    "classProfile": "restorative"
+  },
+  {
+    "id": "disc_sciatica_relief",
+    "name": "Disc & Sciatica Relief",
+    "description": "A neutral-spine session that combines lumbar decompression, gentle neural mobility, and graduated core loading for disc and sciatic pain.",
+    "goal": "Reduce disc compression and sciatic nerve tension.",
+    "level": "beginner",
+    "accessLevel": "Pro",
+    "apparatus": "Mat",
+    "focusAreas": [
+      "Lumbar decompression",
+      "Neural mobility",
+      "Neutral spine"
+    ],
+    "tags": [
+      "beginner",
+      "pro",
+      "lumbar-decompression",
+      "neural-mobility",
+      "neutral-spine",
+      "style-contemporary",
+      "profile-mobility"
+    ],
+    "recommendedClassLengthMinutes": 20,
+    "blocks": [
+      {
+        "id": "disc_sciatica_relief-b-1",
+        "exerciseId": "pelvic_curl",
+        "exerciseName": "Pelvic Curl",
+        "durationSeconds": 70,
+        "transitionSeconds": 15,
+        "restSeconds": 15,
+        "notes": "A foundational exercise for assessing spinal articulation. Watch for the client who rises as a block from T12 — this indicates thoracic rigidity. Cue sequentially.",
+        "section": "warmup"
+      },
+      {
+        "id": "disc_sciatica_relief-b-2",
+        "exerciseId": "knee_stretch",
+        "exerciseName": "Knee Stretch",
+        "durationSeconds": 75,
+        "transitionSeconds": 15,
+        "restSeconds": 15,
+        "notes": "This is both a hip flexor stretch and a core challenge. The neutral spine version tests stability; the rounded version is a spine mobilizer. Distinguish clearly for the client.",
+        "section": "core"
+      },
+      {
+        "id": "disc_sciatica_relief-b-3",
+        "exerciseId": "spine_stretch_forward",
+        "exerciseName": "Spine Stretch Forward",
+        "durationSeconds": 80,
+        "transitionSeconds": 15,
+        "restSeconds": 20,
+        "notes": "The goal is spinal length, not hamstring stretch. Cue clients to grow taller before reaching. Sit on a folded blanket if the pelvis tips backward.",
+        "section": "cooldown"
+      },
+      {
+        "id": "disc_sciatica_relief-b-4",
+        "exerciseId": "shoulder_bridge",
+        "exerciseName": "Shoulder Bridge",
+        "durationSeconds": 75,
+        "transitionSeconds": 15,
+        "restSeconds": 15,
+        "notes": "Build from Pelvic Curl first. The pelvis should be level and the glutes active without gripping. For knee issues, ensure the knees don't drift inward.",
+        "section": "core"
+      },
+      {
+        "id": "disc_sciatica_relief-b-5",
+        "exerciseId": "one_leg_circle",
+        "exerciseName": "One Leg Circle",
+        "durationSeconds": 75,
+        "transitionSeconds": 15,
+        "restSeconds": 15,
+        "notes": "The circle is small until stability is established. Cue the opposite inner thigh to stay active. Watch for external hip rotation loss at the bottom of the circle.",
+        "section": "core"
+      },
+      {
+        "id": "disc_sciatica_relief-b-6",
+        "exerciseId": "swan_prep",
+        "exerciseName": "Swan Prep",
+        "durationSeconds": 70,
+        "transitionSeconds": 15,
+        "restSeconds": 15,
+        "notes": "A crucial building block before Swan. Focus on thoracic extension and keep the elbows soft. Watch for cervical hyperextension in clients with neck issues.",
+        "section": "warmup"
+      },
+      {
+        "id": "disc_sciatica_relief-b-7",
+        "exerciseId": "single_leg_stretch",
+        "exerciseName": "Single Leg Stretch",
+        "durationSeconds": 75,
+        "transitionSeconds": 15,
+        "restSeconds": 15,
+        "notes": "A foundational abdominal exercise. Hands on shin guide, not pull. Cue the rib-to-hip connection on every leg switch. Keep head down for beginners.",
+        "section": "core"
+      },
+      {
+        "id": "disc_sciatica_relief-b-8",
+        "exerciseId": "spine_mobilization",
+        "exerciseName": "Spine Mobilization",
+        "durationSeconds": 70,
+        "transitionSeconds": 15,
+        "restSeconds": 15,
+        "notes": "Use as an opening warm-up and a closing cool-down. Segmental mobility reveals restrictions — note where movement stops and educate the client on finding that area.",
+        "section": "warmup"
+      }
+    ],
+    "deliveryStyle": "contemporary",
+    "classProfile": "mobility"
+  },
+  {
+    "id": "epilepsy_ground_safe",
+    "name": "Epilepsy Ground-Safe Flow",
+    "description": "A ground-based mat program for epilepsy and seizure disorders — staying low, avoiding inversions and breath-holding, with calm pacing throughout.",
+    "goal": "Exercise safely with epilepsy using a ground-based, inversion-free sequence.",
+    "level": "beginner",
+    "accessLevel": "Pro",
+    "apparatus": "Mat",
+    "focusAreas": [
+      "Ground-based safety",
+      "No inversions",
+      "Calm pacing"
+    ],
+    "tags": [
+      "beginner",
+      "pro",
+      "ground-based-safety",
+      "no-inversions",
+      "calm-pacing",
+      "style-contemporary",
+      "profile-restorative"
+    ],
+    "recommendedClassLengthMinutes": 25,
+    "blocks": [
+      {
+        "id": "epilepsy_ground_safe-b-1",
+        "exerciseId": "pelvic_curl",
+        "exerciseName": "Pelvic Curl",
+        "durationSeconds": 80,
+        "transitionSeconds": 20,
+        "restSeconds": 25,
+        "notes": "A foundational exercise for assessing spinal articulation. Watch for the client who rises as a block from T12 — this indicates thoracic rigidity. Cue sequentially.",
+        "section": "warmup"
+      },
+      {
+        "id": "epilepsy_ground_safe-b-2",
+        "exerciseId": "shoulder_bridge",
+        "exerciseName": "Shoulder Bridge",
+        "durationSeconds": 85,
+        "transitionSeconds": 20,
+        "restSeconds": 25,
+        "notes": "Build from Pelvic Curl first. The pelvis should be level and the glutes active without gripping. For knee issues, ensure the knees don't drift inward.",
+        "section": "core"
+      },
+      {
+        "id": "epilepsy_ground_safe-b-3",
+        "exerciseId": "rolling_like_a_ball",
+        "exerciseName": "Rolling Like a Ball",
+        "durationSeconds": 80,
+        "transitionSeconds": 20,
+        "restSeconds": 25,
+        "notes": "Use this as a spinal massage and proprioceptive reset. Beginners often unroll the shape mid-roll — cue them to hug the knees tight. Contraindicate for osteoporosis and recent spinal surgery.",
+        "section": "warmup"
+      },
+      {
+        "id": "epilepsy_ground_safe-b-4",
+        "exerciseId": "single_leg_stretch",
+        "exerciseName": "Single Leg Stretch",
+        "durationSeconds": 85,
+        "transitionSeconds": 20,
+        "restSeconds": 25,
+        "notes": "A foundational abdominal exercise. Hands on shin guide, not pull. Cue the rib-to-hip connection on every leg switch. Keep head down for beginners.",
+        "section": "core"
+      },
+      {
+        "id": "epilepsy_ground_safe-b-5",
+        "exerciseId": "spine_stretch_forward",
+        "exerciseName": "Spine Stretch Forward",
+        "durationSeconds": 90,
+        "transitionSeconds": 20,
+        "restSeconds": 30,
+        "notes": "The goal is spinal length, not hamstring stretch. Cue clients to grow taller before reaching. Sit on a folded blanket if the pelvis tips backward.",
+        "section": "cooldown"
+      },
+      {
+        "id": "epilepsy_ground_safe-b-6",
+        "exerciseId": "side_kick",
+        "exerciseName": "Side Kick",
+        "durationSeconds": 85,
+        "transitionSeconds": 20,
+        "restSeconds": 25,
+        "notes": "Stability of the underneath side is the real challenge. Cue the obliques on the supporting side to keep the waist lifted. Watch for internal hip rotation on the kick.",
+        "section": "core"
+      },
+      {
+        "id": "epilepsy_ground_safe-b-7",
+        "exerciseId": "spine_mobilization",
+        "exerciseName": "Spine Mobilization",
+        "durationSeconds": 80,
+        "transitionSeconds": 20,
+        "restSeconds": 25,
+        "notes": "Use as an opening warm-up and a closing cool-down. Segmental mobility reveals restrictions — note where movement stops and educate the client on finding that area.",
+        "section": "warmup"
+      }
+    ],
+    "deliveryStyle": "contemporary",
+    "classProfile": "restorative"
+  },
+  {
+    "id": "foot_ankle_rehab",
+    "name": "Foot & Ankle Rehabilitation",
+    "description": "An intrinsic foot and ankle strengthening sequence addressing plantar loading, Achilles resilience, and foot alignment for common lower-limb conditions.",
+    "goal": "Strengthen foot intrinsics and restore ankle stability.",
+    "level": "beginner",
+    "accessLevel": "Pro",
+    "apparatus": "Reformer",
+    "focusAreas": [
+      "Foot strength",
+      "Ankle stability",
+      "Achilles loading"
+    ],
+    "tags": [
+      "beginner",
+      "pro",
+      "foot-strength",
+      "ankle-stability",
+      "achilles-loading",
+      "style-classical",
+      "profile-rehab"
+    ],
+    "recommendedClassLengthMinutes": 20,
+    "blocks": [
+      {
+        "id": "foot_ankle_rehab-b-1",
+        "exerciseId": "footwork",
+        "exerciseName": "Footwork",
+        "durationSeconds": 70,
+        "transitionSeconds": 20,
+        "restSeconds": 15,
+        "notes": "Footwork is the foundation of Reformer work and an assessment of lower limb alignment. Check that the client's feet are parallel or externally rotated consistently. Adjust spring weight to match ability.",
+        "section": "warmup"
+      },
+      {
+        "id": "foot_ankle_rehab-b-2",
+        "exerciseId": "achilles_stretch_chair",
+        "exerciseName": "Achilles Stretch",
+        "durationSeconds": 80,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "A gentle eccentric Achilles and calf lengthening exercise. Excellent for plantar fasciitis and Achilles tendinopathy. Progress the depth of stretch gradually over sessions.",
+        "section": "cooldown"
+      },
+      {
+        "id": "foot_ankle_rehab-b-3",
+        "exerciseId": "running_reformer",
+        "exerciseName": "Running",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "A dynamic single-leg heel press that mimics gait. Excellent for lower limb proprioception and Achilles loading. Start slowly to assess Achilles and plantar tolerance.",
+        "section": "core"
+      },
+      {
+        "id": "foot_ankle_rehab-b-4",
+        "exerciseId": "pilates_ring_squeeze",
+        "exerciseName": "Pilates Ring Squeeze",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "Versatile for inner thigh, outer hip, or arm activation. Particularly useful for pelvic floor connection — cue the client to link the pelvic floor with the squeeze.",
+        "section": "core"
+      },
+      {
+        "id": "foot_ankle_rehab-b-5",
+        "exerciseId": "foam_roller_series",
+        "exerciseName": "Foam Roller Series",
+        "durationSeconds": 80,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "Myofascial release and spinal stability challenge. Lying along the roller requires significant balance. Teach supine placement first before adding arm or leg movements.",
+        "section": "cooldown"
+      },
+      {
+        "id": "foot_ankle_rehab-b-6",
+        "exerciseId": "side_kick",
+        "exerciseName": "Side Kick",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "Stability of the underneath side is the real challenge. Cue the obliques on the supporting side to keep the waist lifted. Watch for internal hip rotation on the kick.",
+        "section": "core"
+      },
+      {
+        "id": "foot_ankle_rehab-b-7",
+        "exerciseId": "single_leg_stretch",
+        "exerciseName": "Single Leg Stretch",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "A foundational abdominal exercise. Hands on shin guide, not pull. Cue the rib-to-hip connection on every leg switch. Keep head down for beginners.",
+        "section": "core"
+      }
+    ],
+    "deliveryStyle": "classical",
+    "classProfile": "rehab"
+  },
+  {
+    "id": "hip_lateral_recovery",
+    "name": "Hip & Lateral Chain Recovery",
+    "description": "A glute and lateral hip strengthening program addressing piriformis, hamstring, IT band, and greater trochanteric pain with targeted spring and mat work.",
+    "goal": "Strengthen the lateral hip chain and relieve hip and thigh pain.",
+    "level": "intermediate",
+    "accessLevel": "Pro",
+    "apparatus": "Mat",
+    "focusAreas": [
+      "Lateral hip strength",
+      "Glute activation",
+      "Hip flexibility"
+    ],
+    "tags": [
+      "intermediate",
+      "pro",
+      "lateral-hip-strength",
+      "glute-activation",
+      "hip-flexibility",
+      "style-contemporary",
+      "profile-rehab"
+    ],
+    "recommendedClassLengthMinutes": 20,
+    "blocks": [
+      {
+        "id": "hip_lateral_recovery-b-1",
+        "exerciseId": "side_kick_series",
+        "exerciseName": "Side Kick Series",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "Each series variation tests a different hip plane. Teach each separately before flowing. Cue the client to breathe continuously and watch for fatigue-driven pelvic rolling.",
+        "section": "core"
+      },
+      {
+        "id": "hip_lateral_recovery-b-2",
+        "exerciseId": "one_leg_circle",
+        "exerciseName": "One Leg Circle",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "The circle is small until stability is established. Cue the opposite inner thigh to stay active. Watch for external hip rotation loss at the bottom of the circle.",
+        "section": "core"
+      },
+      {
+        "id": "hip_lateral_recovery-b-3",
+        "exerciseId": "leg_springs",
+        "exerciseName": "Leg Springs",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "Supine leg spring work targets hip flexors, abductors, and extensors in isolation. Especially useful for post-surgical rehab. Multiple patterns available — teach each separately.",
+        "section": "core"
+      },
+      {
+        "id": "hip_lateral_recovery-b-4",
+        "exerciseId": "pilates_ring_squeeze",
+        "exerciseName": "Pilates Ring Squeeze",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "Versatile for inner thigh, outer hip, or arm activation. Particularly useful for pelvic floor connection — cue the client to link the pelvic floor with the squeeze.",
+        "section": "core"
+      },
+      {
+        "id": "hip_lateral_recovery-b-5",
+        "exerciseId": "shoulder_bridge",
+        "exerciseName": "Shoulder Bridge",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "Build from Pelvic Curl first. The pelvis should be level and the glutes active without gripping. For knee issues, ensure the knees don't drift inward.",
+        "section": "core"
+      },
+      {
+        "id": "hip_lateral_recovery-b-6",
+        "exerciseId": "single_leg_stretch",
+        "exerciseName": "Single Leg Stretch",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "A foundational abdominal exercise. Hands on shin guide, not pull. Cue the rib-to-hip connection on every leg switch. Keep head down for beginners.",
+        "section": "core"
+      },
+      {
+        "id": "hip_lateral_recovery-b-7",
+        "exerciseId": "foam_roller_series",
+        "exerciseName": "Foam Roller Series",
+        "durationSeconds": 80,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "Myofascial release and spinal stability challenge. Lying along the roller requires significant balance. Teach supine placement first before adding arm or leg movements.",
+        "section": "cooldown"
+      },
+      {
+        "id": "hip_lateral_recovery-b-8",
+        "exerciseId": "side_kick_kneeling",
+        "exerciseName": "Side Kick Kneeling",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "Wrist sensitivity is common here — offer a fist or forearm support. The kneeling position increases demand on the supporting lateral chain. Progress from Side Kick.",
+        "section": "core"
+      }
+    ],
+    "deliveryStyle": "contemporary",
+    "classProfile": "rehab"
+  },
+  {
+    "id": "hip_mobility_recovery",
+    "name": "Hip Mobility & Recovery",
+    "description": "A hip mobility program that respects impingement-free ranges, builds lateral hip stability, and restores functional movement patterns.",
+    "goal": "Restore hip mobility and strengthen lateral stabilisers.",
+    "level": "beginner",
+    "accessLevel": "Pro",
+    "apparatus": "Mat",
+    "focusAreas": [
+      "Hip mobility",
+      "Lateral stabilisers",
+      "Safe range"
+    ],
+    "tags": [
+      "beginner",
+      "pro",
+      "hip-mobility",
+      "lateral-stabilisers",
+      "safe-range",
+      "style-contemporary",
+      "profile-rehab"
+    ],
+    "recommendedClassLengthMinutes": 20,
+    "blocks": [
+      {
+        "id": "hip_mobility_recovery-b-1",
+        "exerciseId": "pelvic_curl",
+        "exerciseName": "Pelvic Curl",
+        "durationSeconds": 70,
+        "transitionSeconds": 20,
+        "restSeconds": 15,
+        "notes": "A foundational exercise for assessing spinal articulation. Watch for the client who rises as a block from T12 — this indicates thoracic rigidity. Cue sequentially.",
+        "section": "warmup"
+      },
+      {
+        "id": "hip_mobility_recovery-b-2",
+        "exerciseId": "one_leg_circle",
+        "exerciseName": "One Leg Circle",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "The circle is small until stability is established. Cue the opposite inner thigh to stay active. Watch for external hip rotation loss at the bottom of the circle.",
+        "section": "core"
+      },
+      {
+        "id": "hip_mobility_recovery-b-3",
+        "exerciseId": "side_kick_series",
+        "exerciseName": "Side Kick Series",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "Each series variation tests a different hip plane. Teach each separately before flowing. Cue the client to breathe continuously and watch for fatigue-driven pelvic rolling.",
+        "section": "core"
+      },
+      {
+        "id": "hip_mobility_recovery-b-4",
+        "exerciseId": "leg_springs",
+        "exerciseName": "Leg Springs",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "Supine leg spring work targets hip flexors, abductors, and extensors in isolation. Especially useful for post-surgical rehab. Multiple patterns available — teach each separately.",
+        "section": "core"
+      },
+      {
+        "id": "hip_mobility_recovery-b-5",
+        "exerciseId": "knee_stretch",
+        "exerciseName": "Knee Stretch",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "This is both a hip flexor stretch and a core challenge. The neutral spine version tests stability; the rounded version is a spine mobilizer. Distinguish clearly for the client.",
+        "section": "core"
+      },
+      {
+        "id": "hip_mobility_recovery-b-6",
+        "exerciseId": "footwork",
+        "exerciseName": "Footwork",
+        "durationSeconds": 70,
+        "transitionSeconds": 20,
+        "restSeconds": 15,
+        "notes": "Footwork is the foundation of Reformer work and an assessment of lower limb alignment. Check that the client's feet are parallel or externally rotated consistently. Adjust spring weight to match ability.",
+        "section": "warmup"
+      },
+      {
+        "id": "hip_mobility_recovery-b-7",
+        "exerciseId": "single_leg_stretch",
+        "exerciseName": "Single Leg Stretch",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "A foundational abdominal exercise. Hands on shin guide, not pull. Cue the rib-to-hip connection on every leg switch. Keep head down for beginners.",
+        "section": "core"
+      },
+      {
+        "id": "hip_mobility_recovery-b-8",
+        "exerciseId": "hip_circles",
+        "exerciseName": "Hip Circles",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "The circle should come from the hip socket, not the whole trunk. Build from a stable Teaser V-sit. Watch for rib flare at the back of the circle.",
+        "section": "core"
+      }
+    ],
+    "deliveryStyle": "contemporary",
+    "classProfile": "rehab"
+  },
+  {
+    "id": "hypermobility_control",
+    "name": "Hypermobility Control",
+    "description": "A joint-stabilisation program that builds neuromuscular control and end-range awareness, replacing passive flexibility with active strength.",
+    "goal": "Develop active joint stability and neuromuscular control.",
+    "level": "intermediate",
+    "accessLevel": "Pro",
+    "apparatus": "Mat",
+    "focusAreas": [
+      "Joint stabilisation",
+      "Neuromuscular control",
+      "Controlled loading"
+    ],
+    "tags": [
+      "intermediate",
+      "pro",
+      "joint-stabilisation",
+      "neuromuscular-control",
+      "controlled-loading",
+      "style-contemporary",
+      "profile-mobility"
+    ],
+    "recommendedClassLengthMinutes": 20,
+    "blocks": [
+      {
+        "id": "hypermobility_control-b-1",
+        "exerciseId": "pelvic_curl",
+        "exerciseName": "Pelvic Curl",
+        "durationSeconds": 70,
+        "transitionSeconds": 15,
+        "restSeconds": 15,
+        "notes": "A foundational exercise for assessing spinal articulation. Watch for the client who rises as a block from T12 — this indicates thoracic rigidity. Cue sequentially.",
+        "section": "warmup"
+      },
+      {
+        "id": "hypermobility_control-b-2",
+        "exerciseId": "shoulder_bridge",
+        "exerciseName": "Shoulder Bridge",
+        "durationSeconds": 75,
+        "transitionSeconds": 15,
+        "restSeconds": 15,
+        "notes": "Build from Pelvic Curl first. The pelvis should be level and the glutes active without gripping. For knee issues, ensure the knees don't drift inward.",
+        "section": "core"
+      },
+      {
+        "id": "hypermobility_control-b-3",
+        "exerciseId": "plank",
+        "exerciseName": "Plank",
+        "durationSeconds": 75,
+        "transitionSeconds": 15,
+        "restSeconds": 15,
+        "notes": "A prerequisite for any loaded push-up or leg pull variation. Ensure the shoulders are stacked over the wrists and the core is active before adding movement. For wrist issues, use forearm plank.",
+        "section": "core"
+      },
+      {
+        "id": "hypermobility_control-b-4",
+        "exerciseId": "pilates_ring_squeeze",
+        "exerciseName": "Pilates Ring Squeeze",
+        "durationSeconds": 75,
+        "transitionSeconds": 15,
+        "restSeconds": 15,
+        "notes": "Versatile for inner thigh, outer hip, or arm activation. Particularly useful for pelvic floor connection — cue the client to link the pelvic floor with the squeeze.",
+        "section": "core"
+      },
+      {
+        "id": "hypermobility_control-b-5",
+        "exerciseId": "footwork",
+        "exerciseName": "Footwork",
+        "durationSeconds": 70,
+        "transitionSeconds": 15,
+        "restSeconds": 15,
+        "notes": "Footwork is the foundation of Reformer work and an assessment of lower limb alignment. Check that the client's feet are parallel or externally rotated consistently. Adjust spring weight to match ability.",
+        "section": "warmup"
+      },
+      {
+        "id": "hypermobility_control-b-6",
+        "exerciseId": "single_leg_stretch",
+        "exerciseName": "Single Leg Stretch",
+        "durationSeconds": 75,
+        "transitionSeconds": 15,
+        "restSeconds": 15,
+        "notes": "A foundational abdominal exercise. Hands on shin guide, not pull. Cue the rib-to-hip connection on every leg switch. Keep head down for beginners.",
+        "section": "core"
+      },
+      {
+        "id": "hypermobility_control-b-7",
+        "exerciseId": "band_arm_series",
+        "exerciseName": "Resistance Band Arm Series",
+        "durationSeconds": 75,
+        "transitionSeconds": 15,
+        "restSeconds": 15,
+        "notes": "A versatile resistance band series that replicates Cadillac arm spring patterns without the apparatus. Excellent travel or home practice option. Adjust band tension with grip width.",
+        "section": "core"
+      },
+      {
+        "id": "hypermobility_control-b-8",
+        "exerciseId": "coordination",
+        "exerciseName": "Coordination",
+        "durationSeconds": 75,
+        "transitionSeconds": 15,
+        "restSeconds": 15,
+        "notes": "A sequenced arm and leg coordination exercise. Teach the arm-only version first, then add legs. Watch for the lower back popping off the carriage on leg extension.",
+        "section": "core"
+      }
+    ],
+    "deliveryStyle": "contemporary",
+    "classProfile": "mobility"
+  },
+  {
+    "id": "joint_replacement_recovery",
+    "name": "Joint Replacement Recovery",
+    "description": "A post-surgical mobility restoration program using gentle range-of-motion work, non-impact loading, and progressive movement confidence.",
+    "goal": "Restore mobility and confidence after joint replacement or surgery.",
+    "level": "beginner",
+    "accessLevel": "Pro",
+    "apparatus": "Mat",
+    "focusAreas": [
+      "Post-surgical mobility",
+      "Gentle range",
+      "Non-impact rehab"
+    ],
+    "tags": [
+      "beginner",
+      "pro",
+      "post-surgical-mobility",
+      "gentle-range",
+      "non-impact-rehab",
+      "style-contemporary",
+      "profile-rehab"
+    ],
+    "recommendedClassLengthMinutes": 20,
+    "blocks": [
+      {
+        "id": "joint_replacement_recovery-b-1",
+        "exerciseId": "spine_mobilization",
+        "exerciseName": "Spine Mobilization",
+        "durationSeconds": 70,
+        "transitionSeconds": 20,
+        "restSeconds": 15,
+        "notes": "Use as an opening warm-up and a closing cool-down. Segmental mobility reveals restrictions — note where movement stops and educate the client on finding that area.",
+        "section": "warmup"
+      },
+      {
+        "id": "joint_replacement_recovery-b-2",
+        "exerciseId": "shoulder_rolls",
+        "exerciseName": "Shoulder Rolls",
+        "durationSeconds": 70,
+        "transitionSeconds": 20,
+        "restSeconds": 15,
+        "notes": "Use as an entry-point assessment for scapular mobility. Slow, bilateral rolls reveal asymmetry. Cue the breath on the down-phase to encourage parasympathetic response.",
+        "section": "warmup"
+      },
+      {
+        "id": "joint_replacement_recovery-b-3",
+        "exerciseId": "pelvic_curl",
+        "exerciseName": "Pelvic Curl",
+        "durationSeconds": 70,
+        "transitionSeconds": 20,
+        "restSeconds": 15,
+        "notes": "A foundational exercise for assessing spinal articulation. Watch for the client who rises as a block from T12 — this indicates thoracic rigidity. Cue sequentially.",
+        "section": "warmup"
+      },
+      {
+        "id": "joint_replacement_recovery-b-4",
+        "exerciseId": "shoulder_bridge",
+        "exerciseName": "Shoulder Bridge",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "Build from Pelvic Curl first. The pelvis should be level and the glutes active without gripping. For knee issues, ensure the knees don't drift inward.",
+        "section": "core"
+      },
+      {
+        "id": "joint_replacement_recovery-b-5",
+        "exerciseId": "leg_springs",
+        "exerciseName": "Leg Springs",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "Supine leg spring work targets hip flexors, abductors, and extensors in isolation. Especially useful for post-surgical rehab. Multiple patterns available — teach each separately.",
+        "section": "core"
+      },
+      {
+        "id": "joint_replacement_recovery-b-6",
+        "exerciseId": "footwork",
+        "exerciseName": "Footwork",
+        "durationSeconds": 70,
+        "transitionSeconds": 20,
+        "restSeconds": 15,
+        "notes": "Footwork is the foundation of Reformer work and an assessment of lower limb alignment. Check that the client's feet are parallel or externally rotated consistently. Adjust spring weight to match ability.",
+        "section": "warmup"
+      },
+      {
+        "id": "joint_replacement_recovery-b-7",
+        "exerciseId": "rolling_like_a_ball",
+        "exerciseName": "Rolling Like a Ball",
+        "durationSeconds": 70,
+        "transitionSeconds": 20,
+        "restSeconds": 15,
+        "notes": "Use this as a spinal massage and proprioceptive reset. Beginners often unroll the shape mid-roll — cue them to hug the knees tight. Contraindicate for osteoporosis and recent spinal surgery.",
+        "section": "warmup"
+      },
+      {
+        "id": "joint_replacement_recovery-b-8",
+        "exerciseId": "side_kick",
+        "exerciseName": "Side Kick",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "Stability of the underneath side is the real challenge. Cue the obliques on the supporting side to keep the waist lifted. Watch for internal hip rotation on the kick.",
+        "section": "core"
+      }
+    ],
+    "deliveryStyle": "contemporary",
+    "classProfile": "rehab"
+  },
+  {
+    "id": "knee_rehab",
+    "name": "Knee Rehabilitation",
+    "description": "A VMO and quad-activation sequence using non-weight-bearing leg work and spring resistance to support knee recovery and prevent re-injury.",
+    "goal": "Restore knee stability and quad control after injury or surgery.",
+    "level": "beginner",
+    "accessLevel": "Pro",
+    "apparatus": "Mat",
+    "focusAreas": [
+      "Quad activation",
+      "Knee stability",
+      "Non-weight-bearing leg"
+    ],
+    "tags": [
+      "beginner",
+      "pro",
+      "quad-activation",
+      "knee-stability",
+      "non-weight-bearing-leg",
+      "style-contemporary",
+      "profile-rehab"
+    ],
+    "recommendedClassLengthMinutes": 20,
+    "blocks": [
+      {
+        "id": "knee_rehab-b-1",
+        "exerciseId": "footwork",
+        "exerciseName": "Footwork",
+        "durationSeconds": 70,
+        "transitionSeconds": 20,
+        "restSeconds": 15,
+        "notes": "Footwork is the foundation of Reformer work and an assessment of lower limb alignment. Check that the client's feet are parallel or externally rotated consistently. Adjust spring weight to match ability.",
+        "section": "warmup"
+      },
+      {
+        "id": "knee_rehab-b-2",
+        "exerciseId": "leg_springs",
+        "exerciseName": "Leg Springs",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "Supine leg spring work targets hip flexors, abductors, and extensors in isolation. Especially useful for post-surgical rehab. Multiple patterns available — teach each separately.",
+        "section": "core"
+      },
+      {
+        "id": "knee_rehab-b-3",
+        "exerciseId": "pilates_ring_squeeze",
+        "exerciseName": "Pilates Ring Squeeze",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "Versatile for inner thigh, outer hip, or arm activation. Particularly useful for pelvic floor connection — cue the client to link the pelvic floor with the squeeze.",
+        "section": "core"
+      },
+      {
+        "id": "knee_rehab-b-4",
+        "exerciseId": "single_leg_stretch",
+        "exerciseName": "Single Leg Stretch",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "A foundational abdominal exercise. Hands on shin guide, not pull. Cue the rib-to-hip connection on every leg switch. Keep head down for beginners.",
+        "section": "core"
+      },
+      {
+        "id": "knee_rehab-b-5",
+        "exerciseId": "side_kick",
+        "exerciseName": "Side Kick",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "Stability of the underneath side is the real challenge. Cue the obliques on the supporting side to keep the waist lifted. Watch for internal hip rotation on the kick.",
+        "section": "core"
+      },
+      {
+        "id": "knee_rehab-b-6",
+        "exerciseId": "shoulder_bridge",
+        "exerciseName": "Shoulder Bridge",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "Build from Pelvic Curl first. The pelvis should be level and the glutes active without gripping. For knee issues, ensure the knees don't drift inward.",
+        "section": "core"
+      },
+      {
+        "id": "knee_rehab-b-7",
+        "exerciseId": "pelvic_curl",
+        "exerciseName": "Pelvic Curl",
+        "durationSeconds": 70,
+        "transitionSeconds": 20,
+        "restSeconds": 15,
+        "notes": "A foundational exercise for assessing spinal articulation. Watch for the client who rises as a block from T12 — this indicates thoracic rigidity. Cue sequentially.",
+        "section": "warmup"
+      },
+      {
+        "id": "knee_rehab-b-8",
+        "exerciseId": "coordination",
+        "exerciseName": "Coordination",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "A sequenced arm and leg coordination exercise. Teach the arm-only version first, then add legs. Watch for the lower back popping off the carriage on leg extension.",
+        "section": "core"
+      }
+    ],
+    "deliveryStyle": "contemporary",
+    "classProfile": "rehab"
+  },
+  {
+    "id": "metabolic_whole_body",
+    "name": "Metabolic Whole-Body Flow",
+    "description": "A progressive whole-body activation sequence for diabetes, metabolic conditions, and weight management — prioritising circulation, functional strength, and energy expenditure.",
+    "goal": "Activate metabolism and build functional full-body strength.",
+    "level": "intermediate",
+    "accessLevel": "Pro",
+    "apparatus": "Mat",
+    "focusAreas": [
+      "Circulation",
+      "Functional strength",
+      "Metabolic activation"
+    ],
+    "tags": [
+      "intermediate",
+      "pro",
+      "circulation",
+      "functional-strength",
+      "metabolic-activation",
+      "style-contemporary",
+      "profile-strength"
+    ],
+    "recommendedClassLengthMinutes": 20,
+    "blocks": [
+      {
+        "id": "metabolic_whole_body-b-1",
+        "exerciseId": "footwork",
+        "exerciseName": "Footwork",
+        "durationSeconds": 60,
+        "transitionSeconds": 15,
+        "restSeconds": 10,
+        "notes": "Footwork is the foundation of Reformer work and an assessment of lower limb alignment. Check that the client's feet are parallel or externally rotated consistently. Adjust spring weight to match ability.",
+        "section": "warmup"
+      },
+      {
+        "id": "metabolic_whole_body-b-2",
+        "exerciseId": "the_hundred",
+        "exerciseName": "The Hundred",
+        "durationSeconds": 60,
+        "transitionSeconds": 15,
+        "restSeconds": 10,
+        "notes": "Watch for rib-popping on the inhale and premature shoulder tension. Keep beginners head-down and progress to head-float only once the pelvis is truly stable.",
+        "section": "warmup"
+      },
+      {
+        "id": "metabolic_whole_body-b-3",
+        "exerciseId": "single_leg_stretch",
+        "exerciseName": "Single Leg Stretch",
+        "durationSeconds": 85,
+        "transitionSeconds": 15,
+        "restSeconds": 12,
+        "notes": "A foundational abdominal exercise. Hands on shin guide, not pull. Cue the rib-to-hip connection on every leg switch. Keep head down for beginners.",
+        "section": "core"
+      },
+      {
+        "id": "metabolic_whole_body-b-4",
+        "exerciseId": "shoulder_bridge",
+        "exerciseName": "Shoulder Bridge",
+        "durationSeconds": 85,
+        "transitionSeconds": 15,
+        "restSeconds": 12,
+        "notes": "Build from Pelvic Curl first. The pelvis should be level and the glutes active without gripping. For knee issues, ensure the knees don't drift inward.",
+        "section": "core"
+      },
+      {
+        "id": "metabolic_whole_body-b-5",
+        "exerciseId": "side_kick",
+        "exerciseName": "Side Kick",
+        "durationSeconds": 85,
+        "transitionSeconds": 15,
+        "restSeconds": 12,
+        "notes": "Stability of the underneath side is the real challenge. Cue the obliques on the supporting side to keep the waist lifted. Watch for internal hip rotation on the kick.",
+        "section": "core"
+      },
+      {
+        "id": "metabolic_whole_body-b-6",
+        "exerciseId": "swan_prep",
+        "exerciseName": "Swan Prep",
+        "durationSeconds": 60,
+        "transitionSeconds": 15,
+        "restSeconds": 10,
+        "notes": "A crucial building block before Swan. Focus on thoracic extension and keep the elbows soft. Watch for cervical hyperextension in clients with neck issues.",
+        "section": "warmup"
+      },
+      {
+        "id": "metabolic_whole_body-b-7",
+        "exerciseId": "pilates_ring_squeeze",
+        "exerciseName": "Pilates Ring Squeeze",
+        "durationSeconds": 85,
+        "transitionSeconds": 15,
+        "restSeconds": 12,
+        "notes": "Versatile for inner thigh, outer hip, or arm activation. Particularly useful for pelvic floor connection — cue the client to link the pelvic floor with the squeeze.",
+        "section": "core"
+      },
+      {
+        "id": "metabolic_whole_body-b-8",
+        "exerciseId": "coordination",
+        "exerciseName": "Coordination",
+        "durationSeconds": 85,
+        "transitionSeconds": 15,
+        "restSeconds": 12,
+        "notes": "A sequenced arm and leg coordination exercise. Teach the arm-only version first, then add legs. Watch for the lower back popping off the carriage on leg extension.",
+        "section": "core"
+      }
+    ],
+    "deliveryStyle": "contemporary",
+    "classProfile": "strength"
+  },
+  {
+    "id": "mind_body_calm",
+    "name": "Mind-Body Calm",
+    "description": "A breath-led somatic flow for anxiety, mental health conditions, and recovery — using rhythm, grounding, and interoceptive awareness to calm the nervous system.",
+    "goal": "Calm the nervous system through breath-led somatic movement.",
+    "level": "beginner",
+    "accessLevel": "Pro",
+    "apparatus": "Mat",
+    "focusAreas": [
+      "Breath awareness",
+      "Somatic calm",
+      "Mind-body connection"
+    ],
+    "tags": [
+      "beginner",
+      "pro",
+      "breath-awareness",
+      "somatic-calm",
+      "mind-body-connection",
+      "style-contemporary",
+      "profile-restorative"
+    ],
+    "recommendedClassLengthMinutes": 25,
+    "blocks": [
+      {
+        "id": "mind_body_calm-b-1",
+        "exerciseId": "spine_mobilization",
+        "exerciseName": "Spine Mobilization",
+        "durationSeconds": 80,
+        "transitionSeconds": 20,
+        "restSeconds": 25,
+        "notes": "Use as an opening warm-up and a closing cool-down. Segmental mobility reveals restrictions — note where movement stops and educate the client on finding that area.",
+        "section": "warmup"
+      },
+      {
+        "id": "mind_body_calm-b-2",
+        "exerciseId": "shoulder_rolls",
+        "exerciseName": "Shoulder Rolls",
+        "durationSeconds": 80,
+        "transitionSeconds": 20,
+        "restSeconds": 25,
+        "notes": "Use as an entry-point assessment for scapular mobility. Slow, bilateral rolls reveal asymmetry. Cue the breath on the down-phase to encourage parasympathetic response.",
+        "section": "warmup"
+      },
+      {
+        "id": "mind_body_calm-b-3",
+        "exerciseId": "rolling_like_a_ball",
+        "exerciseName": "Rolling Like a Ball",
+        "durationSeconds": 80,
+        "transitionSeconds": 20,
+        "restSeconds": 25,
+        "notes": "Use this as a spinal massage and proprioceptive reset. Beginners often unroll the shape mid-roll — cue them to hug the knees tight. Contraindicate for osteoporosis and recent spinal surgery.",
+        "section": "warmup"
+      },
+      {
+        "id": "mind_body_calm-b-4",
+        "exerciseId": "seal",
+        "exerciseName": "Seal",
+        "durationSeconds": 80,
+        "transitionSeconds": 20,
+        "restSeconds": 25,
+        "notes": "The inner-thigh adductor squeeze adds another layer to the rolling massage. Contraindicate for osteoporosis and recent spinal surgery.",
+        "section": "warmup"
+      },
+      {
+        "id": "mind_body_calm-b-5",
+        "exerciseId": "spine_stretch_forward",
+        "exerciseName": "Spine Stretch Forward",
+        "durationSeconds": 90,
+        "transitionSeconds": 20,
+        "restSeconds": 30,
+        "notes": "The goal is spinal length, not hamstring stretch. Cue clients to grow taller before reaching. Sit on a folded blanket if the pelvis tips backward.",
+        "section": "cooldown"
+      },
+      {
+        "id": "mind_body_calm-b-6",
+        "exerciseId": "mermaid",
+        "exerciseName": "Mermaid",
+        "durationSeconds": 90,
+        "transitionSeconds": 20,
+        "restSeconds": 30,
+        "notes": "Excellent lateral thoracic stretch. Whether on mat, chair, or box, the foundational cue is the same: grow before bending. Especially valuable for scoliosis work.",
+        "section": "cooldown"
+      },
+      {
+        "id": "mind_body_calm-b-7",
+        "exerciseId": "pelvic_curl",
+        "exerciseName": "Pelvic Curl",
+        "durationSeconds": 80,
+        "transitionSeconds": 20,
+        "restSeconds": 25,
+        "notes": "A foundational exercise for assessing spinal articulation. Watch for the client who rises as a block from T12 — this indicates thoracic rigidity. Cue sequentially.",
+        "section": "warmup"
+      },
+      {
+        "id": "mind_body_calm-b-8",
+        "exerciseId": "one_leg_circle",
+        "exerciseName": "One Leg Circle",
+        "durationSeconds": 85,
+        "transitionSeconds": 20,
+        "restSeconds": 25,
+        "notes": "The circle is small until stability is established. Cue the opposite inner thigh to stay active. Watch for external hip rotation loss at the bottom of the circle.",
+        "section": "core"
+      }
+    ],
+    "deliveryStyle": "contemporary",
+    "classProfile": "restorative"
+  },
+  {
+    "id": "neurological_movement",
+    "name": "Neurological Movement Flow",
+    "description": "A coordination and proprioception-focused program for MS, Parkinson's, and neurological conditions — using rhythmic, predictable sequences to support motor control.",
+    "goal": "Improve motor coordination and neuromuscular rhythm.",
+    "level": "beginner",
+    "accessLevel": "Pro",
+    "apparatus": "Mat",
+    "focusAreas": [
+      "Coordination",
+      "Proprioception",
+      "Rhythmic movement"
+    ],
+    "tags": [
+      "beginner",
+      "pro",
+      "coordination",
+      "proprioception",
+      "rhythmic-movement",
+      "style-contemporary",
+      "profile-rehab"
+    ],
+    "recommendedClassLengthMinutes": 20,
+    "blocks": [
+      {
+        "id": "neurological_movement-b-1",
+        "exerciseId": "rolling_like_a_ball",
+        "exerciseName": "Rolling Like a Ball",
+        "durationSeconds": 70,
+        "transitionSeconds": 20,
+        "restSeconds": 15,
+        "notes": "Use this as a spinal massage and proprioceptive reset. Beginners often unroll the shape mid-roll — cue them to hug the knees tight. Contraindicate for osteoporosis and recent spinal surgery.",
+        "section": "warmup"
+      },
+      {
+        "id": "neurological_movement-b-2",
+        "exerciseId": "pelvic_curl",
+        "exerciseName": "Pelvic Curl",
+        "durationSeconds": 70,
+        "transitionSeconds": 20,
+        "restSeconds": 15,
+        "notes": "A foundational exercise for assessing spinal articulation. Watch for the client who rises as a block from T12 — this indicates thoracic rigidity. Cue sequentially.",
+        "section": "warmup"
+      },
+      {
+        "id": "neurological_movement-b-3",
+        "exerciseId": "shoulder_bridge",
+        "exerciseName": "Shoulder Bridge",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "Build from Pelvic Curl first. The pelvis should be level and the glutes active without gripping. For knee issues, ensure the knees don't drift inward.",
+        "section": "core"
+      },
+      {
+        "id": "neurological_movement-b-4",
+        "exerciseId": "side_kick",
+        "exerciseName": "Side Kick",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "Stability of the underneath side is the real challenge. Cue the obliques on the supporting side to keep the waist lifted. Watch for internal hip rotation on the kick.",
+        "section": "core"
+      },
+      {
+        "id": "neurological_movement-b-5",
+        "exerciseId": "spine_stretch_forward",
+        "exerciseName": "Spine Stretch Forward",
+        "durationSeconds": 80,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "The goal is spinal length, not hamstring stretch. Cue clients to grow taller before reaching. Sit on a folded blanket if the pelvis tips backward.",
+        "section": "cooldown"
+      },
+      {
+        "id": "neurological_movement-b-6",
+        "exerciseId": "pilates_ring_squeeze",
+        "exerciseName": "Pilates Ring Squeeze",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "Versatile for inner thigh, outer hip, or arm activation. Particularly useful for pelvic floor connection — cue the client to link the pelvic floor with the squeeze.",
+        "section": "core"
+      },
+      {
+        "id": "neurological_movement-b-7",
+        "exerciseId": "shoulder_rolls",
+        "exerciseName": "Shoulder Rolls",
+        "durationSeconds": 70,
+        "transitionSeconds": 20,
+        "restSeconds": 15,
+        "notes": "Use as an entry-point assessment for scapular mobility. Slow, bilateral rolls reveal asymmetry. Cue the breath on the down-phase to encourage parasympathetic response.",
+        "section": "warmup"
+      },
+      {
+        "id": "neurological_movement-b-8",
+        "exerciseId": "single_leg_stretch",
+        "exerciseName": "Single Leg Stretch",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "A foundational abdominal exercise. Hands on shin guide, not pull. Cue the rib-to-hip connection on every leg switch. Keep head down for beginners.",
+        "section": "core"
+      }
+    ],
+    "deliveryStyle": "contemporary",
+    "classProfile": "rehab"
+  },
+  {
+    "id": "osteoporosis_safe_flow",
+    "name": "Osteoporosis-Safe Flow",
+    "description": "An extension-focused sequence that avoids loaded spinal flexion and rotation, building axial strength and posture with bone-friendly loading.",
+    "goal": "Strengthen posture and support bone density safely.",
+    "level": "beginner",
+    "accessLevel": "Pro",
+    "apparatus": "Mat",
+    "focusAreas": [
+      "Spinal extension",
+      "Bone loading",
+      "Posture"
+    ],
+    "tags": [
+      "beginner",
+      "pro",
+      "spinal-extension",
+      "bone-loading",
+      "posture",
+      "style-classical",
+      "profile-rehab"
+    ],
+    "recommendedClassLengthMinutes": 20,
+    "blocks": [
+      {
+        "id": "osteoporosis_safe_flow-b-1",
+        "exerciseId": "shoulder_rolls",
+        "exerciseName": "Shoulder Rolls",
+        "durationSeconds": 70,
+        "transitionSeconds": 20,
+        "restSeconds": 15,
+        "notes": "Use as an entry-point assessment for scapular mobility. Slow, bilateral rolls reveal asymmetry. Cue the breath on the down-phase to encourage parasympathetic response.",
+        "section": "warmup"
+      },
+      {
+        "id": "osteoporosis_safe_flow-b-2",
+        "exerciseId": "spine_mobilization",
+        "exerciseName": "Spine Mobilization",
+        "durationSeconds": 70,
+        "transitionSeconds": 20,
+        "restSeconds": 15,
+        "notes": "Use as an opening warm-up and a closing cool-down. Segmental mobility reveals restrictions — note where movement stops and educate the client on finding that area.",
+        "section": "warmup"
+      },
+      {
+        "id": "osteoporosis_safe_flow-b-3",
+        "exerciseId": "swan_prep",
+        "exerciseName": "Swan Prep",
+        "durationSeconds": 70,
+        "transitionSeconds": 20,
+        "restSeconds": 15,
+        "notes": "A crucial building block before Swan. Focus on thoracic extension and keep the elbows soft. Watch for cervical hyperextension in clients with neck issues.",
+        "section": "warmup"
+      },
+      {
+        "id": "osteoporosis_safe_flow-b-4",
+        "exerciseId": "swimming",
+        "exerciseName": "Swimming",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "The head is a continuation of the spine — cue the gaze forward and slightly down. Progressives can add the breath in sets of 5. For tight hip flexors, a small range is fine.",
+        "section": "core"
+      },
+      {
+        "id": "osteoporosis_safe_flow-b-5",
+        "exerciseId": "shoulder_bridge",
+        "exerciseName": "Shoulder Bridge",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "Build from Pelvic Curl first. The pelvis should be level and the glutes active without gripping. For knee issues, ensure the knees don't drift inward.",
+        "section": "core"
+      },
+      {
+        "id": "osteoporosis_safe_flow-b-6",
+        "exerciseId": "side_kick",
+        "exerciseName": "Side Kick",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "Stability of the underneath side is the real challenge. Cue the obliques on the supporting side to keep the waist lifted. Watch for internal hip rotation on the kick.",
+        "section": "core"
+      },
+      {
+        "id": "osteoporosis_safe_flow-b-7",
+        "exerciseId": "footwork",
+        "exerciseName": "Footwork",
+        "durationSeconds": 70,
+        "transitionSeconds": 20,
+        "restSeconds": 15,
+        "notes": "Footwork is the foundation of Reformer work and an assessment of lower limb alignment. Check that the client's feet are parallel or externally rotated consistently. Adjust spring weight to match ability.",
+        "section": "warmup"
+      },
+      {
+        "id": "osteoporosis_safe_flow-b-8",
+        "exerciseId": "band_arm_series",
+        "exerciseName": "Resistance Band Arm Series",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "A versatile resistance band series that replicates Cadillac arm spring patterns without the apparatus. Excellent travel or home practice option. Adjust band tension with grip width.",
+        "section": "core"
+      },
+      {
+        "id": "osteoporosis_safe_flow-b-9",
+        "exerciseId": "leg_springs",
+        "exerciseName": "Leg Springs",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "Supine leg spring work targets hip flexors, abductors, and extensors in isolation. Especially useful for post-surgical rehab. Multiple patterns available — teach each separately.",
+        "section": "core"
+      }
+    ],
+    "deliveryStyle": "classical",
+    "classProfile": "rehab"
+  },
+  {
+    "id": "pelvic_floor_foundations",
+    "name": "Pelvic Floor Foundations",
+    "description": "A pressure-management program for pelvic floor dysfunction, diastasis recti, hernia, and incontinence — building deep core reconnection without excessive intra-abdominal load.",
+    "goal": "Reconnect deep core and pelvic floor with load management.",
+    "level": "beginner",
+    "accessLevel": "Pro",
+    "apparatus": "Mat",
+    "focusAreas": [
+      "Pelvic floor",
+      "Deep core",
+      "Pressure management"
+    ],
+    "tags": [
+      "beginner",
+      "pro",
+      "pelvic-floor",
+      "deep-core",
+      "pressure-management",
+      "style-contemporary",
+      "profile-rehab"
+    ],
+    "recommendedClassLengthMinutes": 20,
+    "blocks": [
+      {
+        "id": "pelvic_floor_foundations-b-1",
+        "exerciseId": "pelvic_curl",
+        "exerciseName": "Pelvic Curl",
+        "durationSeconds": 70,
+        "transitionSeconds": 20,
+        "restSeconds": 15,
+        "notes": "A foundational exercise for assessing spinal articulation. Watch for the client who rises as a block from T12 — this indicates thoracic rigidity. Cue sequentially.",
+        "section": "warmup"
+      },
+      {
+        "id": "pelvic_floor_foundations-b-2",
+        "exerciseId": "shoulder_bridge",
+        "exerciseName": "Shoulder Bridge",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "Build from Pelvic Curl first. The pelvis should be level and the glutes active without gripping. For knee issues, ensure the knees don't drift inward.",
+        "section": "core"
+      },
+      {
+        "id": "pelvic_floor_foundations-b-3",
+        "exerciseId": "single_leg_stretch",
+        "exerciseName": "Single Leg Stretch",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "A foundational abdominal exercise. Hands on shin guide, not pull. Cue the rib-to-hip connection on every leg switch. Keep head down for beginners.",
+        "section": "core"
+      },
+      {
+        "id": "pelvic_floor_foundations-b-4",
+        "exerciseId": "pilates_ring_squeeze",
+        "exerciseName": "Pilates Ring Squeeze",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "Versatile for inner thigh, outer hip, or arm activation. Particularly useful for pelvic floor connection — cue the client to link the pelvic floor with the squeeze.",
+        "section": "core"
+      },
+      {
+        "id": "pelvic_floor_foundations-b-5",
+        "exerciseId": "seal",
+        "exerciseName": "Seal",
+        "durationSeconds": 70,
+        "transitionSeconds": 20,
+        "restSeconds": 15,
+        "notes": "The inner-thigh adductor squeeze adds another layer to the rolling massage. Contraindicate for osteoporosis and recent spinal surgery.",
+        "section": "warmup"
+      },
+      {
+        "id": "pelvic_floor_foundations-b-6",
+        "exerciseId": "spine_stretch_forward",
+        "exerciseName": "Spine Stretch Forward",
+        "durationSeconds": 80,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "The goal is spinal length, not hamstring stretch. Cue clients to grow taller before reaching. Sit on a folded blanket if the pelvis tips backward.",
+        "section": "cooldown"
+      },
+      {
+        "id": "pelvic_floor_foundations-b-7",
+        "exerciseId": "rolling_like_a_ball",
+        "exerciseName": "Rolling Like a Ball",
+        "durationSeconds": 70,
+        "transitionSeconds": 20,
+        "restSeconds": 15,
+        "notes": "Use this as a spinal massage and proprioceptive reset. Beginners often unroll the shape mid-roll — cue them to hug the knees tight. Contraindicate for osteoporosis and recent spinal surgery.",
+        "section": "warmup"
+      }
+    ],
+    "deliveryStyle": "contemporary",
+    "classProfile": "rehab"
+  },
+  {
+    "id": "postpartum_recovery_flow",
+    "name": "Postpartum Recovery Flow",
+    "description": "A gentle Pilates sequence designed to support postpartum core rebuilding, pelvic floor awareness, and gradual abdominal return.",
+    "goal": "Rebuild core support and pelvic stability after pregnancy.",
+    "level": "beginner",
+    "accessLevel": "Pro",
+    "apparatus": "Mat",
+    "focusAreas": [
+      "Postpartum",
+      "Pelvic floor",
+      "Core rebuilding"
+    ],
+    "tags": [
+      "beginner",
+      "pro",
+      "postpartum",
+      "pelvic-floor",
+      "core-rebuilding",
+      "style-contemporary",
+      "profile-rehab"
+    ],
+    "recommendedClassLengthMinutes": 20,
+    "blocks": [
+      {
+        "id": "postpartum_recovery_flow-b-1",
+        "exerciseId": "pelvic_curl",
+        "exerciseName": "Pelvic Curl",
+        "durationSeconds": 70,
+        "transitionSeconds": 20,
+        "restSeconds": 15,
+        "notes": "A foundational exercise for assessing spinal articulation. Watch for the client who rises as a block from T12 — this indicates thoracic rigidity. Cue sequentially.",
+        "section": "warmup"
+      },
+      {
+        "id": "postpartum_recovery_flow-b-2",
+        "exerciseId": "shoulder_bridge",
+        "exerciseName": "Shoulder Bridge",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "Build from Pelvic Curl first. The pelvis should be level and the glutes active without gripping. For knee issues, ensure the knees don't drift inward.",
+        "section": "core"
+      },
+      {
+        "id": "postpartum_recovery_flow-b-3",
+        "exerciseId": "mermaid",
+        "exerciseName": "Mermaid",
+        "durationSeconds": 80,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "Excellent lateral thoracic stretch. Whether on mat, chair, or box, the foundational cue is the same: grow before bending. Especially valuable for scoliosis work.",
+        "section": "cooldown"
+      },
+      {
+        "id": "postpartum_recovery_flow-b-4",
+        "exerciseId": "single_leg_stretch",
+        "exerciseName": "Single Leg Stretch",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "A foundational abdominal exercise. Hands on shin guide, not pull. Cue the rib-to-hip connection on every leg switch. Keep head down for beginners.",
+        "section": "core"
+      },
+      {
+        "id": "postpartum_recovery_flow-b-5",
+        "exerciseId": "pilates_ring_squeeze",
+        "exerciseName": "Pilates Ring Squeeze",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "Versatile for inner thigh, outer hip, or arm activation. Particularly useful for pelvic floor connection — cue the client to link the pelvic floor with the squeeze.",
+        "section": "core"
+      }
+    ],
+    "deliveryStyle": "contemporary",
+    "classProfile": "rehab"
+  },
+  {
+    "id": "prenatal_mobility_flow",
+    "name": "Prenatal Mobility Flow",
+    "description": "A pregnancy-safe Pilates flow that supports the changing body with gentle spinal mobility and lateral openness.",
+    "goal": "Maintain mobility and core support during pregnancy.",
+    "level": "beginner",
+    "accessLevel": "Pro",
+    "apparatus": "Mat",
+    "focusAreas": [
+      "Prenatal",
+      "Mobility",
+      "Pelvic stability"
+    ],
+    "tags": [
+      "beginner",
+      "pro",
+      "prenatal",
+      "mobility",
+      "pelvic-stability",
+      "style-contemporary",
+      "profile-rehab"
+    ],
+    "recommendedClassLengthMinutes": 20,
+    "blocks": [
+      {
+        "id": "prenatal_mobility_flow-b-1",
+        "exerciseId": "mermaid",
+        "exerciseName": "Mermaid",
+        "durationSeconds": 80,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "Excellent lateral thoracic stretch. Whether on mat, chair, or box, the foundational cue is the same: grow before bending. Especially valuable for scoliosis work.",
+        "section": "cooldown"
+      },
+      {
+        "id": "prenatal_mobility_flow-b-2",
+        "exerciseId": "shoulder_bridge",
+        "exerciseName": "Shoulder Bridge",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "Build from Pelvic Curl first. The pelvis should be level and the glutes active without gripping. For knee issues, ensure the knees don't drift inward.",
+        "section": "core"
+      },
+      {
+        "id": "prenatal_mobility_flow-b-3",
+        "exerciseId": "pelvic_curl",
+        "exerciseName": "Pelvic Curl",
+        "durationSeconds": 70,
+        "transitionSeconds": 20,
+        "restSeconds": 15,
+        "notes": "A foundational exercise for assessing spinal articulation. Watch for the client who rises as a block from T12 — this indicates thoracic rigidity. Cue sequentially.",
+        "section": "warmup"
+      },
+      {
+        "id": "prenatal_mobility_flow-b-4",
+        "exerciseId": "leg_pull_back",
+        "exerciseName": "Leg Pull Back",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "The reverse plank demands wrist extension tolerance. For sensitive wrists, use fingertips forward or forearm variation. Cue the hips up before the kick.",
+        "section": "core"
+      },
+      {
+        "id": "prenatal_mobility_flow-b-5",
+        "exerciseId": "spine_stretch_forward",
+        "exerciseName": "Spine Stretch Forward",
+        "durationSeconds": 80,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "The goal is spinal length, not hamstring stretch. Cue clients to grow taller before reaching. Sit on a folded blanket if the pelvis tips backward.",
+        "section": "cooldown"
+      }
+    ],
+    "deliveryStyle": "contemporary",
+    "classProfile": "rehab"
+  },
+  {
+    "id": "reformer_strength_flow",
+    "name": "Reformer Strength Flow",
+    "description": "An apparatus-based routine that develops lower-body control, carriage coordination, and spinal support.",
+    "goal": "Build Reformer strength and control.",
+    "level": "intermediate",
+    "accessLevel": "Pro",
+    "apparatus": "Reformer",
+    "focusAreas": [
+      "Reformer",
+      "Leg strength",
+      "Spinal support"
+    ],
+    "tags": [
+      "intermediate",
+      "pro",
+      "reformer",
+      "leg-strength",
+      "spinal-support",
+      "style-classical",
+      "profile-strength"
+    ],
+    "recommendedClassLengthMinutes": 20,
+    "blocks": [
+      {
+        "id": "reformer_strength_flow-b-1",
+        "exerciseId": "footwork",
+        "exerciseName": "Footwork",
+        "durationSeconds": 60,
+        "transitionSeconds": 15,
+        "restSeconds": 10,
+        "notes": "Footwork is the foundation of Reformer work and an assessment of lower limb alignment. Check that the client's feet are parallel or externally rotated consistently. Adjust spring weight to match ability.",
+        "section": "warmup"
+      },
+      {
+        "id": "reformer_strength_flow-b-2",
+        "exerciseId": "elephant",
+        "exerciseName": "Elephant",
+        "durationSeconds": 85,
+        "transitionSeconds": 15,
+        "restSeconds": 12,
+        "notes": "A standing spinal stretch and hamstring mobilizer. The movement originates from the hips folding, not the back rounding. Cue the sit bones reaching back and up.",
+        "section": "core"
+      },
+      {
+        "id": "reformer_strength_flow-b-3",
+        "exerciseId": "long_box_series",
+        "exerciseName": "Long Box Series",
+        "durationSeconds": 85,
+        "transitionSeconds": 15,
+        "restSeconds": 12,
+        "notes": "Includes pulling straps and T-shape variations. Build thoracic extensor strength gradually. Contraindicate for active rotator cuff injury at high resistance.",
+        "section": "core"
+      },
+      {
+        "id": "reformer_strength_flow-b-4",
+        "exerciseId": "short_spine_massage",
+        "exerciseName": "Short Spine Massage",
+        "durationSeconds": 85,
+        "transitionSeconds": 15,
+        "restSeconds": 12,
+        "notes": "One of the most therapeutic Reformer exercises for spinal articulation and traction. The inversion is contraindicated for osteoporosis, pregnancy, and hypertension. Cue the peel-down to be slow and sequential.",
+        "section": "core"
+      }
+    ],
+    "deliveryStyle": "classical",
+    "classProfile": "strength"
+  },
+  {
+    "id": "respiratory_breath_flow",
+    "name": "Respiratory & Breath Flow",
+    "description": "A diaphragmatic breathing and ribcage expansion program to improve thoracic mobility and breathing mechanics in respiratory and pulmonary conditions.",
+    "goal": "Expand breathing capacity and thoracic mobility.",
+    "level": "beginner",
+    "accessLevel": "Pro",
+    "apparatus": "Mat",
+    "focusAreas": [
+      "Diaphragmatic breathing",
+      "Rib expansion",
+      "Postural opening"
+    ],
+    "tags": [
+      "beginner",
+      "pro",
+      "diaphragmatic-breathing",
+      "rib-expansion",
+      "postural-opening",
+      "style-classical",
+      "profile-mobility"
+    ],
+    "recommendedClassLengthMinutes": 20,
+    "blocks": [
+      {
+        "id": "respiratory_breath_flow-b-1",
+        "exerciseId": "spine_mobilization",
+        "exerciseName": "Spine Mobilization",
+        "durationSeconds": 70,
+        "transitionSeconds": 15,
+        "restSeconds": 15,
+        "notes": "Use as an opening warm-up and a closing cool-down. Segmental mobility reveals restrictions — note where movement stops and educate the client on finding that area.",
+        "section": "warmup"
+      },
+      {
+        "id": "respiratory_breath_flow-b-2",
+        "exerciseId": "seated_side_bend",
+        "exerciseName": "Seated Side Bend",
+        "durationSeconds": 80,
+        "transitionSeconds": 15,
+        "restSeconds": 20,
+        "notes": "Excellent for assessing lateral thoracic mobility. Watch for one side having significantly more range — address this with extra reps on the tight side. Sit on a block if the pelvis tips.",
+        "section": "cooldown"
+      },
+      {
+        "id": "respiratory_breath_flow-b-3",
+        "exerciseId": "shoulder_rolls",
+        "exerciseName": "Shoulder Rolls",
+        "durationSeconds": 70,
+        "transitionSeconds": 15,
+        "restSeconds": 15,
+        "notes": "Use as an entry-point assessment for scapular mobility. Slow, bilateral rolls reveal asymmetry. Cue the breath on the down-phase to encourage parasympathetic response.",
+        "section": "warmup"
+      },
+      {
+        "id": "respiratory_breath_flow-b-4",
+        "exerciseId": "mermaid",
+        "exerciseName": "Mermaid",
+        "durationSeconds": 80,
+        "transitionSeconds": 15,
+        "restSeconds": 20,
+        "notes": "Excellent lateral thoracic stretch. Whether on mat, chair, or box, the foundational cue is the same: grow before bending. Especially valuable for scoliosis work.",
+        "section": "cooldown"
+      },
+      {
+        "id": "respiratory_breath_flow-b-5",
+        "exerciseId": "spine_stretch_forward",
+        "exerciseName": "Spine Stretch Forward",
+        "durationSeconds": 80,
+        "transitionSeconds": 15,
+        "restSeconds": 20,
+        "notes": "The goal is spinal length, not hamstring stretch. Cue clients to grow taller before reaching. Sit on a folded blanket if the pelvis tips backward.",
+        "section": "cooldown"
+      },
+      {
+        "id": "respiratory_breath_flow-b-6",
+        "exerciseId": "swan_prep",
+        "exerciseName": "Swan Prep",
+        "durationSeconds": 70,
+        "transitionSeconds": 15,
+        "restSeconds": 15,
+        "notes": "A crucial building block before Swan. Focus on thoracic extension and keep the elbows soft. Watch for cervical hyperextension in clients with neck issues.",
+        "section": "warmup"
+      },
+      {
+        "id": "respiratory_breath_flow-b-7",
+        "exerciseId": "band_arm_series",
+        "exerciseName": "Resistance Band Arm Series",
+        "durationSeconds": 75,
+        "transitionSeconds": 15,
+        "restSeconds": 15,
+        "notes": "A versatile resistance band series that replicates Cadillac arm spring patterns without the apparatus. Excellent travel or home practice option. Adjust band tension with grip width.",
+        "section": "core"
+      },
+      {
+        "id": "respiratory_breath_flow-b-8",
+        "exerciseId": "the_hundred",
+        "exerciseName": "The Hundred",
+        "durationSeconds": 70,
+        "transitionSeconds": 15,
+        "restSeconds": 15,
+        "notes": "Watch for rib-popping on the inhale and premature shoulder tension. Keep beginners head-down and progress to head-float only once the pelvis is truly stable.",
+        "section": "warmup"
+      }
+    ],
+    "deliveryStyle": "classical",
+    "classProfile": "mobility"
+  },
+  {
+    "id": "rotator_cuff_shoulder",
+    "name": "Rotator Cuff & Shoulder Rehab",
+    "description": "A scapular-first shoulder rehabilitation sequence targeting rotator cuff activation, pendular range of motion, and progressive loading for frozen shoulder, impingement, and AC sprains.",
+    "goal": "Restore rotator cuff strength and pain-free shoulder range.",
+    "level": "beginner",
+    "accessLevel": "Pro",
+    "apparatus": "Mat",
+    "focusAreas": [
+      "Rotator cuff",
+      "Scapular stability",
+      "Shoulder range"
+    ],
+    "tags": [
+      "beginner",
+      "pro",
+      "rotator-cuff",
+      "scapular-stability",
+      "shoulder-range",
+      "style-contemporary",
+      "profile-rehab"
+    ],
+    "recommendedClassLengthMinutes": 20,
+    "blocks": [
+      {
+        "id": "rotator_cuff_shoulder-b-1",
+        "exerciseId": "shoulder_rolls",
+        "exerciseName": "Shoulder Rolls",
+        "durationSeconds": 70,
+        "transitionSeconds": 20,
+        "restSeconds": 15,
+        "notes": "Use as an entry-point assessment for scapular mobility. Slow, bilateral rolls reveal asymmetry. Cue the breath on the down-phase to encourage parasympathetic response.",
+        "section": "warmup"
+      },
+      {
+        "id": "rotator_cuff_shoulder-b-2",
+        "exerciseId": "arm_springs",
+        "exerciseName": "Arm Springs",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "Multiple positions available: supine, seated, kneeling, standing. Start supine to establish scapular connection before progressing to upright. Excellent for rotator cuff activation.",
+        "section": "core"
+      },
+      {
+        "id": "rotator_cuff_shoulder-b-3",
+        "exerciseId": "band_arm_series",
+        "exerciseName": "Resistance Band Arm Series",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "A versatile resistance band series that replicates Cadillac arm spring patterns without the apparatus. Excellent travel or home practice option. Adjust band tension with grip width.",
+        "section": "core"
+      },
+      {
+        "id": "rotator_cuff_shoulder-b-4",
+        "exerciseId": "pilates_ring_squeeze",
+        "exerciseName": "Pilates Ring Squeeze",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "Versatile for inner thigh, outer hip, or arm activation. Particularly useful for pelvic floor connection — cue the client to link the pelvic floor with the squeeze.",
+        "section": "core"
+      },
+      {
+        "id": "rotator_cuff_shoulder-b-5",
+        "exerciseId": "breaststroke",
+        "exerciseName": "Breaststroke",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "An advanced back extension. Ensure adequate thoracic extension from Swan Prep first. The breath timing — inhale up, exhale circle down — is key to rhythm.",
+        "section": "core"
+      },
+      {
+        "id": "rotator_cuff_shoulder-b-6",
+        "exerciseId": "swan_prep",
+        "exerciseName": "Swan Prep",
+        "durationSeconds": 70,
+        "transitionSeconds": 20,
+        "restSeconds": 15,
+        "notes": "A crucial building block before Swan. Focus on thoracic extension and keep the elbows soft. Watch for cervical hyperextension in clients with neck issues.",
+        "section": "warmup"
+      },
+      {
+        "id": "rotator_cuff_shoulder-b-7",
+        "exerciseId": "pulling_straps",
+        "exerciseName": "Pulling Straps",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "A prone back extension with arm resistance. Contraindicate for active rotator cuff issues at high tension. Progress gradually as thoracic extensor strength builds.",
+        "section": "core"
+      },
+      {
+        "id": "rotator_cuff_shoulder-b-8",
+        "exerciseId": "spine_mobilization",
+        "exerciseName": "Spine Mobilization",
+        "durationSeconds": 70,
+        "transitionSeconds": 20,
+        "restSeconds": 15,
+        "notes": "Use as an opening warm-up and a closing cool-down. Segmental mobility reveals restrictions — note where movement stops and educate the client on finding that area.",
+        "section": "warmup"
+      }
+    ],
+    "deliveryStyle": "contemporary",
+    "classProfile": "rehab"
+  },
+  {
+    "id": "restorative_immune",
+    "name": "Restorative Immune Support",
+    "description": "A gentle, energy-conserving program for chronic fatigue, autoimmune conditions, oncology treatment, and immunosuppression — honouring capacity limits with restorative movement.",
+    "goal": "Support recovery and energy with gentle restorative movement.",
+    "level": "beginner",
+    "accessLevel": "Pro",
+    "apparatus": "Mat",
+    "focusAreas": [
+      "Restorative movement",
+      "Energy conservation",
+      "Immune support"
+    ],
+    "tags": [
+      "beginner",
+      "pro",
+      "restorative-movement",
+      "energy-conservation",
+      "immune-support",
+      "style-contemporary",
+      "profile-restorative"
+    ],
+    "recommendedClassLengthMinutes": 25,
+    "blocks": [
+      {
+        "id": "restorative_immune-b-1",
+        "exerciseId": "spine_mobilization",
+        "exerciseName": "Spine Mobilization",
+        "durationSeconds": 80,
+        "transitionSeconds": 20,
+        "restSeconds": 25,
+        "notes": "Use as an opening warm-up and a closing cool-down. Segmental mobility reveals restrictions — note where movement stops and educate the client on finding that area.",
+        "section": "warmup"
+      },
+      {
+        "id": "restorative_immune-b-2",
+        "exerciseId": "shoulder_rolls",
+        "exerciseName": "Shoulder Rolls",
+        "durationSeconds": 80,
+        "transitionSeconds": 20,
+        "restSeconds": 25,
+        "notes": "Use as an entry-point assessment for scapular mobility. Slow, bilateral rolls reveal asymmetry. Cue the breath on the down-phase to encourage parasympathetic response.",
+        "section": "warmup"
+      },
+      {
+        "id": "restorative_immune-b-3",
+        "exerciseId": "rolling_like_a_ball",
+        "exerciseName": "Rolling Like a Ball",
+        "durationSeconds": 80,
+        "transitionSeconds": 20,
+        "restSeconds": 25,
+        "notes": "Use this as a spinal massage and proprioceptive reset. Beginners often unroll the shape mid-roll — cue them to hug the knees tight. Contraindicate for osteoporosis and recent spinal surgery.",
+        "section": "warmup"
+      },
+      {
+        "id": "restorative_immune-b-4",
+        "exerciseId": "pelvic_curl",
+        "exerciseName": "Pelvic Curl",
+        "durationSeconds": 80,
+        "transitionSeconds": 20,
+        "restSeconds": 25,
+        "notes": "A foundational exercise for assessing spinal articulation. Watch for the client who rises as a block from T12 — this indicates thoracic rigidity. Cue sequentially.",
+        "section": "warmup"
+      },
+      {
+        "id": "restorative_immune-b-5",
+        "exerciseId": "spine_stretch_forward",
+        "exerciseName": "Spine Stretch Forward",
+        "durationSeconds": 90,
+        "transitionSeconds": 20,
+        "restSeconds": 30,
+        "notes": "The goal is spinal length, not hamstring stretch. Cue clients to grow taller before reaching. Sit on a folded blanket if the pelvis tips backward.",
+        "section": "cooldown"
+      },
+      {
+        "id": "restorative_immune-b-6",
+        "exerciseId": "seal",
+        "exerciseName": "Seal",
+        "durationSeconds": 80,
+        "transitionSeconds": 20,
+        "restSeconds": 25,
+        "notes": "The inner-thigh adductor squeeze adds another layer to the rolling massage. Contraindicate for osteoporosis and recent spinal surgery.",
+        "section": "warmup"
+      },
+      {
+        "id": "restorative_immune-b-7",
+        "exerciseId": "mermaid",
+        "exerciseName": "Mermaid",
+        "durationSeconds": 90,
+        "transitionSeconds": 20,
+        "restSeconds": 30,
+        "notes": "Excellent lateral thoracic stretch. Whether on mat, chair, or box, the foundational cue is the same: grow before bending. Especially valuable for scoliosis work.",
+        "section": "cooldown"
+      }
+    ],
+    "deliveryStyle": "contemporary",
+    "classProfile": "restorative"
+  },
+  {
+    "id": "sacroiliac_stability",
+    "name": "Sacroiliac Stability",
+    "description": "A pelvic stability program targeting symmetric hip loading, SIJ compression control, and deep lumbopelvic muscle recruitment.",
+    "goal": "Stabilise the sacroiliac joint and pelvic girdle.",
+    "level": "beginner",
+    "accessLevel": "Pro",
+    "apparatus": "Mat",
+    "focusAreas": [
+      "Pelvic stability",
+      "Hip alignment",
+      "Core control"
+    ],
+    "tags": [
+      "beginner",
+      "pro",
+      "pelvic-stability",
+      "hip-alignment",
+      "core-control",
+      "style-classical",
+      "profile-mobility"
+    ],
+    "recommendedClassLengthMinutes": 20,
+    "blocks": [
+      {
+        "id": "sacroiliac_stability-b-1",
+        "exerciseId": "pelvic_curl",
+        "exerciseName": "Pelvic Curl",
+        "durationSeconds": 70,
+        "transitionSeconds": 15,
+        "restSeconds": 15,
+        "notes": "A foundational exercise for assessing spinal articulation. Watch for the client who rises as a block from T12 — this indicates thoracic rigidity. Cue sequentially.",
+        "section": "warmup"
+      },
+      {
+        "id": "sacroiliac_stability-b-2",
+        "exerciseId": "shoulder_bridge",
+        "exerciseName": "Shoulder Bridge",
+        "durationSeconds": 75,
+        "transitionSeconds": 15,
+        "restSeconds": 15,
+        "notes": "Build from Pelvic Curl first. The pelvis should be level and the glutes active without gripping. For knee issues, ensure the knees don't drift inward.",
+        "section": "core"
+      },
+      {
+        "id": "sacroiliac_stability-b-3",
+        "exerciseId": "single_leg_stretch",
+        "exerciseName": "Single Leg Stretch",
+        "durationSeconds": 75,
+        "transitionSeconds": 15,
+        "restSeconds": 15,
+        "notes": "A foundational abdominal exercise. Hands on shin guide, not pull. Cue the rib-to-hip connection on every leg switch. Keep head down for beginners.",
+        "section": "core"
+      },
+      {
+        "id": "sacroiliac_stability-b-4",
+        "exerciseId": "pilates_ring_squeeze",
+        "exerciseName": "Pilates Ring Squeeze",
+        "durationSeconds": 75,
+        "transitionSeconds": 15,
+        "restSeconds": 15,
+        "notes": "Versatile for inner thigh, outer hip, or arm activation. Particularly useful for pelvic floor connection — cue the client to link the pelvic floor with the squeeze.",
+        "section": "core"
+      },
+      {
+        "id": "sacroiliac_stability-b-5",
+        "exerciseId": "footwork",
+        "exerciseName": "Footwork",
+        "durationSeconds": 70,
+        "transitionSeconds": 15,
+        "restSeconds": 15,
+        "notes": "Footwork is the foundation of Reformer work and an assessment of lower limb alignment. Check that the client's feet are parallel or externally rotated consistently. Adjust spring weight to match ability.",
+        "section": "warmup"
+      },
+      {
+        "id": "sacroiliac_stability-b-6",
+        "exerciseId": "knee_stretch",
+        "exerciseName": "Knee Stretch",
+        "durationSeconds": 75,
+        "transitionSeconds": 15,
+        "restSeconds": 15,
+        "notes": "This is both a hip flexor stretch and a core challenge. The neutral spine version tests stability; the rounded version is a spine mobilizer. Distinguish clearly for the client.",
+        "section": "core"
+      },
+      {
+        "id": "sacroiliac_stability-b-7",
+        "exerciseId": "rolling_like_a_ball",
+        "exerciseName": "Rolling Like a Ball",
+        "durationSeconds": 75,
+        "transitionSeconds": 15,
+        "restSeconds": 15,
+        "notes": "Use this as a spinal massage and proprioceptive reset. Beginners often unroll the shape mid-roll — cue them to hug the knees tight. Contraindicate for osteoporosis and recent spinal surgery.",
+        "section": "core"
+      }
+    ],
+    "deliveryStyle": "classical",
+    "classProfile": "mobility"
+  },
+  {
+    "id": "scoliosis_balance",
+    "name": "Scoliosis Balance Flow",
+    "description": "A laterally balanced session using derotational cues, lateral breathing, and symmetry-focused movement to support the scoliotic spine.",
+    "goal": "Balance lateral asymmetry and improve spinal awareness.",
+    "level": "intermediate",
+    "accessLevel": "Pro",
+    "apparatus": "Mat",
+    "focusAreas": [
+      "Spinal balance",
+      "Lateral breathing",
+      "Derotation"
+    ],
+    "tags": [
+      "intermediate",
+      "pro",
+      "spinal-balance",
+      "lateral-breathing",
+      "derotation",
+      "style-contemporary",
+      "profile-mobility"
+    ],
+    "recommendedClassLengthMinutes": 20,
+    "blocks": [
+      {
+        "id": "scoliosis_balance-b-1",
+        "exerciseId": "spine_mobilization",
+        "exerciseName": "Spine Mobilization",
+        "durationSeconds": 70,
+        "transitionSeconds": 15,
+        "restSeconds": 15,
+        "notes": "Use as an opening warm-up and a closing cool-down. Segmental mobility reveals restrictions — note where movement stops and educate the client on finding that area.",
+        "section": "warmup"
+      },
+      {
+        "id": "scoliosis_balance-b-2",
+        "exerciseId": "mermaid",
+        "exerciseName": "Mermaid",
+        "durationSeconds": 80,
+        "transitionSeconds": 15,
+        "restSeconds": 20,
+        "notes": "Excellent lateral thoracic stretch. Whether on mat, chair, or box, the foundational cue is the same: grow before bending. Especially valuable for scoliosis work.",
+        "section": "cooldown"
+      },
+      {
+        "id": "scoliosis_balance-b-3",
+        "exerciseId": "spine_twist",
+        "exerciseName": "Spine Twist",
+        "durationSeconds": 75,
+        "transitionSeconds": 15,
+        "restSeconds": 15,
+        "notes": "Cue two distinct breath-pulses on the exhale to deepen the rotation. Watch for clients who hinge at the hip rather than rotate at the thoracic spine.",
+        "section": "core"
+      },
+      {
+        "id": "scoliosis_balance-b-4",
+        "exerciseId": "shoulder_bridge",
+        "exerciseName": "Shoulder Bridge",
+        "durationSeconds": 75,
+        "transitionSeconds": 15,
+        "restSeconds": 15,
+        "notes": "Build from Pelvic Curl first. The pelvis should be level and the glutes active without gripping. For knee issues, ensure the knees don't drift inward.",
+        "section": "core"
+      },
+      {
+        "id": "scoliosis_balance-b-5",
+        "exerciseId": "side_kick_series",
+        "exerciseName": "Side Kick Series",
+        "durationSeconds": 75,
+        "transitionSeconds": 15,
+        "restSeconds": 15,
+        "notes": "Each series variation tests a different hip plane. Teach each separately before flowing. Cue the client to breathe continuously and watch for fatigue-driven pelvic rolling.",
+        "section": "core"
+      },
+      {
+        "id": "scoliosis_balance-b-6",
+        "exerciseId": "seated_side_bend",
+        "exerciseName": "Seated Side Bend",
+        "durationSeconds": 80,
+        "transitionSeconds": 15,
+        "restSeconds": 20,
+        "notes": "Excellent for assessing lateral thoracic mobility. Watch for one side having significantly more range — address this with extra reps on the tight side. Sit on a block if the pelvis tips.",
+        "section": "cooldown"
+      },
+      {
+        "id": "scoliosis_balance-b-7",
+        "exerciseId": "foam_roller_series",
+        "exerciseName": "Foam Roller Series",
+        "durationSeconds": 80,
+        "transitionSeconds": 15,
+        "restSeconds": 20,
+        "notes": "Myofascial release and spinal stability challenge. Lying along the roller requires significant balance. Teach supine placement first before adding arm or leg movements.",
+        "section": "cooldown"
+      },
+      {
+        "id": "scoliosis_balance-b-8",
+        "exerciseId": "pilates_ring_squeeze",
+        "exerciseName": "Pilates Ring Squeeze",
+        "durationSeconds": 75,
+        "transitionSeconds": 15,
+        "restSeconds": 15,
+        "notes": "Versatile for inner thigh, outer hip, or arm activation. Particularly useful for pelvic floor connection — cue the client to link the pelvic floor with the squeeze.",
+        "section": "core"
+      }
+    ],
+    "deliveryStyle": "contemporary",
+    "classProfile": "mobility"
+  },
+  {
+    "id": "sensory_adapted_flow",
+    "name": "Sensory-Adapted Flow",
+    "description": "A proprioceptively-rich, predictable Pilates sequence designed for vision and hearing impairment — using spatial consistency, tactile cueing, and safe orientation.",
+    "goal": "Move safely and confidently with sensory impairment.",
+    "level": "beginner",
+    "accessLevel": "Pro",
+    "apparatus": "Mat",
+    "focusAreas": [
+      "Proprioceptive safety",
+      "Predictable sequence",
+      "Sensory adaptation"
+    ],
+    "tags": [
+      "beginner",
+      "pro",
+      "proprioceptive-safety",
+      "predictable-sequence",
+      "sensory-adaptation",
+      "style-contemporary",
+      "profile-rehab"
+    ],
+    "recommendedClassLengthMinutes": 20,
+    "blocks": [
+      {
+        "id": "sensory_adapted_flow-b-1",
+        "exerciseId": "pelvic_curl",
+        "exerciseName": "Pelvic Curl",
+        "durationSeconds": 70,
+        "transitionSeconds": 20,
+        "restSeconds": 15,
+        "notes": "A foundational exercise for assessing spinal articulation. Watch for the client who rises as a block from T12 — this indicates thoracic rigidity. Cue sequentially.",
+        "section": "warmup"
+      },
+      {
+        "id": "sensory_adapted_flow-b-2",
+        "exerciseId": "shoulder_bridge",
+        "exerciseName": "Shoulder Bridge",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "Build from Pelvic Curl first. The pelvis should be level and the glutes active without gripping. For knee issues, ensure the knees don't drift inward.",
+        "section": "core"
+      },
+      {
+        "id": "sensory_adapted_flow-b-3",
+        "exerciseId": "rolling_like_a_ball",
+        "exerciseName": "Rolling Like a Ball",
+        "durationSeconds": 70,
+        "transitionSeconds": 20,
+        "restSeconds": 15,
+        "notes": "Use this as a spinal massage and proprioceptive reset. Beginners often unroll the shape mid-roll — cue them to hug the knees tight. Contraindicate for osteoporosis and recent spinal surgery.",
+        "section": "warmup"
+      },
+      {
+        "id": "sensory_adapted_flow-b-4",
+        "exerciseId": "single_leg_stretch",
+        "exerciseName": "Single Leg Stretch",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "A foundational abdominal exercise. Hands on shin guide, not pull. Cue the rib-to-hip connection on every leg switch. Keep head down for beginners.",
+        "section": "core"
+      },
+      {
+        "id": "sensory_adapted_flow-b-5",
+        "exerciseId": "spine_stretch_forward",
+        "exerciseName": "Spine Stretch Forward",
+        "durationSeconds": 80,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "The goal is spinal length, not hamstring stretch. Cue clients to grow taller before reaching. Sit on a folded blanket if the pelvis tips backward.",
+        "section": "cooldown"
+      },
+      {
+        "id": "sensory_adapted_flow-b-6",
+        "exerciseId": "seal",
+        "exerciseName": "Seal",
+        "durationSeconds": 70,
+        "transitionSeconds": 20,
+        "restSeconds": 15,
+        "notes": "The inner-thigh adductor squeeze adds another layer to the rolling massage. Contraindicate for osteoporosis and recent spinal surgery.",
+        "section": "warmup"
+      },
+      {
+        "id": "sensory_adapted_flow-b-7",
+        "exerciseId": "pilates_ring_squeeze",
+        "exerciseName": "Pilates Ring Squeeze",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "Versatile for inner thigh, outer hip, or arm activation. Particularly useful for pelvic floor connection — cue the client to link the pelvic floor with the squeeze.",
+        "section": "core"
+      }
+    ],
+    "deliveryStyle": "contemporary",
+    "classProfile": "rehab"
+  },
+  {
+    "id": "shoulder_friendly_flow",
+    "name": "Shoulder-Friendly Flow",
+    "description": "A focused session for shoulder comfort that emphasizes scapular support, gentle upper-body strength, and safe range of motion.",
+    "goal": "Support shoulder stability with safe Pilates movement.",
+    "level": "beginner",
+    "accessLevel": "Pro",
+    "apparatus": "Cadillac",
+    "focusAreas": [
+      "Shoulder",
+      "Scapular support",
+      "Upper body"
+    ],
+    "tags": [
+      "beginner",
+      "pro",
+      "shoulder",
+      "scapular-support",
+      "upper-body",
+      "style-classical",
+      "profile-rehab"
+    ],
+    "recommendedClassLengthMinutes": 20,
+    "blocks": [
+      {
+        "id": "shoulder_friendly_flow-b-1",
+        "exerciseId": "roll_down_bar",
+        "exerciseName": "Roll Down Bar",
+        "durationSeconds": 70,
+        "transitionSeconds": 20,
+        "restSeconds": 15,
+        "notes": "The bar provides traction and proprioceptive feedback during the roll. Especially useful for teaching the thoracic region to release. Lighter spring = more support on the way down.",
+        "section": "warmup"
+      },
+      {
+        "id": "shoulder_friendly_flow-b-2",
+        "exerciseId": "long_box_series",
+        "exerciseName": "Long Box Series",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "Includes pulling straps and T-shape variations. Build thoracic extensor strength gradually. Contraindicate for active rotator cuff injury at high resistance.",
+        "section": "core"
+      },
+      {
+        "id": "shoulder_friendly_flow-b-3",
+        "exerciseId": "mermaid",
+        "exerciseName": "Mermaid",
+        "durationSeconds": 80,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "Excellent lateral thoracic stretch. Whether on mat, chair, or box, the foundational cue is the same: grow before bending. Especially valuable for scoliosis work.",
+        "section": "cooldown"
+      },
+      {
+        "id": "shoulder_friendly_flow-b-4",
+        "exerciseId": "breaststroke",
+        "exerciseName": "Breaststroke",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "An advanced back extension. Ensure adequate thoracic extension from Swan Prep first. The breath timing — inhale up, exhale circle down — is key to rhythm.",
+        "section": "core"
+      },
+      {
+        "id": "shoulder_friendly_flow-b-5",
+        "exerciseId": "pilates_ring_squeeze",
+        "exerciseName": "Pilates Ring Squeeze",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "Versatile for inner thigh, outer hip, or arm activation. Particularly useful for pelvic floor connection — cue the client to link the pelvic floor with the squeeze.",
+        "section": "core"
+      }
+    ],
+    "deliveryStyle": "classical",
+    "classProfile": "rehab"
+  },
+  {
+    "id": "upper_limb_nerve",
+    "name": "Upper Limb & Nerve Relief",
+    "description": "A thoracic-opening and neural-mobilisation flow for wrist, elbow, and nerve compression conditions — keeping joint loading low and range of motion wide.",
+    "goal": "Decompress nerves and restore thoracic and upper-limb mobility.",
+    "level": "beginner",
+    "accessLevel": "Pro",
+    "apparatus": "Mat",
+    "focusAreas": [
+      "Thoracic opening",
+      "Neural mobility",
+      "Wrist-safe movement"
+    ],
+    "tags": [
+      "beginner",
+      "pro",
+      "thoracic-opening",
+      "neural-mobility",
+      "wrist-safe-movement",
+      "style-contemporary",
+      "profile-rehab"
+    ],
+    "recommendedClassLengthMinutes": 20,
+    "blocks": [
+      {
+        "id": "upper_limb_nerve-b-1",
+        "exerciseId": "shoulder_rolls",
+        "exerciseName": "Shoulder Rolls",
+        "durationSeconds": 70,
+        "transitionSeconds": 20,
+        "restSeconds": 15,
+        "notes": "Use as an entry-point assessment for scapular mobility. Slow, bilateral rolls reveal asymmetry. Cue the breath on the down-phase to encourage parasympathetic response.",
+        "section": "warmup"
+      },
+      {
+        "id": "upper_limb_nerve-b-2",
+        "exerciseId": "spine_mobilization",
+        "exerciseName": "Spine Mobilization",
+        "durationSeconds": 70,
+        "transitionSeconds": 20,
+        "restSeconds": 15,
+        "notes": "Use as an opening warm-up and a closing cool-down. Segmental mobility reveals restrictions — note where movement stops and educate the client on finding that area.",
+        "section": "warmup"
+      },
+      {
+        "id": "upper_limb_nerve-b-3",
+        "exerciseId": "seated_side_bend",
+        "exerciseName": "Seated Side Bend",
+        "durationSeconds": 80,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "Excellent for assessing lateral thoracic mobility. Watch for one side having significantly more range — address this with extra reps on the tight side. Sit on a block if the pelvis tips.",
+        "section": "cooldown"
+      },
+      {
+        "id": "upper_limb_nerve-b-4",
+        "exerciseId": "band_arm_series",
+        "exerciseName": "Resistance Band Arm Series",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "A versatile resistance band series that replicates Cadillac arm spring patterns without the apparatus. Excellent travel or home practice option. Adjust band tension with grip width.",
+        "section": "core"
+      },
+      {
+        "id": "upper_limb_nerve-b-5",
+        "exerciseId": "swan_prep",
+        "exerciseName": "Swan Prep",
+        "durationSeconds": 70,
+        "transitionSeconds": 20,
+        "restSeconds": 15,
+        "notes": "A crucial building block before Swan. Focus on thoracic extension and keep the elbows soft. Watch for cervical hyperextension in clients with neck issues.",
+        "section": "warmup"
+      },
+      {
+        "id": "upper_limb_nerve-b-6",
+        "exerciseId": "mermaid",
+        "exerciseName": "Mermaid",
+        "durationSeconds": 80,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "Excellent lateral thoracic stretch. Whether on mat, chair, or box, the foundational cue is the same: grow before bending. Especially valuable for scoliosis work.",
+        "section": "cooldown"
+      },
+      {
+        "id": "upper_limb_nerve-b-7",
+        "exerciseId": "spine_twist",
+        "exerciseName": "Spine Twist",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "Cue two distinct breath-pulses on the exhale to deepen the rotation. Watch for clients who hinge at the hip rather than rotate at the thoracic spine.",
+        "section": "core"
+      },
+      {
+        "id": "upper_limb_nerve-b-8",
+        "exerciseId": "arm_springs",
+        "exerciseName": "Arm Springs",
+        "durationSeconds": 75,
+        "transitionSeconds": 20,
+        "restSeconds": 20,
+        "notes": "Multiple positions available: supine, seated, kneeling, standing. Start supine to establish scapular connection before progressing to upright. Excellent for rotator cuff activation.",
+        "section": "core"
+      }
+    ],
+    "deliveryStyle": "contemporary",
+    "classProfile": "rehab"
+  }
+]

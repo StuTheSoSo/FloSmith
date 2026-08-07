@@ -1,0 +1,6 @@
+{
+  "APP": { "TITLE": "FloSmith" },
+  "COMMON": { "ADD": "Agregar", "DELETE": "Eliminar", "LOAD": "Cargar", "DUPLICATE": "Duplicar", "ALL": "Todos", "CLEAR": "Limpiar", "WARMUP": "Calentamiento", "CORE": "Centro", "COOLDOWN": "Vuelta a la calma" },
+  "NAV": { "HOME": "Inicio", "FLOW": "Flujo", "LIBRARY": "Biblioteca", "TEMPLATES": "Plantillas", "SAVED": "Guardados", "TIMER": "Temporizador", "CLIENTS": "Clientes", "SETTINGS": "Ajustes" },
+  "PAGES": { "HOME": { "TITLE": "Espacio del instructor", "SUBTITLE": "Planifica clases con confianza", "DESCRIPTION": "Crea secuencias, mide tiempos y guarda notas para cada cliente." }, "FLOW_BUILDER": { "TITLE": "Constructor de flujo", "LIST_MODE": "Lista", "TIMELINE_MODE": "Cronologia", "TOTAL": "Total" }, "LIBRARY": { "TITLE": "Biblioteca de ejercicios", "SEARCH": "Buscar ejercicios" }, "TEMPLATES": { "TITLE": "Plantillas", "APPLY": "Aplicar" }, "SAVED_FLOWS": { "TITLE": "Flujos guardados", "NAME": "Nombre del flujo", "SAVE": "Guardar flujo actual" }, "TIMER": { "TITLE": "Temporizador", "TOTAL": "Tiempo estimado", "PRESET": "Preajuste", "TRANSITION": "Transicion por defecto", "REST": "Descanso por defecto" }, "CLIENTS": { "TITLE": "Notas de clientes", "NAME": "Nombre", "NOTE": "Nota" }, "SETTINGS": { "TITLE": "Ajustes", "LANGUAGE": "Idioma", "THEME": "Tema" } }
+}

@@ -1,0 +1,64 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-title>{{ 'PAGES.LIBRARY.TITLE' | translate }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <div class="category-row ion-padding-top ion-padding-horizontal">
+    <ion-chip [class.selected]="category() === 'all'" (click)="category.set('all')">{{ 'COMMON.ALL' | translate }}</ion-chip>
+    @for (categoryOption of categories; track categoryOption) {
+      <ion-chip [class.selected]="category() === categoryOption" (click)="category.set(categoryOption)">{{ categoryOption }}</ion-chip>
+    }
+  </div>
+
+  <div class="page-hero ion-padding-horizontal page-shell">
+    <ion-searchbar [value]="query()" (ionInput)="query.set($any($event).detail.value ?? '')" [placeholder]="'PAGES.LIBRARY.SEARCH' | translate" class="condition-searchbar"></ion-searchbar>
+
+    <div class="level-row">
+      <ion-chip [class.selected]="level() === 'all'" (click)="level.set('all')">{{ 'COMMON.ALL' | translate }}</ion-chip>
+      <ion-chip [class.selected]="level() === 'beginner'" (click)="level.set('beginner')">Beginner</ion-chip>
+      <ion-chip [class.selected]="level() === 'intermediate'" (click)="level.set('intermediate')">Intermediate</ion-chip>
+      <ion-chip [class.selected]="level() === 'advanced'" (click)="level.set('advanced')">Advanced</ion-chip>
+    </div>
+
+    <p class="results-summary">
+      {{ resultCount }} exercise{{ resultCount === 1 ? '' : 's' }}
+      @if (query().trim()) {
+        <span> for "{{ query().trim() }}"</span>
+      }
+    </p>
+  </div>
+
+  <ion-grid class="ion-padding page-shell">
+    <ion-row>
+      @for (exercise of exercises; track exercise.id) {
+        <ion-col size="12" size-md="6">
+          <ion-card class="exercise-card" button (click)="openExercise(exercise.id)">
+            <ion-card-header>
+              <ion-card-title>{{ exercise.name }}</ion-card-title>
+              <ion-card-subtitle>{{ sectionLabel(exercise.defaultSection) }} · {{ exercise.category }}</ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content>
+              <p>{{ exercise.description }}</p>
+              <p class="exercise-focus">{{ exercise.apparatus }} · {{ exercise.level }} · {{ exercise.durationSeconds }}s</p>
+              <p class="exercise-category">{{ exercise.focusAreas.join(' • ') }}</p>
+              <p class="exercise-category">{{ exercise.cueTags.join(' • ') }}</p>
+              <ion-button expand="block" (click)="addExercise(exercise); $event.stopPropagation()">{{ 'COMMON.ADD' | translate }}</ion-button>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      }
+
+      @if (resultCount === 0) {
+        <ion-col size="12">
+          <ion-card>
+            <ion-card-content>
+              <p class="empty-state">No exercises match the current filters.</p>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      }
+    </ion-row>
+  </ion-grid>
+</ion-content>

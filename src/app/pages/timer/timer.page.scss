@@ -1,0 +1,12 @@
+.page-shell {
+  --padding-start: 14px;
+  --padding-end: 14px;
+}
+
+.panel {
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 12px;
+  background: var(--flo-surface-a);
+  border: 1px solid var(--flo-border);
+}

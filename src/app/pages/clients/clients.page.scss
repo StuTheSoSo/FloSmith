@@ -1,0 +1,40 @@
+.page-shell {
+  --padding-start: 14px;
+  --padding-end: 14px;
+}
+
+.form-card,
+.client-card {
+  margin-bottom: 1rem;
+}
+
+.client-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.client-name,
+.empty-title {
+  color: var(--ion-color-primary);
+  font-weight: 800;
+}
+
+.client-notes,
+.empty-desc {
+  color: var(--flo-brand-ink);
+}
+
+.empty-state {
+  display: grid;
+  justify-items: center;
+  gap: 0.5rem;
+  padding: 1.5rem 0 1rem;
+  text-align: center;
+}
+
+.empty-icon {
+  font-size: 2.25rem;
+  color: var(--ion-color-primary);
+}

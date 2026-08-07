@@ -1,0 +1,69 @@
+{
+  "APP": {
+    "TITLE": "FloSmith"
+  },
+  "COMMON": {
+    "ADD": "Add",
+    "DELETE": "Delete",
+    "LOAD": "Load",
+    "DUPLICATE": "Duplicate",
+    "ALL": "All",
+    "CLEAR": "Clear",
+    "WARMUP": "Warm-up",
+    "CORE": "Core",
+    "COOLDOWN": "Cool-down"
+  },
+  "NAV": {
+    "HOME": "Home",
+    "FLOW": "Flow",
+    "LIBRARY": "Library",
+    "TEMPLATES": "Templates",
+    "SAVED": "Saved",
+    "TIMER": "Timer",
+    "CLIENTS": "Clients",
+    "SETTINGS": "Settings"
+  },
+  "PAGES": {
+    "HOME": {
+      "TITLE": "Instructor Workspace",
+      "SUBTITLE": "Plan classes with confidence",
+      "DESCRIPTION": "Build sequences, track timing, and keep reusable notes for each client."
+    },
+    "FLOW_BUILDER": {
+      "TITLE": "Flow Builder",
+      "LIST_MODE": "List",
+      "TIMELINE_MODE": "Timeline",
+      "TOTAL": "Total"
+    },
+    "LIBRARY": {
+      "TITLE": "Exercise Library",
+      "SEARCH": "Search exercises"
+    },
+    "TEMPLATES": {
+      "TITLE": "Class Templates",
+      "APPLY": "Apply"
+    },
+    "SAVED_FLOWS": {
+      "TITLE": "Saved Flows",
+      "NAME": "Flow name",
+      "SAVE": "Save current flow"
+    },
+    "TIMER": {
+      "TITLE": "Class Timer",
+      "TOTAL": "Estimated Class Time",
+      "PRESET": "Timing preset",
+      "TRANSITION": "Default transition",
+      "REST": "Default rest"
+    },
+    "CLIENTS": {
+      "TITLE": "Client Notes",
+      "NAME": "Client name",
+      "NOTE": "Note"
+    },
+    "SETTINGS": {
+      "TITLE": "Settings",
+      "LANGUAGE": "Language",
+      "THEME": "Theme"
+    }
+  }
+}

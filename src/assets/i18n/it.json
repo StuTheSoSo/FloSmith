@@ -1,0 +1,6 @@
+{
+  "APP": { "TITLE": "FloSmith" },
+  "COMMON": { "ADD": "Aggiungi", "DELETE": "Elimina", "LOAD": "Carica", "DUPLICATE": "Duplica", "ALL": "Tutti", "CLEAR": "Pulisci", "WARMUP": "Riscaldamento", "CORE": "Core", "COOLDOWN": "Defaticamento" },
+  "NAV": { "HOME": "Home", "FLOW": "Flusso", "LIBRARY": "Libreria", "TEMPLATES": "Modelli", "SAVED": "Salvati", "TIMER": "Timer", "CLIENTS": "Clienti", "SETTINGS": "Impostazioni" },
+  "PAGES": { "HOME": { "TITLE": "Spazio istruttore", "SUBTITLE": "Pianifica lezioni con sicurezza", "DESCRIPTION": "Crea sequenze, gestisci tempi, salva note clienti." }, "FLOW_BUILDER": { "TITLE": "Costruttore flusso", "LIST_MODE": "Lista", "TIMELINE_MODE": "Timeline", "TOTAL": "Totale" }, "LIBRARY": { "TITLE": "Libreria esercizi", "SEARCH": "Cerca esercizi" }, "TEMPLATES": { "TITLE": "Modelli", "APPLY": "Applica" }, "SAVED_FLOWS": { "TITLE": "Flussi salvati", "NAME": "Nome flusso", "SAVE": "Salva flusso corrente" }, "TIMER": { "TITLE": "Timer", "TOTAL": "Durata stimata", "PRESET": "Preset", "TRANSITION": "Transizione", "REST": "Recupero" }, "CLIENTS": { "TITLE": "Note clienti", "NAME": "Nome", "NOTE": "Nota" }, "SETTINGS": { "TITLE": "Impostazioni", "LANGUAGE": "Lingua", "THEME": "Tema" } }
+}

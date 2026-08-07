@@ -1,0 +1,45 @@
+.page-shell {
+  --padding-start: 14px;
+  --padding-end: 14px;
+  --padding-bottom: 24px;
+}
+
+.panel {
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 16px;
+  background: linear-gradient(180deg, var(--flo-surface-a) 0%, var(--flo-surface-b) 100%);
+  border: 1px solid var(--flo-border);
+}
+
+.add-row {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+  align-items: center;
+}
+
+.timeline {
+  margin-top: 8px;
+  display: grid;
+  gap: 8px;
+}
+
+.timeline-card {
+  padding: 10px;
+  border-radius: 12px;
+  background: var(--flo-chip);
+  border: 1px solid var(--flo-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.name {
+  font-weight: 700;
+}
+
+.meta {
+  color: var(--flo-ink-2);
+}

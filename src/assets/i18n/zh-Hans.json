@@ -1,0 +1,6 @@
+{
+  "APP": { "TITLE": "FloSmith" },
+  "COMMON": { "ADD": "添加", "DELETE": "删除", "LOAD": "加载", "DUPLICATE": "复制", "ALL": "全部", "CLEAR": "清空", "WARMUP": "热身", "CORE": "核心", "COOLDOWN": "放松" },
+  "NAV": { "HOME": "首页", "FLOW": "流程", "LIBRARY": "练习库", "TEMPLATES": "模板", "SAVED": "已保存", "TIMER": "计时", "CLIENTS": "客户", "SETTINGS": "设置" },
+  "PAGES": { "HOME": { "TITLE": "教练工作台", "SUBTITLE": "高效规划课程", "DESCRIPTION": "构建序列、调整时间、记录客户备注。" }, "FLOW_BUILDER": { "TITLE": "流程构建", "LIST_MODE": "列表", "TIMELINE_MODE": "时间线", "TOTAL": "总计" }, "LIBRARY": { "TITLE": "练习库", "SEARCH": "搜索练习" }, "TEMPLATES": { "TITLE": "课程模板", "APPLY": "应用" }, "SAVED_FLOWS": { "TITLE": "已保存流程", "NAME": "流程名称", "SAVE": "保存当前流程" }, "TIMER": { "TITLE": "课程计时", "TOTAL": "预计总时长", "PRESET": "预设", "TRANSITION": "默认过渡", "REST": "默认休息" }, "CLIENTS": { "TITLE": "客户备注", "NAME": "客户姓名", "NOTE": "备注" }, "SETTINGS": { "TITLE": "设置", "LANGUAGE": "语言", "THEME": "主题" } }
+}

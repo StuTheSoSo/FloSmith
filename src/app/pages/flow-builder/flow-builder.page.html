@@ -1,0 +1,64 @@
+<ion-header translucent="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ 'PAGES.FLOW_BUILDER.TITLE' | translate }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button fill="clear" (click)="clearAll()">{{ 'COMMON.CLEAR' | translate }}</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="page-shell ion-padding-horizontal">
+  <section class="panel">
+    <ion-segment [value]="mode()" (ionChange)="setMode($any($event).detail.value)">
+      <ion-segment-button value="list">
+        <ion-label>{{ 'PAGES.FLOW_BUILDER.LIST_MODE' | translate }}</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="timeline">
+        <ion-label>{{ 'PAGES.FLOW_BUILDER.TIMELINE_MODE' | translate }}</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+
+    <div class="add-row">
+      <ion-select [value]="selectedExerciseId()" (ionChange)="selectedExerciseId.set($any($event).detail.value)">
+        @for (exercise of libraryExercises; track exercise.id) {
+          <ion-select-option [value]="exercise.id">{{ exercise.name }}</ion-select-option>
+        }
+      </ion-select>
+      <ion-button (click)="addSelectedExercise()">{{ 'COMMON.ADD' | translate }}</ion-button>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h3>{{ 'PAGES.FLOW_BUILDER.TOTAL' | translate }}: {{ totalLabel() }}</h3>
+
+    @if (mode() === 'list') {
+      <ion-list>
+        @for (block of blocks(); track block.id; let i = $index) {
+          <ion-item>
+            <ion-label>
+              <h2>{{ block.exerciseName }}</h2>
+              <p>{{ block.durationSeconds }}s + {{ block.transitionSeconds }}s transition + {{ block.restSeconds }}s rest</p>
+            </ion-label>
+            <ion-button fill="clear" (click)="moveUp(i)" [disabled]="i === 0">Up</ion-button>
+            <ion-button fill="clear" (click)="moveDown(i)" [disabled]="i === blocks().length - 1">Down</ion-button>
+            <ion-button fill="clear" color="danger" (click)="remove(block.id)">×</ion-button>
+          </ion-item>
+        }
+      </ion-list>
+    } @else {
+      <div class="timeline">
+        @for (block of blocks(); track block.id) {
+          <div class="timeline-card">
+            <div class="name">{{ block.exerciseName }}</div>
+            <div class="meta">{{ block.durationSeconds + block.transitionSeconds + block.restSeconds }}s</div>
+          </div>
+        }
+      </div>
+    }
+  </section>
+  </div>
+</ion-content>

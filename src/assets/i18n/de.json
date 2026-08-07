@@ -1,0 +1,6 @@
+{
+  "APP": { "TITLE": "FloSmith" },
+  "COMMON": { "ADD": "Hinzufugen", "DELETE": "Loschen", "LOAD": "Laden", "DUPLICATE": "Duplizieren", "ALL": "Alle", "CLEAR": "Leeren", "WARMUP": "Aufwarmen", "CORE": "Kern", "COOLDOWN": "Abkuhlen" },
+  "NAV": { "HOME": "Start", "FLOW": "Flow", "LIBRARY": "Bibliothek", "TEMPLATES": "Vorlagen", "SAVED": "Gespeichert", "TIMER": "Timer", "CLIENTS": "Kunden", "SETTINGS": "Einstellungen" },
+  "PAGES": { "HOME": { "TITLE": "Trainerbereich", "SUBTITLE": "Kurse sicher planen", "DESCRIPTION": "Sequenzen bauen, Zeit steuern, Notizen speichern." }, "FLOW_BUILDER": { "TITLE": "Flow Builder", "LIST_MODE": "Liste", "TIMELINE_MODE": "Zeitachse", "TOTAL": "Gesamt" }, "LIBRARY": { "TITLE": "Ubungsbibliothek", "SEARCH": "Ubung suchen" }, "TEMPLATES": { "TITLE": "Vorlagen", "APPLY": "Anwenden" }, "SAVED_FLOWS": { "TITLE": "Gespeicherte Flows", "NAME": "Flow Name", "SAVE": "Aktuellen Flow speichern" }, "TIMER": { "TITLE": "Timer", "TOTAL": "Gesamtzeit", "PRESET": "Voreinstellung", "TRANSITION": "Ubergang", "REST": "Pause" }, "CLIENTS": { "TITLE": "Kundennotizen", "NAME": "Name", "NOTE": "Notiz" }, "SETTINGS": { "TITLE": "Einstellungen", "LANGUAGE": "Sprache", "THEME": "Theme" } }
+}

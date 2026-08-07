@@ -1,0 +1,6 @@
+{
+  "APP": { "TITLE": "FloSmith" },
+  "COMMON": { "ADD": "追加", "DELETE": "削除", "LOAD": "読み込み", "DUPLICATE": "複製", "ALL": "すべて", "CLEAR": "クリア", "WARMUP": "ウォームアップ", "CORE": "コア", "COOLDOWN": "クールダウン" },
+  "NAV": { "HOME": "ホーム", "FLOW": "フロー", "LIBRARY": "ライブラリ", "TEMPLATES": "テンプレート", "SAVED": "保存", "TIMER": "タイマー", "CLIENTS": "クライアント", "SETTINGS": "設定" },
+  "PAGES": { "HOME": { "TITLE": "インストラクターワークスペース", "SUBTITLE": "安心してクラスを設計", "DESCRIPTION": "シーケンス作成、時間調整、クライアントメモ管理。" }, "FLOW_BUILDER": { "TITLE": "フロービルダー", "LIST_MODE": "リスト", "TIMELINE_MODE": "タイムライン", "TOTAL": "合計" }, "LIBRARY": { "TITLE": "エクササイズライブラリ", "SEARCH": "エクササイズを検索" }, "TEMPLATES": { "TITLE": "テンプレート", "APPLY": "適用" }, "SAVED_FLOWS": { "TITLE": "保存済みフロー", "NAME": "フロー名", "SAVE": "現在のフローを保存" }, "TIMER": { "TITLE": "クラスタイマー", "TOTAL": "推定クラス時間", "PRESET": "プリセット", "TRANSITION": "移行時間", "REST": "休憩時間" }, "CLIENTS": { "TITLE": "クライアントメモ", "NAME": "名前", "NOTE": "メモ" }, "SETTINGS": { "TITLE": "設定", "LANGUAGE": "言語", "THEME": "テーマ" } }
+}

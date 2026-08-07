@@ -1,0 +1,6 @@
+{
+  "APP": { "TITLE": "FloSmith" },
+  "COMMON": { "ADD": "إضافة", "DELETE": "حذف", "LOAD": "تحميل", "DUPLICATE": "نسخ", "ALL": "الكل", "CLEAR": "مسح", "WARMUP": "إحماء", "CORE": "أساسي", "COOLDOWN": "تهدئة" },
+  "NAV": { "HOME": "الرئيسية", "FLOW": "التدفق", "LIBRARY": "المكتبة", "TEMPLATES": "القوالب", "SAVED": "المحفوظة", "TIMER": "المؤقت", "CLIENTS": "العملاء", "SETTINGS": "الإعدادات" },
+  "PAGES": { "HOME": { "TITLE": "مساحة المدرب", "SUBTITLE": "خطط الحصص بثقة", "DESCRIPTION": "ابن التسلسلات واضبط التوقيت واحتفظ بملاحظات العملاء." }, "FLOW_BUILDER": { "TITLE": "منشئ التدفق", "LIST_MODE": "قائمة", "TIMELINE_MODE": "مخطط زمني", "TOTAL": "الإجمالي" }, "LIBRARY": { "TITLE": "مكتبة التمارين", "SEARCH": "ابحث عن تمرين" }, "TEMPLATES": { "TITLE": "قوالب الحصص", "APPLY": "تطبيق" }, "SAVED_FLOWS": { "TITLE": "التدفقات المحفوظة", "NAME": "اسم التدفق", "SAVE": "حفظ التدفق الحالي" }, "TIMER": { "TITLE": "مؤقت الحصة", "TOTAL": "الوقت التقديري", "PRESET": "إعداد", "TRANSITION": "انتقال افتراضي", "REST": "راحة افتراضية" }, "CLIENTS": { "TITLE": "ملاحظات العملاء", "NAME": "اسم العميل", "NOTE": "ملاحظة" }, "SETTINGS": { "TITLE": "الإعدادات", "LANGUAGE": "اللغة", "THEME": "المظهر" } }
+}

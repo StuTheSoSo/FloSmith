@@ -1,0 +1,14 @@
+node_modules
+dist
+www
+.angular
+.ionic
+coverage
+*.log
+.DS_Store
+._*
+.__*
+.idea
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json

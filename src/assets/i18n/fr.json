@@ -1,0 +1,6 @@
+{
+  "APP": { "TITLE": "FloSmith" },
+  "COMMON": { "ADD": "Ajouter", "DELETE": "Supprimer", "LOAD": "Charger", "DUPLICATE": "Dupliquer", "ALL": "Tous", "CLEAR": "Effacer", "WARMUP": "Echauffement", "CORE": "Centre", "COOLDOWN": "Retour au calme" },
+  "NAV": { "HOME": "Accueil", "FLOW": "Flux", "LIBRARY": "Bibliotheque", "TEMPLATES": "Modeles", "SAVED": "Sauvegardes", "TIMER": "Minuteur", "CLIENTS": "Clients", "SETTINGS": "Reglages" },
+  "PAGES": { "HOME": { "TITLE": "Espace instructeur", "SUBTITLE": "Planifiez vos cours", "DESCRIPTION": "Construisez des sequences, suivez le temps, et gardez des notes clients." }, "FLOW_BUILDER": { "TITLE": "Constructeur de flux", "LIST_MODE": "Liste", "TIMELINE_MODE": "Chronologie", "TOTAL": "Total" }, "LIBRARY": { "TITLE": "Bibliotheque d'exercices", "SEARCH": "Rechercher" }, "TEMPLATES": { "TITLE": "Modeles", "APPLY": "Appliquer" }, "SAVED_FLOWS": { "TITLE": "Flux sauvegardes", "NAME": "Nom du flux", "SAVE": "Sauvegarder le flux" }, "TIMER": { "TITLE": "Minuteur", "TOTAL": "Temps estime", "PRESET": "Preset", "TRANSITION": "Transition", "REST": "Repos" }, "CLIENTS": { "TITLE": "Notes clients", "NAME": "Nom", "NOTE": "Note" }, "SETTINGS": { "TITLE": "Reglages", "LANGUAGE": "Langue", "THEME": "Theme" } }
+}

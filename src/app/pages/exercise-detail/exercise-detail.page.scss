@@ -1,0 +1,41 @@
+.exercise-hero-card {
+  margin-bottom: 1rem;
+}
+
+.exercise-description,
+.tag-block p,
+ion-card-subtitle {
+  color: var(--flo-brand-ink);
+}
+
+.focus-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin: 1rem 0;
+}
+
+.focus-chip {
+  font-size: 0.82rem;
+  height: 26px;
+  border-radius: 12px;
+  font-weight: 700;
+}
+
+.tag-block {
+  margin-top: 0.75rem;
+}
+
+.tag-block strong {
+  color: var(--ion-color-primary);
+}
+
+.detail-list {
+  margin: 0.5rem 0 0;
+  padding-left: 1.1rem;
+  color: var(--flo-brand-ink);
+}
+
+.detail-list li + li {
+  margin-top: 0.35rem;
+}

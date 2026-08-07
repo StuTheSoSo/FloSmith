@@ -1,0 +1,42 @@
+.page-hero {
+  display: grid;
+  gap: 1rem;
+}
+
+.condition-searchbar {
+  --background: rgba(255, 255, 255, 0.92);
+  --border-radius: 18px;
+  --box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  --placeholder-color: var(--flo-ink-3);
+  border: 1px solid var(--flo-border);
+}
+
+.category-row,
+.level-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+ion-chip.selected {
+  background: linear-gradient(90deg, var(--ion-color-primary) 60%, var(--ion-color-tertiary) 100%) !important;
+  color: #fff !important;
+  border-color: var(--ion-color-tertiary) !important;
+}
+
+.exercise-card {
+  min-height: 100%;
+}
+
+.results-summary,
+.empty-state {
+  color: var(--flo-brand-ink);
+  font-weight: 600;
+}
+
+.exercise-focus,
+.exercise-category {
+  color: var(--flo-brand-ink);
+  font-weight: 600;
+}

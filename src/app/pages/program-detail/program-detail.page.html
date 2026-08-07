@@ -1,0 +1,93 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/programs"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ template?.name || ('PAGES.TEMPLATES.TITLE' | translate) }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen class="ion-padding page-shell">
+  @if (template) {
+    <ion-card class="program-hero-card">
+      <ion-card-header>
+        <div class="program-level-row">
+          <ion-badge color="primary">{{ template.level }}</ion-badge>
+          <ion-badge color="medium">{{ template.accessLevel ?? 'Pro' }}</ion-badge>
+          <span class="program-length">{{ template.recommendedClassLengthMinutes }} min</span>
+        </div>
+        <ion-card-title>{{ template.name }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <div class="goal-callout">
+          <div class="goal-dot" aria-hidden="true"></div>
+          <div class="goal-text">
+            <div class="goal-label">Goal</div>
+            <div class="goal-value">{{ template.goal }}</div>
+          </div>
+        </div>
+        @if (template.description) {
+          <p class="program-description">{{ template.description }}</p>
+        }
+        <p class="program-description">{{ template.apparatus }} · {{ duration() }}</p>
+        <div class="focus-chips">
+          @for (area of template.focusAreas; track area) {
+            <ion-chip outline color="primary" class="focus-chip">{{ area }}</ion-chip>
+          }
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <div class="sequence-flow">
+      <div class="flow-header">Class Flow</div>
+      <div class="flow-timeline">
+        @for (stage of stageSummary(); track stage) {
+          <div class="flow-stage">
+            <div class="stage-dot"></div>
+            <div class="stage-label">{{ stage }}</div>
+          </div>
+        }
+      </div>
+    </div>
+
+    <div class="section-header">Exercises</div>
+    <ion-list class="exercise-list">
+      @for (block of template.blocks; track block.id; let i = $index) {
+        <ion-item button detail (click)="openExercise(block.exerciseId)">
+          <div class="exercise-number" slot="start">{{ i + 1 }}</div>
+          <ion-label>
+            <h2>{{ block.exerciseName }}</h2>
+            <p>{{ block.section }} · {{ block.durationSeconds }}s + {{ block.transitionSeconds }}s transition + {{ block.restSeconds }}s rest</p>
+            @if (block.notes) {
+              <p class="exercise-meta">{{ block.notes }}</p>
+            }
+          </ion-label>
+        </ion-item>
+      }
+    </ion-list>
+
+    <ion-card class="program-note-card">
+      <ion-card-header>
+        <ion-card-title>Teaching Notes</ion-card-title>
+        <ion-card-subtitle>Keep quick private notes for delivery cues or client modifications.</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-textarea rows="5" [(ngModel)]="note" placeholder="Add notes for class pacing, regressions, or standout cues" class="note-textarea"></ion-textarea>
+        <div class="note-actions">
+          <ion-button size="small" (click)="saveNote()">Save Notes</ion-button>
+          @if (noteSaved()) {
+            <span class="note-saved">Saved</span>
+          }
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-button expand="block" (click)="applyTemplate()">Load Into Flow Builder</ion-button>
+  } @else {
+    <ion-card>
+      <ion-card-content>
+        <p>Template not found.</p>
+      </ion-card-content>
+    </ion-card>
+  }
+</ion-content>

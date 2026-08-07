@@ -1,0 +1,31 @@
+$font-family-main: 'Nunito', 'Avenir Next', sans-serif;
+$font-size-h1: 2rem;
+$font-size-h2: 1.3rem;
+$font-size-body: 1rem;
+$font-size-small: 0.9rem;
+
+$font-weight-header: 800;
+$font-weight-body: 500;
+
+.h1 {
+  font-size: $font-size-h1;
+  font-weight: $font-weight-header;
+  line-height: 1.2;
+}
+
+.h2 {
+  font-size: $font-size-h2;
+  font-weight: $font-weight-header;
+  line-height: 1.25;
+}
+
+.body {
+  font-size: $font-size-body;
+  font-weight: $font-weight-body;
+  line-height: 1.55;
+}
+
+.small {
+  font-size: $font-size-small;
+  line-height: 1.45;
+}

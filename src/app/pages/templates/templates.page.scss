@@ -1,0 +1,51 @@
+.intro-text {
+  color: var(--flo-brand-ink);
+  margin-bottom: 0.5rem;
+}
+
+.program-searchbar {
+  width: 100%;
+}
+
+.results-summary,
+.empty-state {
+  color: var(--flo-brand-ink);
+  font-weight: 600;
+}
+
+.page-shell ion-card {
+  min-height: 100%;
+}
+
+.program-level-row {
+  margin-bottom: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.program-length {
+  color: var(--flo-ink-2);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.program-description,
+.program-tags {
+  color: var(--flo-brand-ink);
+}
+
+.focus-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 0.6rem;
+}
+
+.focus-chip {
+  font-size: 0.82rem;
+  height: 26px;
+  border-radius: 12px;
+  font-weight: 700;
+  border: 1.5px solid var(--flo-border);
+}

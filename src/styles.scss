@@ -1,0 +1,121 @@
+@use './app/styles/typography';
+@import '@ionic/angular/css/core.css';
+@import '@ionic/angular/css/normalize.css';
+@import '@ionic/angular/css/structure.css';
+@import '@ionic/angular/css/typography.css';
+@import '@ionic/angular/css/display.css';
+
+:root {
+	--ion-font-family: 'Nunito', 'Avenir Next', sans-serif;
+	--flo-ink: #173347;
+	--flo-ink-2: #436075;
+	--flo-ink-3: #6c8598;
+	--flo-bg-start: #f6f5ef;
+	--flo-bg-end: #e8f2ee;
+	--flo-surface-a: #ffffff;
+	--flo-surface-b: #f4fbf8;
+	--flo-chip: #f0f8f4;
+	--flo-border: #c6ddd3;
+	--flo-brand-ink: #285c4a;
+	--ion-color-dark: var(--flo-ink);
+}
+
+body {
+	margin: 0;
+	font-family: var(--ion-font-family);
+	color: var(--flo-ink);
+	background: linear-gradient(180deg, var(--flo-bg-start) 0%, var(--flo-bg-end) 100%);
+}
+
+ion-app {
+	min-height: 100vh;
+	background: linear-gradient(180deg, var(--flo-bg-start) 0%, var(--flo-bg-end) 100%);
+}
+
+ion-card {
+	border-radius: 24px;
+	box-shadow: 0 12px 40px rgba(23, 51, 71, 0.1), 0 2px 8px rgba(0, 0, 0, 0.04);
+	background: linear-gradient(135deg, var(--flo-surface-a) 60%, var(--flo-surface-b) 100%);
+	border: 1.5px solid var(--flo-border);
+}
+
+ion-chip {
+	margin: 0.25rem;
+	border-radius: 16px;
+	font-weight: 600;
+	background: linear-gradient(90deg, var(--flo-chip) 60%, color-mix(in srgb, var(--flo-chip) 60%, white 40%) 100%);
+	color: var(--flo-brand-ink);
+	box-shadow: 0 2px 8px rgba(23, 51, 71, 0.08);
+	border: 1.5px solid var(--flo-border);
+}
+
+ion-button {
+	--border-radius: 16px;
+	font-weight: 700;
+}
+
+ion-content {
+	--padding-top: calc(env(safe-area-inset-top) + 0.5rem);
+	--padding-bottom: calc(env(safe-area-inset-bottom) + 160px);
+	--padding-start: calc(env(safe-area-inset-left) + 0.75rem);
+	--padding-end: calc(env(safe-area-inset-right) + 0.75rem);
+	--background: linear-gradient(180deg, var(--flo-bg-start) 0%, var(--flo-bg-end) 100%);
+}
+
+.page-shell {
+	width: min(980px, 100%);
+	max-width: 980px;
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+
+.page-hero,
+.panel,
+.category-row {
+	margin-bottom: 1.2rem;
+}
+
+.theme-coral {
+	--ion-color-primary: #e07a9a;
+	--ion-color-secondary: #7ed6c1;
+	--ion-color-tertiary: #f29eb6;
+	--ion-color-light: #fff6f9;
+	--ion-color-dark: #3d2c3c;
+	--flo-bg-start: #fff4ef;
+	--flo-bg-end: #ffe7ea;
+	--flo-surface-a: #fffdfc;
+	--flo-surface-b: #fff2f4;
+	--flo-chip: #ffe7ec;
+	--flo-border: #f2c9d2;
+	--flo-brand-ink: #8e3550;
+}
+
+.theme-sea {
+	--ion-color-primary: #2a8fa5;
+	--ion-color-secondary: #7ed6c1;
+	--ion-color-tertiary: #8ea2e6;
+	--ion-color-light: #f3fbfd;
+	--ion-color-dark: #0f2430;
+	--flo-bg-start: #eef9ff;
+	--flo-bg-end: #e4f2fb;
+	--flo-surface-a: #f9fdff;
+	--flo-surface-b: #edf7fe;
+	--flo-chip: #deeffc;
+	--flo-border: #b8d8f2;
+	--flo-brand-ink: #21517f;
+}
+
+.theme-grove {
+	--ion-color-primary: #4e7c73;
+	--ion-color-secondary: #9db5ff;
+	--ion-color-tertiary: #d691aa;
+	--ion-color-light: #f4faf7;
+	--ion-color-dark: #1f2c2a;
+	--flo-bg-start: #f6f7ee;
+	--flo-bg-end: #eaf2df;
+	--flo-surface-a: #fbfdf8;
+	--flo-surface-b: #f3f8ec;
+	--flo-chip: #e8f2df;
+	--flo-border: #cadfbe;
+	--flo-brand-ink: #3a5f2c;
+}

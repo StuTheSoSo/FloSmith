@@ -1,0 +1,70 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ 'PAGES.SETTINGS.TITLE' | translate }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen class="ion-padding page-shell">
+  <ion-card class="disclaimer-card ion-padding">
+    <strong>FloSmith is a planning tool for instructors. Always adjust flow choices to the class in front of you.</strong>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{ 'PAGES.SETTINGS.THEME' | translate }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <div class="theme-row">
+        @for (themeOption of themes; track themeOption.value) {
+          <ion-chip [class.selected]="theme() === themeOption.value" (click)="setTheme(themeOption.value)">
+            <ion-label>{{ themeOption.label }}</ion-label>
+          </ion-chip>
+        }
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{ 'PAGES.SETTINGS.LANGUAGE' | translate }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <div class="theme-row">
+        @for (localeOption of locales; track localeOption.code) {
+          <ion-chip [class.selected]="locale() === localeOption.code" (click)="setLocale(localeOption.code)">
+            <ion-label>{{ localeOption.label }}</ion-label>
+          </ion-chip>
+        }
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Account</ion-card-title>
+      <ion-card-subtitle>Save your instructor email for future sync and export workflows.</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item lines="none">
+        <ion-input type="email" [value]="emailInput()" (ionInput)="emailInput.set($any($event).detail.value ?? '')" placeholder="name@studio.com"></ion-input>
+      </ion-item>
+      @if (savedEmail()) {
+        <div class="email-saved-note">Saved: {{ savedEmail() }}</div>
+      }
+      <ion-button expand="block" class="ion-margin-top" (click)="saveEmail()">Save Email</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>About FloSmith</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>FloSmith helps Pilates instructors shape reusable class structures, keep client context close, and estimate class timing before stepping into the studio.</p>
+      <p>Use Programs to preview reusable flows, Library to pull exercises, and Home as your day-of-class workspace.</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
