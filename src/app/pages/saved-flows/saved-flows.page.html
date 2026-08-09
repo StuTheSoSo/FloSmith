@@ -13,21 +13,35 @@
     <ion-item>
       <ion-input [value]="flowName()" (ionInput)="flowName.set($any($event).detail.value ?? '')" [label]="'PAGES.SAVED_FLOWS.NAME' | translate" labelPlacement="stacked"></ion-input>
     </ion-item>
+    <ion-item>
+      <ion-input [value]="tagsText()" (ionInput)="tagsText.set($any($event).detail.value ?? '')" label="Tags" labelPlacement="stacked" placeholder="mobility, beginner, reformer"></ion-input>
+    </ion-item>
     <ion-button expand="block" (click)="saveCurrent()" [disabled]="currentCount() === 0">{{ 'PAGES.SAVED_FLOWS.SAVE' | translate }}</ion-button>
   </section>
 
-  <ion-list>
-    @for (flow of flows(); track flow.id) {
-      <ion-item>
-        <ion-label>
-          <h2>{{ flow.name }}</h2>
-          <p>{{ flow.blocks.length }} blocks · {{ format(flow.totalDurationSeconds) }}</p>
-        </ion-label>
-        <ion-button fill="clear" (click)="load(flow.id)">{{ 'COMMON.LOAD' | translate }}</ion-button>
-        <ion-button fill="clear" (click)="duplicate(flow.id)">{{ 'COMMON.DUPLICATE' | translate }}</ion-button>
-        <ion-button fill="clear" color="danger" (click)="delete(flow.id)">{{ 'COMMON.DELETE' | translate }}</ion-button>
-      </ion-item>
-    }
-  </ion-list>
+  @if (recentFlows().length === 0) {
+    <ion-card>
+      <ion-card-content>
+        <p class="empty-state">No saved flows yet. Save a current class so you can load it again later.</p>
+      </ion-card-content>
+    </ion-card>
+  } @else {
+    <ion-list>
+      @for (flow of recentFlows(); track flow.id) {
+        <ion-item>
+          <ion-label>
+            <h2>{{ flow.name }}</h2>
+            <p>{{ flow.blocks.length }} blocks · {{ format(flow.totalDurationSeconds) }} · Updated {{ formatUpdatedAt(flow.updatedAt) }}</p>
+            @if (flow.tags.length > 0) {
+              <p class="flow-tags">{{ flow.tags.join(' • ') }}</p>
+            }
+          </ion-label>
+          <ion-button fill="clear" (click)="load(flow.id)">Load into current flow</ion-button>
+          <ion-button fill="clear" (click)="duplicate(flow.id)">{{ 'COMMON.DUPLICATE' | translate }}</ion-button>
+          <ion-button fill="clear" color="danger" (click)="delete(flow.id)">{{ 'COMMON.DELETE' | translate }}</ion-button>
+        </ion-item>
+      }
+    </ion-list>
+  }
   </div>
 </ion-content>

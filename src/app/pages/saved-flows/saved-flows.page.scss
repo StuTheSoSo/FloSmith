@@ -10,3 +10,18 @@
   background: var(--flo-surface-a);
   border: 1px solid var(--flo-border);
 }
+
+.empty-state,
+.flow-tags {
+  color: var(--flo-ink-2);
+}
+
+.empty-state {
+  margin: 0;
+  font-weight: 600;
+}
+
+.flow-tags {
+  margin-top: 0.25rem;
+  font-size: 0.85rem;
+}

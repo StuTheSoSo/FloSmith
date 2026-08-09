@@ -17,8 +17,10 @@ export class SavedFlowsPage {
   private readonly timerService = inject(TimerService);
 
   readonly flowName = signal('My Class Flow');
+  readonly tagsText = signal('');
   readonly flows = this.flowService.savedFlows;
   readonly currentCount = computed(() => this.flowService.currentBlocks().length);
+  readonly recentFlows = computed(() => [...this.flows()].sort((left, right) => right.updatedAt.localeCompare(left.updatedAt)));
 
   saveCurrent(): void {
     const name = this.flowName().trim();
@@ -26,7 +28,13 @@ export class SavedFlowsPage {
       return;
     }
 
-    this.flowService.saveCurrentFlow(name);
+    const tags = this.tagsText()
+      .split(',')
+      .map((tag) => tag.trim())
+      .filter((tag) => tag.length > 0);
+
+    this.flowService.saveCurrentFlow(name, tags);
+    this.tagsText.set('');
   }
 
   delete(id: string): void {
@@ -48,5 +56,13 @@ export class SavedFlowsPage {
 
   format(seconds: number): string {
     return this.timerService.formatSeconds(seconds);
+  }
+
+  formatUpdatedAt(value: string): string {
+    return new Date(value).toLocaleDateString(undefined, {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric'
+    });
   }
 }

@@ -66,6 +66,20 @@
       }
     </ion-list>
 
+    <div class="section-header">Instructor Guidance</div>
+    <ion-list class="exercise-list">
+      @for (guide of instructorGuide(); track guide.exerciseId) {
+        <ion-item>
+          <ion-label>
+            <h2>{{ guide.exerciseName }}</h2>
+            <p><strong>When to use:</strong> {{ guide.whenToUse }}</p>
+            <p><strong>Avoid if:</strong> {{ guide.avoidIf }}</p>
+            <p><strong>Modification:</strong> {{ guide.modification }}</p>
+          </ion-label>
+        </ion-item>
+      }
+    </ion-list>
+
     <ion-card class="program-note-card">
       <ion-card-header>
         <ion-card-title>Teaching Notes</ion-card-title>

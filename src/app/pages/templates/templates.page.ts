@@ -81,4 +81,9 @@ export class TemplatesPage {
   accessColor(accessLevel?: FlowTemplate['accessLevel']): 'success' | 'medium' {
     return accessLevel === 'Free' ? 'success' : 'medium';
   }
+
+  bestFor(template: FlowTemplate): string {
+    const focus = template.focusAreas.slice(0, 2).join(' + ');
+    return focus ? `Best for: ${focus}` : 'Best for: general class planning';
+  }
 }

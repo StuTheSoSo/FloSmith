@@ -1,6 +1,18 @@
+.intro-text {
+  color: var(--flo-brand-ink);
+  margin: 0;
+  font-weight: 600;
+}
+
 .page-hero {
   display: grid;
   gap: 1rem;
+}
+
+.browse-mode-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
 .condition-searchbar {

@@ -2,7 +2,7 @@ import { Component, inject } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 import { Router, RouterOutlet } from '@angular/router';
 import { addIcons } from 'ionicons';
-import { homeOutline, libraryOutline, listOutline, peopleOutline, settingsOutline, trashOutline } from 'ionicons/icons';
+import { homeOutline, libraryOutline, listOutline, settingsOutline, trashOutline } from 'ionicons/icons';
 import { TranslatePipe } from '@ngx-translate/core';
 import { LanguageService } from './services/language.service';
 import { PreferencesService } from './services/preferences.service';
@@ -28,18 +28,18 @@ export class App {
 
   readonly navItems: NavItem[] = [
     { labelKey: 'NAV.HOME', path: '/', icon: 'home-outline' },
+    { labelKey: 'NAV.FLOW', path: '/flow-builder', icon: 'create-outline' },
     { labelKey: 'NAV.LIBRARY', path: '/library', icon: 'library-outline' },
     { labelKey: 'NAV.TEMPLATES', path: '/programs', icon: 'list-outline' },
-    { labelKey: 'NAV.CLIENTS', path: '/clients', icon: 'people-outline' },
     { labelKey: 'NAV.SETTINGS', path: '/settings', icon: 'settings-outline' }
   ];
 
   constructor() {
     addIcons({
+      'create-outline': listOutline,
       'home-outline': homeOutline,
       'library-outline': libraryOutline,
       'list-outline': listOutline,
-      'people-outline': peopleOutline,
       'settings-outline': settingsOutline,
       'trash-outline': trashOutline
     });

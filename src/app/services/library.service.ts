@@ -19,12 +19,13 @@ export class LibraryService {
     return this.exercises.find((item) => item.id === id);
   }
 
-  filter(query: string, category: 'all' | ExerciseCategory, level: 'all' | Exercise['level']): Exercise[] {
+  filter(query: string, category: 'all' | ExerciseCategory, level: 'all' | Exercise['level'], section: 'all' | Exercise['defaultSection'] = 'all'): Exercise[] {
     const normalized = query.trim().toLowerCase();
 
     return this.exercises.filter((exercise) => {
       const categoryMatch = category === 'all' || exercise.category === category;
       const levelMatch = level === 'all' || exercise.level === level;
+      const sectionMatch = section === 'all' || exercise.defaultSection === section;
       const queryMatch =
         normalized.length === 0 ||
         exercise.name.toLowerCase().includes(normalized) ||
@@ -34,7 +35,7 @@ export class LibraryService {
         exercise.focusAreas.some((area) => area.toLowerCase().includes(normalized)) ||
         exercise.cueTags.some((tag) => tag.toLowerCase().includes(normalized));
 
-      return categoryMatch && levelMatch && queryMatch;
+      return categoryMatch && levelMatch && sectionMatch && queryMatch;
     });
   }
 }

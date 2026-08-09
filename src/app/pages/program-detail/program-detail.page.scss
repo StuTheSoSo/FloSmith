@@ -16,6 +16,10 @@
   color: var(--flo-brand-ink);
 }
 
+.exercise-list p strong {
+  color: var(--flo-ink);
+}
+
 .goal-callout {
   display: flex;
   align-items: flex-start;

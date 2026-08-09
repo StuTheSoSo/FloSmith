@@ -18,14 +18,32 @@ export class LibraryPage {
   private readonly router = inject(Router);
   private readonly libraryService = inject(LibraryService);
   private readonly flowService = inject(FlowService);
+  private readonly allExercises = this.libraryService.getAll();
 
   readonly query = signal('');
   readonly category = signal<'all' | ExerciseCategory>('all');
   readonly level = signal<'all' | Exercise['level']>('all');
+  readonly section = signal<'all' | Exercise['defaultSection']>('all');
+  readonly browseMode = signal<'apparatus' | 'focus'>('apparatus');
+  readonly selectedApparatus = signal<string>('all');
+  readonly selectedFocus = signal<string>('all');
   readonly categories = this.libraryService.getCategories();
+  readonly sections: Array<'all' | Exercise['defaultSection']> = ['all', 'warmup', 'core', 'cooldown'];
+  readonly apparatusOptions = ['all', ...Array.from(new Set(this.allExercises.map((exercise) => exercise.apparatus))).sort((left, right) => left.localeCompare(right))];
+  readonly focusOptions = ['all', ...Array.from(new Set(this.allExercises.flatMap((exercise) => exercise.focusAreas))).sort((left, right) => left.localeCompare(right))];
 
   get exercises(): Exercise[] {
-    return this.libraryService.filter(this.query(), this.category(), this.level());
+    const filtered = this.libraryService.filter(this.query(), this.category(), this.level(), this.section());
+
+    if (this.browseMode() === 'apparatus' && this.selectedApparatus() !== 'all') {
+      return filtered.filter((exercise) => exercise.apparatus === this.selectedApparatus());
+    }
+
+    if (this.browseMode() === 'focus' && this.selectedFocus() !== 'all') {
+      return filtered.filter((exercise) => exercise.focusAreas.includes(this.selectedFocus()));
+    }
+
+    return filtered;
   }
 
   get resultCount(): number {
@@ -59,5 +77,9 @@ export class LibraryPage {
 
   openExercise(exerciseId: string): void {
     this.router.navigate(['/exercise', exerciseId]);
+  }
+
+  setBrowseMode(mode: 'apparatus' | 'focus'): void {
+    this.browseMode.set(mode);
   }
 }

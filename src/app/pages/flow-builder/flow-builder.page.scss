@@ -12,6 +12,17 @@
   border: 1px solid var(--flo-border);
 }
 
+.panel-intro,
+.empty-title,
+.empty-copy {
+  margin: 0;
+}
+
+.panel-intro {
+  color: var(--flo-ink-2);
+  margin-bottom: 10px;
+}
+
 .add-row {
   margin-top: 10px;
   display: grid;
@@ -24,6 +35,23 @@
   margin-top: 8px;
   display: grid;
   gap: 8px;
+}
+
+.empty-flow-card {
+  margin-top: 10px;
+  border-radius: 14px;
+  border: 1px dashed var(--flo-border);
+  background: color-mix(in srgb, var(--flo-surface-b) 72%, #ffffff 28%);
+}
+
+.empty-title {
+  font-weight: 800;
+  color: var(--flo-brand-ink);
+}
+
+.empty-copy {
+  margin-top: 4px;
+  color: var(--flo-ink-2);
 }
 
 .timeline-card {

@@ -13,6 +13,8 @@
 <ion-content [fullscreen]="true">
   <div class="page-shell ion-padding-horizontal">
   <section class="panel">
+    <p class="panel-intro">Build the session in the order you want to teach it. Switch views anytime to compare structure and timing.</p>
+
     <ion-segment [value]="mode()" (ionChange)="setMode($any($event).detail.value)">
       <ion-segment-button value="list">
         <ion-label>{{ 'PAGES.FLOW_BUILDER.LIST_MODE' | translate }}</ion-label>
@@ -35,7 +37,14 @@
   <section class="panel">
     <h3>{{ 'PAGES.FLOW_BUILDER.TOTAL' | translate }}: {{ totalLabel() }}</h3>
 
-    @if (mode() === 'list') {
+    @if (blocks().length === 0) {
+      <ion-card class="empty-flow-card">
+        <ion-card-content>
+          <p class="empty-title">No exercises yet</p>
+          <p class="empty-copy">Add a first exercise or load a program to start shaping the class structure.</p>
+        </ion-card-content>
+      </ion-card>
+    } @else if (mode() === 'list') {
       <ion-list>
         @for (block of blocks(); track block.id; let i = $index) {
           <ion-item>
