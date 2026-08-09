@@ -1,1 +1,147 @@
-{"APP":{"TITLE":"FloSmith"},"COMMON":{"ADD":"追加","DELETE":"削除","LOAD":"読み込み","DUPLICATE":"複製","ALL":"すべて","CLEAR":"クリア","WARMUP":"ウォームアップ","CORE":"コア","COOLDOWN":"クールダウン","START":"Start","RESUME":"Resume","PAUSE":"Pause","NEXT":"Next","RESET":"Reset","BEGINNER":"Beginner","INTERMEDIATE":"Intermediate","ADVANCED":"Advanced"},"NAV":{"HOME":"ホーム","FLOW":"クラス計画","LIBRARY":"エクササイズ","TEMPLATES":"プログラム","SAVED":"保存","TIMER":"タイマー","CLIENTS":"クライアント","SETTINGS":"設定"},"PAGES":{"HOME":{"TITLE":"インストラクターワークスペース","SUBTITLE":"安心してクラスを設計","DESCRIPTION":"シーケンス作成、時間調整、クライアントメモ管理。"},"FLOW_BUILDER":{"TITLE":"クラス計画","LIST_MODE":"リスト","TIMELINE_MODE":"タイムライン","TOTAL":"合計","INTRO":"This is your class plan. Build and reorder today's sequence, then start class when ready.","SEARCH_PLACEHOLDER":"Search and tap to add","RECENT_ARIA":"Recently added exercises","QUICK_ADD_ARIA":"Tap to add exercises","ADD_TO_PLAN":"Add to Plan","NO_MATCHES":"No matches. Try a broader search.","START_CLASS":"Start Class","START_HINT":"When your sequence is final, tap Start Class to begin teaching.","EMPTY_TITLE":"No exercises yet","EMPTY_COPY":"Add a first exercise or load a program to start shaping the class structure.","MOVE_UP":"Up","MOVE_DOWN":"Down","BLOCK_TIMING":"{{duration}}s + {{transition}}s transition + {{rest}}s rest"},"LIBRARY":{"TITLE":"エクササイズ","SEARCH":"エクササイズを検索","FLOW_BADGE":"Plan {{count}}","INTRO":"Use this page to find single exercises and add them into your class plan one at a time.","GROUP_TITLE":"Group Exercises","GROUP_HINT":"Choose one way to group, then pick a value.","GROUP_APPARATUS":"Apparatus","GROUP_BODY_FOCUS":"Body Focus","GROUP_CLASS_PLACEMENT":"Class Placement","GROUP_DIFFICULTY":"Difficulty","ADD_TO_PLAN":"Add to Class Plan","EMPTY_STATE":"No exercises match this setup. Switch browse mode or broaden section/level filters.","TOAST_ADDED":"Added {{name}} ({{count}} in plan)","TOAST_VIEW_PLAN":"View Plan"},"TEMPLATES":{"TITLE":"プログラム","APPLY":"全体プランを読み込む","INTRO":"Use this page to load a complete prebuilt program into your class plan in one step.","SEARCH_PLACEHOLDER":"Search class templates","APPLYING":"Applying...","APPLIED":"Applied","EMPTY_STATE":"No programs match the current search. Try broadening the goal, level, or equipment.","BEST_FOR_PREFIX":"Best for","BEST_FOR_FALLBACK":"general class planning","TOAST_APPLY_ERROR":"Unable to load that template.","TOAST_APPLY_SUCCESS":"Applied {{name}}."},"SAVED_FLOWS":{"TITLE":"保存済みフロー","NAME":"フロー名","SAVE":"現在のフローを保存"},"TIMER":{"TITLE":"クラスタイマー","TOTAL":"推定クラス時間","PRESET":"プリセット","TRANSITION":"移行時間","REST":"休憩時間","SUMMARY_EXERCISES":"Exercises","SUMMARY_SECTIONS":"Sections","SUMMARY_ACTIVE":"Active","SUMMARY_TRANSIT_REST":"Transit + Rest","EMPTY_TITLE":"No class flow loaded","EMPTY_COPY":"Go to Class Plan, add exercises, then come back to start class.","START_CLASS":"Start Class","STARTS_WITH":"Starts with {{name}}.","COMPLETE_TITLE":"Class complete","COMPLETE_COPY":"Great work. Reset to run the class again.","RESET_CLASS":"Reset Class","PHASE_EXERCISE":"Exercise","PHASE_TRANSITION":"Transition","PHASE_REST":"Rest","POSITION":"Exercise {{current}} of {{total}}","REMAINING":"Remaining class time: {{time}}","UP_NEXT":"Up next: {{name}}","OUTLINE_TITLE":"Class Outline","OUTLINE_ITEMS":"{{count}} items","OUTLINE_SHOW_ALL":"Show all","OUTLINE_COLLAPSE":"Collapse","OUTLINE_HELP":"Tap an exercise to jump there while timer is running.","OUTLINE_MORE":"+{{count}} more exercises","NOW_PREFIX":"Now","FINISH_CLASS":"Finish class","CUE_CLASS_COMPLETE":"Class complete","SECTION_FORMAT":"{{count}} {{section}}"},"CLIENTS":{"TITLE":"クライアントメモ","NAME":"名前","NOTE":"メモ"},"SETTINGS":{"TITLE":"設定","LANGUAGE":"言語","THEME":"テーマ","DISCLAIMER":"FloSmith is a planning tool for instructors. Always adjust flow choices to the class in front of you.","ACCOUNT_TITLE":"Account","ACCOUNT_SUBTITLE":"Save your instructor email for future sync and export workflows.","EMAIL_PLACEHOLDER":"name@studio.com","EMAIL_SAVED":"Saved: {{email}}","SAVE_EMAIL":"Save Email","ABOUT_TITLE":"About FloSmith","ABOUT_BODY_1":"FloSmith helps Pilates instructors shape reusable class structures, keep client context close, and estimate class timing before stepping into the studio.","ABOUT_BODY_2":"Use Programs to preview reusable flows, Exercises to pull single movements, and Home as your day-of-class workspace."}}}
+{
+  "APP": {
+    "TITLE": "FloSmith"
+  },
+  "COMMON": {
+    "ADD": "追加",
+    "DELETE": "削除",
+    "LOAD": "読み込み",
+    "DUPLICATE": "複製",
+    "ALL": "すべて",
+    "CLEAR": "クリア",
+    "WARMUP": "ウォームアップ",
+    "CORE": "コア",
+    "COOLDOWN": "クールダウン",
+    "START": "開始",
+    "RESUME": "再開",
+    "PAUSE": "一時停止",
+    "NEXT": "次へ",
+    "RESET": "リセット",
+    "BEGINNER": "初級",
+    "INTERMEDIATE": "中級",
+    "ADVANCED": "上級"
+  },
+  "NAV": {
+    "HOME": "見つける",
+    "FLOW": "プラン",
+    "LIBRARY": "ライブラリ",
+    "TEMPLATES": "プログラム",
+    "SAVED": "保存済み",
+    "TIMER": "タイマー",
+    "CLIENTS": "クライアント",
+    "SETTINGS": "プロフィール"
+  },
+  "PAGES": {
+    "HOME": {
+      "TITLE": "インストラクターワークスペース",
+      "SUBTITLE": "安心してクラスを設計",
+      "DESCRIPTION": "シーケンス作成、時間調整、クライアントメモ管理。"
+    },
+    "FLOW_BUILDER": {
+      "TITLE": "クラス計画",
+      "LIST_MODE": "リスト",
+      "TIMELINE_MODE": "タイムライン",
+      "TOTAL": "合計",
+      "INTRO": "これはクラス計画です。今日のシーケンスを作成・並べ替えし、準備ができたらクラスを開始します。",
+      "SEARCH_PLACEHOLDER": "検索してタップで追加",
+      "RECENT_ARIA": "最近追加したエクササイズ",
+      "QUICK_ADD_ARIA": "タップしてエクササイズを追加",
+      "ADD_TO_PLAN": "計画に追加",
+      "NO_MATCHES": "一致する項目がありません。検索条件を広げてください。",
+      "START_CLASS": "クラス開始",
+      "START_HINT": "シーケンスが完成したら「クラス開始」をタップしてください。",
+      "EMPTY_TITLE": "まだエクササイズがありません",
+      "EMPTY_COPY": "最初のエクササイズを追加するか、プログラムを読み込んで構成を始めましょう。",
+      "MOVE_UP": "上へ",
+      "MOVE_DOWN": "下へ",
+      "BLOCK_TIMING": "{{duration}}秒 + 移行 {{transition}}秒 + 休憩 {{rest}}秒"
+    },
+    "LIBRARY": {
+      "TITLE": "エクササイズ",
+      "SEARCH": "エクササイズを検索",
+      "FLOW_BADGE": "プラン {{count}}",
+      "INTRO": "このページでは単体エクササイズを探し、クラス計画に1つずつ追加できます。",
+      "GROUP_TITLE": "エクササイズのグループ化",
+      "GROUP_HINT": "グループ方法を選び、次に値を選択します。",
+      "GROUP_APPARATUS": "器具",
+      "GROUP_BODY_FOCUS": "部位フォーカス",
+      "GROUP_CLASS_PLACEMENT": "クラス内の配置",
+      "GROUP_DIFFICULTY": "難易度",
+      "ADD_TO_PLAN": "クラス計画に追加",
+      "EMPTY_STATE": "一致するエクササイズがありません。モード変更またはセクション/難易度フィルターを広げてください。",
+      "TOAST_ADDED": "{{name}}を追加しました（計画内 {{count}}）",
+      "TOAST_VIEW_PLAN": "計画を見る"
+    },
+    "TEMPLATES": {
+      "TITLE": "プログラム",
+      "APPLY": "全体プランを読み込む",
+      "INTRO": "このページでは、事前作成済みのプログラム全体を1ステップで計画に読み込めます。",
+      "SEARCH_PLACEHOLDER": "クラステンプレートを検索",
+      "APPLYING": "適用中...",
+      "APPLIED": "適用済み",
+      "EMPTY_STATE": "検索条件に一致するプログラムがありません。目的・難易度・器具を広げてください。",
+      "BEST_FOR_PREFIX": "おすすめ",
+      "BEST_FOR_FALLBACK": "一般的なクラス計画",
+      "TOAST_APPLY_ERROR": "そのテンプレートを読み込めませんでした。",
+      "TOAST_APPLY_SUCCESS": "{{name}}を適用しました。"
+    },
+    "SAVED_FLOWS": {
+      "TITLE": "保存済みフロー",
+      "NAME": "フロー名",
+      "SAVE": "現在のフローを保存"
+    },
+    "TIMER": {
+      "TITLE": "クラスタイマー",
+      "TOTAL": "推定クラス時間",
+      "PRESET": "プリセット",
+      "TRANSITION": "移行時間",
+      "REST": "休憩時間",
+      "SUMMARY_EXERCISES": "エクササイズ",
+      "SUMMARY_SECTIONS": "セクション",
+      "SUMMARY_ACTIVE": "実施時間",
+      "SUMMARY_TRANSIT_REST": "移行 + 休憩",
+      "EMPTY_TITLE": "クラス計画が読み込まれていません",
+      "EMPTY_COPY": "クラス計画でエクササイズを追加してから、ここに戻って開始してください。",
+      "START_CLASS": "クラス開始",
+      "STARTS_WITH": "{{name}}から開始します。",
+      "COMPLETE_TITLE": "クラス完了",
+      "COMPLETE_COPY": "お疲れさまでした。再度実行するにはリセットしてください。",
+      "RESET_CLASS": "クラスをリセット",
+      "PHASE_EXERCISE": "エクササイズ",
+      "PHASE_TRANSITION": "移行",
+      "PHASE_REST": "休憩",
+      "POSITION": "{{total}}中 {{current}}",
+      "REMAINING": "残りクラス時間: {{time}}",
+      "UP_NEXT": "次: {{name}}",
+      "OUTLINE_TITLE": "クラス概要",
+      "OUTLINE_ITEMS": "{{count}}項目",
+      "OUTLINE_SHOW_ALL": "すべて表示",
+      "OUTLINE_COLLAPSE": "折りたたむ",
+      "OUTLINE_HELP": "タイマー中にエクササイズをタップするとジャンプできます。",
+      "OUTLINE_MORE": "+{{count}} 件",
+      "NOW_PREFIX": "現在",
+      "FINISH_CLASS": "クラス終了",
+      "CUE_CLASS_COMPLETE": "クラス完了",
+      "SECTION_FORMAT": "{{count}} {{section}}"
+    },
+    "CLIENTS": {
+      "TITLE": "クライアントメモ",
+      "NAME": "名前",
+      "NOTE": "メモ"
+    },
+    "SETTINGS": {
+      "TITLE": "設定",
+      "LANGUAGE": "言語",
+      "THEME": "テーマ",
+      "DISCLAIMER": "FloSmithはインストラクター向けの計画ツールです。実際のクラスに合わせて必ず調整してください。",
+      "ACCOUNT_TITLE": "アカウント",
+      "ACCOUNT_SUBTITLE": "今後の同期やエクスポートのためにインストラクター用メールを保存します。",
+      "EMAIL_PLACEHOLDER": "name@studio.com",
+      "EMAIL_SAVED": "保存済み: {{email}}",
+      "SAVE_EMAIL": "メールを保存",
+      "ABOUT_TITLE": "FloSmithについて",
+      "ABOUT_BODY_1": "FloSmithは、再利用可能なクラス構成の作成、クライアント文脈の保持、スタジオ前の時間見積もりを支援します。",
+      "ABOUT_BODY_2": "プログラムで再利用フローを確認し、エクササイズで単体動作を追加し、見つけるを当日の作業画面として使います。"
+    }
+  }
+}

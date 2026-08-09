@@ -22,14 +22,14 @@
     "ADVANCED": "Advanced"
   },
   "NAV": {
-    "HOME": "Home",
-    "FLOW": "Class Plan",
-    "LIBRARY": "Exercises",
+    "HOME": "Discover",
+    "FLOW": "Plan",
+    "LIBRARY": "Library",
     "TEMPLATES": "Programs",
     "SAVED": "Saved",
     "TIMER": "Timer",
     "CLIENTS": "Clients",
-    "SETTINGS": "Settings"
+    "SETTINGS": "Profile"
   },
   "PAGES": {
     "HOME": {

@@ -20,37 +20,66 @@ import { TimerService } from '../services/timer.service';
     <ion-content fullscreen>
       <div class="home-content ion-padding-horizontal">
         <ion-card class="hero-card">
-          <p class="eyebrow">START HERE</p>
+          <p class="eyebrow">TODAY'S CLASS</p>
           <h2>{{ primaryActionLabel() }}</h2>
-          <p>Use the 3 steps below to plan and run a class.</p>
-          <ion-button size="large" routerLink="/flow-builder">{{ primaryActionLabel() }}</ion-button>
+          <p>Most Pilates instructor apps follow a simple loop: choose a direction, build the class, then run it with confidence.</p>
+          <div class="hero-actions">
+            <ion-button size="large" routerLink="/flow-builder">{{ primaryActionLabel() }}</ion-button>
+            <ion-button fill="outline" size="large" routerLink="/timer">Start Teaching View</ion-button>
+          </div>
         </ion-card>
+
+        <section class="quick-start-grid" aria-label="Primary app sections">
+          <a routerLink="/programs" class="quick-start-card">
+            <p>Programs</p>
+            <strong>Follow structured class paths and progressions.</strong>
+          </a>
+          <a routerLink="/library" class="quick-start-card">
+            <p>Exercise Library</p>
+            <strong>Browse movements by apparatus, focus, and level.</strong>
+          </a>
+          <a routerLink="/saved-flows" class="quick-start-card">
+            <p>Saved Classes</p>
+            <strong>Reuse and adapt previous class plans quickly.</strong>
+          </a>
+          <a routerLink="/clients" class="quick-start-card">
+            <p>Client Notes</p>
+            <strong>Keep teaching context close before class starts.</strong>
+          </a>
+        </section>
 
         <section class="workflow-panel" aria-label="How to use this app">
           <header>
-            <h3>How To Use FloSmith</h3>
-            <p>Follow these steps in order for each class.</p>
+            <h3>Recommended Class Workflow</h3>
+            <p>Mirrors the flow used in popular Pilates planning apps.</p>
           </header>
           <div class="workflow-grid">
-            <a routerLink="/flow-builder" class="workflow-step primary-step">
+            <a routerLink="/programs" class="workflow-step">
               <span class="step-index">1</span>
               <div>
-                <strong>Build Class Flow</strong>
-                <p>Add and order exercises for today’s class.</p>
+                <strong>Choose Program Direction</strong>
+                <p>Start from a ready structure when you want faster prep.</p>
               </div>
             </a>
-            <a routerLink="/programs" class="workflow-step">
+            <a routerLink="/library" class="workflow-step">
               <span class="step-index">2</span>
               <div>
-                <strong>Load a Program (Optional)</strong>
-                <p>Start from a template if you do not want to build from scratch.</p>
+                <strong>Select or Swap Exercises</strong>
+                <p>Refine the plan based on class level and equipment.</p>
+              </div>
+            </a>
+            <a routerLink="/flow-builder" class="workflow-step primary-step">
+              <span class="step-index">3</span>
+              <div>
+                <strong>Finalize Class Plan</strong>
+                <p>Order blocks, timing, transitions, and teaching notes.</p>
               </div>
             </a>
             <a routerLink="/timer" class="workflow-step">
-              <span class="step-index">3</span>
+              <span class="step-index">4</span>
               <div>
-                <strong>Run Timer</strong>
-                <p>Use timing and transitions while teaching.</p>
+                <strong>Teach with Timer</strong>
+                <p>Run the class live and keep pacing predictable.</p>
               </div>
             </a>
           </div>
@@ -62,6 +91,17 @@ import { TimerService } from '../services/timer.service';
             <ion-card-title>Resume A Saved Class</ion-card-title>
           </ion-card-header>
           <ion-card-content>
+            @if (blockCount() > 0) {
+              <div class="resume-current-flow">
+                <strong>Current plan in progress</strong>
+                <span>{{ blockCount() }} blocks · {{ formatSeconds(currentFlowTotalSeconds()) }}</span>
+                <div class="resume-current-actions">
+                  <ion-button size="small" routerLink="/flow-builder">Continue Plan</ion-button>
+                  <ion-button size="small" fill="outline" routerLink="/timer">Open Timer</ion-button>
+                </div>
+              </div>
+            }
+
             @if (recentSavedFlows().length === 0) {
               <p class="recent-empty">No saved classes yet. Build your first class flow, then save it in Saved Flows.</p>
             } @else {
@@ -149,6 +189,38 @@ import { TimerService } from '../services/timer.service';
       gap: 0.85rem;
     }
 
+    .quick-start-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.65rem;
+    }
+
+    .quick-start-card {
+      border-radius: 16px;
+      border: 1px solid var(--flo-border);
+      background: color-mix(in srgb, var(--flo-surface-b) 88%, #ffffff 12%);
+      padding: 0.8rem;
+      text-decoration: none;
+      display: grid;
+      gap: 0.28rem;
+      box-shadow: 0 4px 16px rgba(23, 51, 71, 0.08);
+    }
+
+    .quick-start-card p {
+      margin: 0;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--ion-color-primary);
+      font-weight: 700;
+    }
+
+    .quick-start-card strong {
+      color: var(--flo-brand-ink);
+      font-size: 0.9rem;
+      line-height: 1.35;
+    }
+
     .workflow-panel h3 {
       margin: 0;
       color: var(--ion-color-primary);
@@ -225,6 +297,32 @@ import { TimerService } from '../services/timer.service';
       gap: 0.9rem;
     }
 
+    .resume-current-flow {
+      border: 1px solid var(--flo-border);
+      border-radius: 14px;
+      padding: 0.75rem;
+      display: grid;
+      gap: 0.35rem;
+      background: color-mix(in srgb, var(--flo-surface-a) 88%, #ffffff 12%);
+    }
+
+    .resume-current-flow strong {
+      color: var(--flo-brand-ink);
+      font-size: 0.94rem;
+    }
+
+    .resume-current-flow span {
+      color: var(--flo-ink-2);
+      font-size: 0.84rem;
+    }
+
+    .resume-current-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.2rem;
+    }
+
     .recent-empty {
       margin: 0;
       color: var(--flo-ink-2);
@@ -256,9 +354,24 @@ import { TimerService } from '../services/timer.service';
       font-size: 0.83rem;
     }
 
+    .hero-actions {
+      display: flex;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+
     @media (max-width: 760px) {
       .hero-card ion-button {
         width: 100%;
+      }
+
+      .quick-start-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-actions {
+        display: grid;
+        grid-template-columns: 1fr;
       }
 
       .help-actions ion-button {
@@ -276,6 +389,7 @@ export class HomePage {
 
   readonly blockCount = computed(() => this.flowService.currentBlocks().length);
   readonly primaryActionLabel = computed(() => this.blockCount() > 0 ? 'Continue Current Flow' : 'Start New Flow');
+  readonly currentFlowTotalSeconds = computed(() => this.timerService.calculateTotalSeconds(this.flowService.currentBlocks()));
   readonly recentSavedFlows = computed(() => [...this.flowService.savedFlows()].sort((left, right) => right.updatedAt.localeCompare(left.updatedAt)).slice(0, 3));
 
   formatSeconds(value: number): string {

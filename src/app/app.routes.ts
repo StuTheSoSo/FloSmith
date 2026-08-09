@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
 	{ path: '', loadComponent: () => import('./pages/home.page').then((m) => m.HomePage) },
+	{ path: 'discover', redirectTo: '', pathMatch: 'full' },
 	{ path: 'flow-builder', loadComponent: () => import('./pages/flow-builder/flow-builder.page').then((m) => m.FlowBuilderPage) },
 	{ path: 'library', loadComponent: () => import('./pages/library/library.page').then((m) => m.LibraryPage) },
 	{ path: 'exercise/:id', loadComponent: () => import('./pages/exercise-detail/exercise-detail.page').then((m) => m.ExerciseDetailPage) },

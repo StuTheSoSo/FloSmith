@@ -30,9 +30,9 @@ export class App {
 
   readonly navItems: NavItem[] = [
     { labelKey: 'NAV.HOME', path: '/', icon: 'home-outline' },
-    { labelKey: 'NAV.FLOW', path: '/flow-builder', icon: 'create-outline' },
-    { labelKey: 'NAV.LIBRARY', path: '/library', icon: 'library-outline' },
     { labelKey: 'NAV.TEMPLATES', path: '/programs', icon: 'list-outline' },
+    { labelKey: 'NAV.LIBRARY', path: '/library', icon: 'library-outline' },
+    { labelKey: 'NAV.FLOW', path: '/flow-builder', icon: 'create-outline' },
     { labelKey: 'NAV.SETTINGS', path: '/settings', icon: 'settings-outline' }
   ];
 

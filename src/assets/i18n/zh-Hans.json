@@ -1,1 +1,147 @@
-{"APP":{"TITLE":"FloSmith"},"COMMON":{"ADD":"添加","DELETE":"删除","LOAD":"加载","DUPLICATE":"复制","ALL":"全部","CLEAR":"清空","WARMUP":"热身","CORE":"核心","COOLDOWN":"放松","START":"Start","RESUME":"Resume","PAUSE":"Pause","NEXT":"Next","RESET":"Reset","BEGINNER":"Beginner","INTERMEDIATE":"Intermediate","ADVANCED":"Advanced"},"NAV":{"HOME":"首页","FLOW":"班课计划","LIBRARY":"练习","TEMPLATES":"课程方案","SAVED":"已保存","TIMER":"计时","CLIENTS":"客户","SETTINGS":"设置"},"PAGES":{"HOME":{"TITLE":"教练工作台","SUBTITLE":"高效规划课程","DESCRIPTION":"构建序列、调整时间、记录客户备注。"},"FLOW_BUILDER":{"TITLE":"班课计划","LIST_MODE":"列表","TIMELINE_MODE":"时间线","TOTAL":"总计","INTRO":"This is your class plan. Build and reorder today's sequence, then start class when ready.","SEARCH_PLACEHOLDER":"Search and tap to add","RECENT_ARIA":"Recently added exercises","QUICK_ADD_ARIA":"Tap to add exercises","ADD_TO_PLAN":"Add to Plan","NO_MATCHES":"No matches. Try a broader search.","START_CLASS":"Start Class","START_HINT":"When your sequence is final, tap Start Class to begin teaching.","EMPTY_TITLE":"No exercises yet","EMPTY_COPY":"Add a first exercise or load a program to start shaping the class structure.","MOVE_UP":"Up","MOVE_DOWN":"Down","BLOCK_TIMING":"{{duration}}s + {{transition}}s transition + {{rest}}s rest"},"LIBRARY":{"TITLE":"练习","SEARCH":"搜索练习","FLOW_BADGE":"Plan {{count}}","INTRO":"Use this page to find single exercises and add them into your class plan one at a time.","GROUP_TITLE":"Group Exercises","GROUP_HINT":"Choose one way to group, then pick a value.","GROUP_APPARATUS":"Apparatus","GROUP_BODY_FOCUS":"Body Focus","GROUP_CLASS_PLACEMENT":"Class Placement","GROUP_DIFFICULTY":"Difficulty","ADD_TO_PLAN":"Add to Class Plan","EMPTY_STATE":"No exercises match this setup. Switch browse mode or broaden section/level filters.","TOAST_ADDED":"Added {{name}} ({{count}} in plan)","TOAST_VIEW_PLAN":"View Plan"},"TEMPLATES":{"TITLE":"课程方案","APPLY":"加载完整计划","INTRO":"Use this page to load a complete prebuilt program into your class plan in one step.","SEARCH_PLACEHOLDER":"Search class templates","APPLYING":"Applying...","APPLIED":"Applied","EMPTY_STATE":"No programs match the current search. Try broadening the goal, level, or equipment.","BEST_FOR_PREFIX":"Best for","BEST_FOR_FALLBACK":"general class planning","TOAST_APPLY_ERROR":"Unable to load that template.","TOAST_APPLY_SUCCESS":"Applied {{name}}."},"SAVED_FLOWS":{"TITLE":"已保存流程","NAME":"流程名称","SAVE":"保存当前流程"},"TIMER":{"TITLE":"课程计时","TOTAL":"预计总时长","PRESET":"预设","TRANSITION":"默认过渡","REST":"默认休息","SUMMARY_EXERCISES":"Exercises","SUMMARY_SECTIONS":"Sections","SUMMARY_ACTIVE":"Active","SUMMARY_TRANSIT_REST":"Transit + Rest","EMPTY_TITLE":"No class flow loaded","EMPTY_COPY":"Go to Class Plan, add exercises, then come back to start class.","START_CLASS":"Start Class","STARTS_WITH":"Starts with {{name}}.","COMPLETE_TITLE":"Class complete","COMPLETE_COPY":"Great work. Reset to run the class again.","RESET_CLASS":"Reset Class","PHASE_EXERCISE":"Exercise","PHASE_TRANSITION":"Transition","PHASE_REST":"Rest","POSITION":"Exercise {{current}} of {{total}}","REMAINING":"Remaining class time: {{time}}","UP_NEXT":"Up next: {{name}}","OUTLINE_TITLE":"Class Outline","OUTLINE_ITEMS":"{{count}} items","OUTLINE_SHOW_ALL":"Show all","OUTLINE_COLLAPSE":"Collapse","OUTLINE_HELP":"Tap an exercise to jump there while timer is running.","OUTLINE_MORE":"+{{count}} more exercises","NOW_PREFIX":"Now","FINISH_CLASS":"Finish class","CUE_CLASS_COMPLETE":"Class complete","SECTION_FORMAT":"{{count}} {{section}}"},"CLIENTS":{"TITLE":"客户备注","NAME":"客户姓名","NOTE":"备注"},"SETTINGS":{"TITLE":"设置","LANGUAGE":"语言","THEME":"主题","DISCLAIMER":"FloSmith is a planning tool for instructors. Always adjust flow choices to the class in front of you.","ACCOUNT_TITLE":"Account","ACCOUNT_SUBTITLE":"Save your instructor email for future sync and export workflows.","EMAIL_PLACEHOLDER":"name@studio.com","EMAIL_SAVED":"Saved: {{email}}","SAVE_EMAIL":"Save Email","ABOUT_TITLE":"About FloSmith","ABOUT_BODY_1":"FloSmith helps Pilates instructors shape reusable class structures, keep client context close, and estimate class timing before stepping into the studio.","ABOUT_BODY_2":"Use Programs to preview reusable flows, Exercises to pull single movements, and Home as your day-of-class workspace."}}}
+{
+  "APP": {
+    "TITLE": "FloSmith"
+  },
+  "COMMON": {
+    "ADD": "添加",
+    "DELETE": "删除",
+    "LOAD": "加载",
+    "DUPLICATE": "复制",
+    "ALL": "全部",
+    "CLEAR": "清空",
+    "WARMUP": "热身",
+    "CORE": "核心",
+    "COOLDOWN": "放松",
+    "START": "开始",
+    "RESUME": "继续",
+    "PAUSE": "暂停",
+    "NEXT": "下一个",
+    "RESET": "重置",
+    "BEGINNER": "初级",
+    "INTERMEDIATE": "中级",
+    "ADVANCED": "高级"
+  },
+  "NAV": {
+    "HOME": "探索",
+    "FLOW": "规划",
+    "LIBRARY": "动作库",
+    "TEMPLATES": "课程",
+    "SAVED": "已保存",
+    "TIMER": "计时器",
+    "CLIENTS": "客户",
+    "SETTINGS": "我的"
+  },
+  "PAGES": {
+    "HOME": {
+      "TITLE": "教练工作台",
+      "SUBTITLE": "高效规划课程",
+      "DESCRIPTION": "构建序列、调整时间、记录客户备注。"
+    },
+    "FLOW_BUILDER": {
+      "TITLE": "班课计划",
+      "LIST_MODE": "列表",
+      "TIMELINE_MODE": "时间线",
+      "TOTAL": "总计",
+      "INTRO": "这是你的课程计划。创建并调整今天的序列，准备好后开始上课。",
+      "SEARCH_PLACEHOLDER": "搜索并点击添加",
+      "RECENT_ARIA": "最近添加的动作",
+      "QUICK_ADD_ARIA": "点击添加动作",
+      "ADD_TO_PLAN": "添加到计划",
+      "NO_MATCHES": "没有匹配结果。请尝试更宽泛的搜索。",
+      "START_CLASS": "开始课程",
+      "START_HINT": "序列确认后，点击开始课程。",
+      "EMPTY_TITLE": "还没有动作",
+      "EMPTY_COPY": "先添加一个动作，或加载课程方案来开始搭建结构。",
+      "MOVE_UP": "上移",
+      "MOVE_DOWN": "下移",
+      "BLOCK_TIMING": "{{duration}}秒 + {{transition}}秒过渡 + {{rest}}秒休息"
+    },
+    "LIBRARY": {
+      "TITLE": "练习",
+      "SEARCH": "搜索练习",
+      "FLOW_BADGE": "计划 {{count}}",
+      "INTRO": "此页面用于查找单个动作，并逐个加入你的课程计划。",
+      "GROUP_TITLE": "分组浏览动作",
+      "GROUP_HINT": "先选择一种分组方式，再选择对应值。",
+      "GROUP_APPARATUS": "器械",
+      "GROUP_BODY_FOCUS": "身体重点",
+      "GROUP_CLASS_PLACEMENT": "课程位置",
+      "GROUP_DIFFICULTY": "难度",
+      "ADD_TO_PLAN": "添加到课程计划",
+      "EMPTY_STATE": "没有匹配动作。请切换浏览方式或放宽分段/难度筛选。",
+      "TOAST_ADDED": "已添加 {{name}}（计划内 {{count}}）",
+      "TOAST_VIEW_PLAN": "查看计划"
+    },
+    "TEMPLATES": {
+      "TITLE": "课程方案",
+      "APPLY": "加载完整计划",
+      "INTRO": "此页面可一步将完整预制课程方案加载到你的计划中。",
+      "SEARCH_PLACEHOLDER": "搜索课程模板",
+      "APPLYING": "应用中...",
+      "APPLIED": "已应用",
+      "EMPTY_STATE": "没有匹配当前搜索的课程。请放宽目标、难度或器械条件。",
+      "BEST_FOR_PREFIX": "适合",
+      "BEST_FOR_FALLBACK": "通用课程规划",
+      "TOAST_APPLY_ERROR": "无法加载该模板。",
+      "TOAST_APPLY_SUCCESS": "已应用 {{name}}。"
+    },
+    "SAVED_FLOWS": {
+      "TITLE": "已保存流程",
+      "NAME": "流程名称",
+      "SAVE": "保存当前流程"
+    },
+    "TIMER": {
+      "TITLE": "课程计时",
+      "TOTAL": "预计总时长",
+      "PRESET": "预设",
+      "TRANSITION": "默认过渡",
+      "REST": "默认休息",
+      "SUMMARY_EXERCISES": "动作",
+      "SUMMARY_SECTIONS": "分段",
+      "SUMMARY_ACTIVE": "进行中",
+      "SUMMARY_TRANSIT_REST": "过渡 + 休息",
+      "EMPTY_TITLE": "未加载课程计划",
+      "EMPTY_COPY": "先到课程计划添加动作，再返回开始课程。",
+      "START_CLASS": "开始课程",
+      "STARTS_WITH": "从 {{name}} 开始。",
+      "COMPLETE_TITLE": "课程完成",
+      "COMPLETE_COPY": "做得很好。重置后可再次运行本课。",
+      "RESET_CLASS": "重置课程",
+      "PHASE_EXERCISE": "动作",
+      "PHASE_TRANSITION": "过渡",
+      "PHASE_REST": "休息",
+      "POSITION": "第 {{current}} / {{total}} 个动作",
+      "REMAINING": "课程剩余时间：{{time}}",
+      "UP_NEXT": "下一个：{{name}}",
+      "OUTLINE_TITLE": "课程大纲",
+      "OUTLINE_ITEMS": "{{count}} 项",
+      "OUTLINE_SHOW_ALL": "显示全部",
+      "OUTLINE_COLLAPSE": "收起",
+      "OUTLINE_HELP": "计时运行时可点击动作直接跳转。",
+      "OUTLINE_MORE": "+{{count}} 个更多动作",
+      "NOW_PREFIX": "当前",
+      "FINISH_CLASS": "结束课程",
+      "CUE_CLASS_COMPLETE": "课程完成",
+      "SECTION_FORMAT": "{{count}} {{section}}"
+    },
+    "CLIENTS": {
+      "TITLE": "客户备注",
+      "NAME": "客户姓名",
+      "NOTE": "备注"
+    },
+    "SETTINGS": {
+      "TITLE": "设置",
+      "LANGUAGE": "语言",
+      "THEME": "主题",
+      "DISCLAIMER": "FloSmith 是面向教练的课程规划工具。请始终根据真实课堂情况调整流程。",
+      "ACCOUNT_TITLE": "账号",
+      "ACCOUNT_SUBTITLE": "保存你的教练邮箱，用于后续同步与导出流程。",
+      "EMAIL_PLACEHOLDER": "name@studio.com",
+      "EMAIL_SAVED": "已保存：{{email}}",
+      "SAVE_EMAIL": "保存邮箱",
+      "ABOUT_TITLE": "关于 FloSmith",
+      "ABOUT_BODY_1": "FloSmith 帮助普拉提教练构建可复用课程结构，保留客户背景信息，并在进棚前预估课程时长。",
+      "ABOUT_BODY_2": "使用课程查看可复用流程，使用动作库补充单项动作，使用探索作为课前工作台。"
+    }
+  }
+}

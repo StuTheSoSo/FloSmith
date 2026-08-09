@@ -1,1 +1,147 @@
-{"APP":{"TITLE":"FloSmith"},"COMMON":{"ADD":"إضافة","DELETE":"حذف","LOAD":"تحميل","DUPLICATE":"نسخ","ALL":"الكل","CLEAR":"مسح","WARMUP":"إحماء","CORE":"أساسي","COOLDOWN":"تهدئة","START":"Start","RESUME":"Resume","PAUSE":"Pause","NEXT":"Next","RESET":"Reset","BEGINNER":"Beginner","INTERMEDIATE":"Intermediate","ADVANCED":"Advanced"},"NAV":{"HOME":"الرئيسية","FLOW":"خطة الحصة","LIBRARY":"التمارين","TEMPLATES":"البرامج","SAVED":"المحفوظة","TIMER":"المؤقت","CLIENTS":"العملاء","SETTINGS":"الإعدادات"},"PAGES":{"HOME":{"TITLE":"مساحة المدرب","SUBTITLE":"خطط الحصص بثقة","DESCRIPTION":"ابن التسلسلات واضبط التوقيت واحتفظ بملاحظات العملاء."},"FLOW_BUILDER":{"TITLE":"خطة الحصة","LIST_MODE":"قائمة","TIMELINE_MODE":"مخطط زمني","TOTAL":"الإجمالي","INTRO":"This is your class plan. Build and reorder today's sequence, then start class when ready.","SEARCH_PLACEHOLDER":"Search and tap to add","RECENT_ARIA":"Recently added exercises","QUICK_ADD_ARIA":"Tap to add exercises","ADD_TO_PLAN":"Add to Plan","NO_MATCHES":"No matches. Try a broader search.","START_CLASS":"Start Class","START_HINT":"When your sequence is final, tap Start Class to begin teaching.","EMPTY_TITLE":"No exercises yet","EMPTY_COPY":"Add a first exercise or load a program to start shaping the class structure.","MOVE_UP":"Up","MOVE_DOWN":"Down","BLOCK_TIMING":"{{duration}}s + {{transition}}s transition + {{rest}}s rest"},"LIBRARY":{"TITLE":"التمارين","SEARCH":"ابحث عن تمرين","FLOW_BADGE":"Plan {{count}}","INTRO":"Use this page to find single exercises and add them into your class plan one at a time.","GROUP_TITLE":"Group Exercises","GROUP_HINT":"Choose one way to group, then pick a value.","GROUP_APPARATUS":"Apparatus","GROUP_BODY_FOCUS":"Body Focus","GROUP_CLASS_PLACEMENT":"Class Placement","GROUP_DIFFICULTY":"Difficulty","ADD_TO_PLAN":"Add to Class Plan","EMPTY_STATE":"No exercises match this setup. Switch browse mode or broaden section/level filters.","TOAST_ADDED":"Added {{name}} ({{count}} in plan)","TOAST_VIEW_PLAN":"View Plan"},"TEMPLATES":{"TITLE":"البرامج","APPLY":"تحميل الخطة الكاملة","INTRO":"Use this page to load a complete prebuilt program into your class plan in one step.","SEARCH_PLACEHOLDER":"Search class templates","APPLYING":"Applying...","APPLIED":"Applied","EMPTY_STATE":"No programs match the current search. Try broadening the goal, level, or equipment.","BEST_FOR_PREFIX":"Best for","BEST_FOR_FALLBACK":"general class planning","TOAST_APPLY_ERROR":"Unable to load that template.","TOAST_APPLY_SUCCESS":"Applied {{name}}."},"SAVED_FLOWS":{"TITLE":"التدفقات المحفوظة","NAME":"اسم التدفق","SAVE":"حفظ التدفق الحالي"},"TIMER":{"TITLE":"مؤقت الحصة","TOTAL":"الوقت التقديري","PRESET":"إعداد","TRANSITION":"انتقال افتراضي","REST":"راحة افتراضية","SUMMARY_EXERCISES":"Exercises","SUMMARY_SECTIONS":"Sections","SUMMARY_ACTIVE":"Active","SUMMARY_TRANSIT_REST":"Transit + Rest","EMPTY_TITLE":"No class flow loaded","EMPTY_COPY":"Go to Class Plan, add exercises, then come back to start class.","START_CLASS":"Start Class","STARTS_WITH":"Starts with {{name}}.","COMPLETE_TITLE":"Class complete","COMPLETE_COPY":"Great work. Reset to run the class again.","RESET_CLASS":"Reset Class","PHASE_EXERCISE":"Exercise","PHASE_TRANSITION":"Transition","PHASE_REST":"Rest","POSITION":"Exercise {{current}} of {{total}}","REMAINING":"Remaining class time: {{time}}","UP_NEXT":"Up next: {{name}}","OUTLINE_TITLE":"Class Outline","OUTLINE_ITEMS":"{{count}} items","OUTLINE_SHOW_ALL":"Show all","OUTLINE_COLLAPSE":"Collapse","OUTLINE_HELP":"Tap an exercise to jump there while timer is running.","OUTLINE_MORE":"+{{count}} more exercises","NOW_PREFIX":"Now","FINISH_CLASS":"Finish class","CUE_CLASS_COMPLETE":"Class complete","SECTION_FORMAT":"{{count}} {{section}}"},"CLIENTS":{"TITLE":"ملاحظات العملاء","NAME":"اسم العميل","NOTE":"ملاحظة"},"SETTINGS":{"TITLE":"الإعدادات","LANGUAGE":"اللغة","THEME":"المظهر","DISCLAIMER":"FloSmith is a planning tool for instructors. Always adjust flow choices to the class in front of you.","ACCOUNT_TITLE":"Account","ACCOUNT_SUBTITLE":"Save your instructor email for future sync and export workflows.","EMAIL_PLACEHOLDER":"name@studio.com","EMAIL_SAVED":"Saved: {{email}}","SAVE_EMAIL":"Save Email","ABOUT_TITLE":"About FloSmith","ABOUT_BODY_1":"FloSmith helps Pilates instructors shape reusable class structures, keep client context close, and estimate class timing before stepping into the studio.","ABOUT_BODY_2":"Use Programs to preview reusable flows, Exercises to pull single movements, and Home as your day-of-class workspace."}}}
+{
+  "APP": {
+    "TITLE": "FloSmith"
+  },
+  "COMMON": {
+    "ADD": "إضافة",
+    "DELETE": "حذف",
+    "LOAD": "تحميل",
+    "DUPLICATE": "نسخ",
+    "ALL": "الكل",
+    "CLEAR": "مسح",
+    "WARMUP": "إحماء",
+    "CORE": "أساسي",
+    "COOLDOWN": "تهدئة",
+    "START": "ابدأ",
+    "RESUME": "استئناف",
+    "PAUSE": "إيقاف مؤقت",
+    "NEXT": "التالي",
+    "RESET": "إعادة تعيين",
+    "BEGINNER": "مبتدئ",
+    "INTERMEDIATE": "متوسط",
+    "ADVANCED": "متقدم"
+  },
+  "NAV": {
+    "HOME": "اكتشف",
+    "FLOW": "خطة",
+    "LIBRARY": "مكتبة",
+    "TEMPLATES": "برامج",
+    "SAVED": "المحفوظات",
+    "TIMER": "مؤقت",
+    "CLIENTS": "العملاء",
+    "SETTINGS": "حسابي"
+  },
+  "PAGES": {
+    "HOME": {
+      "TITLE": "مساحة المدرب",
+      "SUBTITLE": "خطط الحصص بثقة",
+      "DESCRIPTION": "ابن التسلسلات واضبط التوقيت واحتفظ بملاحظات العملاء."
+    },
+    "FLOW_BUILDER": {
+      "TITLE": "خطة الحصة",
+      "LIST_MODE": "قائمة",
+      "TIMELINE_MODE": "مخطط زمني",
+      "TOTAL": "الإجمالي",
+      "INTRO": "هذه خطة حصتك. أنشئ تسلسل اليوم وأعد ترتيبه، ثم ابدأ الحصة عندما تصبح جاهزًا.",
+      "SEARCH_PLACEHOLDER": "ابحث واضغط للإضافة",
+      "RECENT_ARIA": "تمارين أضيفت مؤخرًا",
+      "QUICK_ADD_ARIA": "اضغط لإضافة تمارين",
+      "ADD_TO_PLAN": "أضف إلى الخطة",
+      "NO_MATCHES": "لا توجد نتائج. جرّب بحثًا أوسع.",
+      "START_CLASS": "ابدأ الحصة",
+      "START_HINT": "عند اكتمال التسلسل، اضغط ابدأ الحصة لبدء التدريس.",
+      "EMPTY_TITLE": "لا توجد تمارين بعد",
+      "EMPTY_COPY": "أضف تمرينًا أولًا أو حمّل برنامجًا لبدء تشكيل بنية الحصة.",
+      "MOVE_UP": "أعلى",
+      "MOVE_DOWN": "أسفل",
+      "BLOCK_TIMING": "{{duration}}ث + انتقال {{transition}}ث + راحة {{rest}}ث"
+    },
+    "LIBRARY": {
+      "TITLE": "التمارين",
+      "SEARCH": "ابحث عن تمرين",
+      "FLOW_BADGE": "الخطة {{count}}",
+      "INTRO": "استخدم هذه الصفحة للعثور على تمارين فردية وإضافتها إلى خطة حصتك واحدًا تلو الآخر.",
+      "GROUP_TITLE": "تجميع التمارين",
+      "GROUP_HINT": "اختر طريقة واحدة للتجميع، ثم اختر قيمة.",
+      "GROUP_APPARATUS": "الأداة",
+      "GROUP_BODY_FOCUS": "تركيز الجسم",
+      "GROUP_CLASS_PLACEMENT": "موضعه في الحصة",
+      "GROUP_DIFFICULTY": "الصعوبة",
+      "ADD_TO_PLAN": "أضف إلى خطة الحصة",
+      "EMPTY_STATE": "لا توجد تمارين تطابق هذا الإعداد. بدّل نمط التصفح أو وسّع فلاتر القسم/المستوى.",
+      "TOAST_ADDED": "تمت إضافة {{name}} ({{count}} في الخطة)",
+      "TOAST_VIEW_PLAN": "عرض الخطة"
+    },
+    "TEMPLATES": {
+      "TITLE": "البرامج",
+      "APPLY": "تحميل الخطة الكاملة",
+      "INTRO": "استخدم هذه الصفحة لتحميل برنامج جاهز كامل إلى خطة حصتك بخطوة واحدة.",
+      "SEARCH_PLACEHOLDER": "ابحث في قوالب الحصص",
+      "APPLYING": "جارٍ التطبيق...",
+      "APPLIED": "تم التطبيق",
+      "EMPTY_STATE": "لا توجد برامج تطابق البحث الحالي. جرّب توسيع الهدف أو المستوى أو الأداة.",
+      "BEST_FOR_PREFIX": "الأفضل لـ",
+      "BEST_FOR_FALLBACK": "تخطيط الحصص العام",
+      "TOAST_APPLY_ERROR": "تعذر تحميل هذا القالب.",
+      "TOAST_APPLY_SUCCESS": "تم تطبيق {{name}}."
+    },
+    "SAVED_FLOWS": {
+      "TITLE": "التدفقات المحفوظة",
+      "NAME": "اسم التدفق",
+      "SAVE": "حفظ التدفق الحالي"
+    },
+    "TIMER": {
+      "TITLE": "مؤقت الحصة",
+      "TOTAL": "الوقت التقديري",
+      "PRESET": "إعداد",
+      "TRANSITION": "انتقال افتراضي",
+      "REST": "راحة افتراضية",
+      "SUMMARY_EXERCISES": "التمارين",
+      "SUMMARY_SECTIONS": "الأقسام",
+      "SUMMARY_ACTIVE": "النشط",
+      "SUMMARY_TRANSIT_REST": "انتقال + راحة",
+      "EMPTY_TITLE": "لا توجد خطة حصة محمّلة",
+      "EMPTY_COPY": "انتقل إلى خطة الحصة، أضف التمارين، ثم عد لبدء الحصة.",
+      "START_CLASS": "ابدأ الحصة",
+      "STARTS_WITH": "تبدأ بـ {{name}}.",
+      "COMPLETE_TITLE": "اكتملت الحصة",
+      "COMPLETE_COPY": "عمل رائع. أعد التعيين لتشغيل الحصة مرة أخرى.",
+      "RESET_CLASS": "إعادة ضبط الحصة",
+      "PHASE_EXERCISE": "تمرين",
+      "PHASE_TRANSITION": "انتقال",
+      "PHASE_REST": "راحة",
+      "POSITION": "التمرين {{current}} من {{total}}",
+      "REMAINING": "الوقت المتبقي للحصة: {{time}}",
+      "UP_NEXT": "التالي: {{name}}",
+      "OUTLINE_TITLE": "مخطط الحصة",
+      "OUTLINE_ITEMS": "{{count}} عناصر",
+      "OUTLINE_SHOW_ALL": "عرض الكل",
+      "OUTLINE_COLLAPSE": "طي",
+      "OUTLINE_HELP": "اضغط تمرينًا للانتقال إليه أثناء تشغيل المؤقت.",
+      "OUTLINE_MORE": "+{{count}} تمارين إضافية",
+      "NOW_PREFIX": "الآن",
+      "FINISH_CLASS": "إنهاء الحصة",
+      "CUE_CLASS_COMPLETE": "اكتملت الحصة",
+      "SECTION_FORMAT": "{{count}} {{section}}"
+    },
+    "CLIENTS": {
+      "TITLE": "ملاحظات العملاء",
+      "NAME": "اسم العميل",
+      "NOTE": "ملاحظة"
+    },
+    "SETTINGS": {
+      "TITLE": "الإعدادات",
+      "LANGUAGE": "اللغة",
+      "THEME": "المظهر",
+      "DISCLAIMER": "FloSmith أداة تخطيط للمدربين. اضبط دائمًا اختيارات التدفق بما يناسب الحصة أمامك.",
+      "ACCOUNT_TITLE": "الحساب",
+      "ACCOUNT_SUBTITLE": "احفظ بريدك كمدرب لاستخدامه لاحقًا في مزامنة وتصدير التدفقات.",
+      "EMAIL_PLACEHOLDER": "name@studio.com",
+      "EMAIL_SAVED": "تم الحفظ: {{email}}",
+      "SAVE_EMAIL": "حفظ البريد",
+      "ABOUT_TITLE": "حول FloSmith",
+      "ABOUT_BODY_1": "يساعد FloSmith مدربي البيلاتس على بناء هياكل حصص قابلة لإعادة الاستخدام، والحفاظ على سياق العملاء قريبًا، وتقدير وقت الحصة قبل دخول الاستوديو.",
+      "ABOUT_BODY_2": "استخدم البرامج لمعاينة التدفقات القابلة لإعادة الاستخدام، والمكتبة لسحب التمارين الفردية، واكتشف كمساحة عملك قبل الحصة."
+    }
+  }
+}

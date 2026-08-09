@@ -1,1 +1,147 @@
-{"APP":{"TITLE":"FloSmith"},"COMMON":{"ADD":"Agregar","DELETE":"Eliminar","LOAD":"Cargar","DUPLICATE":"Duplicar","ALL":"Todos","CLEAR":"Limpiar","WARMUP":"Calentamiento","CORE":"Centro","COOLDOWN":"Vuelta a la calma","START":"Start","RESUME":"Resume","PAUSE":"Pause","NEXT":"Next","RESET":"Reset","BEGINNER":"Beginner","INTERMEDIATE":"Intermediate","ADVANCED":"Advanced"},"NAV":{"HOME":"Inicio","FLOW":"Plan de clase","LIBRARY":"Ejercicios","TEMPLATES":"Programas","SAVED":"Guardados","TIMER":"Temporizador","CLIENTS":"Clientes","SETTINGS":"Ajustes"},"PAGES":{"HOME":{"TITLE":"Espacio del instructor","SUBTITLE":"Planifica clases con confianza","DESCRIPTION":"Crea secuencias, mide tiempos y guarda notas para cada cliente."},"FLOW_BUILDER":{"TITLE":"Plan de clase","LIST_MODE":"Lista","TIMELINE_MODE":"Cronologia","TOTAL":"Total","INTRO":"This is your class plan. Build and reorder today's sequence, then start class when ready.","SEARCH_PLACEHOLDER":"Search and tap to add","RECENT_ARIA":"Recently added exercises","QUICK_ADD_ARIA":"Tap to add exercises","ADD_TO_PLAN":"Add to Plan","NO_MATCHES":"No matches. Try a broader search.","START_CLASS":"Start Class","START_HINT":"When your sequence is final, tap Start Class to begin teaching.","EMPTY_TITLE":"No exercises yet","EMPTY_COPY":"Add a first exercise or load a program to start shaping the class structure.","MOVE_UP":"Up","MOVE_DOWN":"Down","BLOCK_TIMING":"{{duration}}s + {{transition}}s transition + {{rest}}s rest"},"LIBRARY":{"TITLE":"Ejercicios","SEARCH":"Buscar ejercicios","FLOW_BADGE":"Plan {{count}}","INTRO":"Use this page to find single exercises and add them into your class plan one at a time.","GROUP_TITLE":"Group Exercises","GROUP_HINT":"Choose one way to group, then pick a value.","GROUP_APPARATUS":"Apparatus","GROUP_BODY_FOCUS":"Body Focus","GROUP_CLASS_PLACEMENT":"Class Placement","GROUP_DIFFICULTY":"Difficulty","ADD_TO_PLAN":"Add to Class Plan","EMPTY_STATE":"No exercises match this setup. Switch browse mode or broaden section/level filters.","TOAST_ADDED":"Added {{name}} ({{count}} in plan)","TOAST_VIEW_PLAN":"View Plan"},"TEMPLATES":{"TITLE":"Programas","APPLY":"Cargar plan completo","INTRO":"Use this page to load a complete prebuilt program into your class plan in one step.","SEARCH_PLACEHOLDER":"Search class templates","APPLYING":"Applying...","APPLIED":"Applied","EMPTY_STATE":"No programs match the current search. Try broadening the goal, level, or equipment.","BEST_FOR_PREFIX":"Best for","BEST_FOR_FALLBACK":"general class planning","TOAST_APPLY_ERROR":"Unable to load that template.","TOAST_APPLY_SUCCESS":"Applied {{name}}."},"SAVED_FLOWS":{"TITLE":"Flujos guardados","NAME":"Nombre del flujo","SAVE":"Guardar flujo actual"},"TIMER":{"TITLE":"Temporizador","TOTAL":"Tiempo estimado","PRESET":"Preajuste","TRANSITION":"Transicion por defecto","REST":"Descanso por defecto","SUMMARY_EXERCISES":"Exercises","SUMMARY_SECTIONS":"Sections","SUMMARY_ACTIVE":"Active","SUMMARY_TRANSIT_REST":"Transit + Rest","EMPTY_TITLE":"No class flow loaded","EMPTY_COPY":"Go to Class Plan, add exercises, then come back to start class.","START_CLASS":"Start Class","STARTS_WITH":"Starts with {{name}}.","COMPLETE_TITLE":"Class complete","COMPLETE_COPY":"Great work. Reset to run the class again.","RESET_CLASS":"Reset Class","PHASE_EXERCISE":"Exercise","PHASE_TRANSITION":"Transition","PHASE_REST":"Rest","POSITION":"Exercise {{current}} of {{total}}","REMAINING":"Remaining class time: {{time}}","UP_NEXT":"Up next: {{name}}","OUTLINE_TITLE":"Class Outline","OUTLINE_ITEMS":"{{count}} items","OUTLINE_SHOW_ALL":"Show all","OUTLINE_COLLAPSE":"Collapse","OUTLINE_HELP":"Tap an exercise to jump there while timer is running.","OUTLINE_MORE":"+{{count}} more exercises","NOW_PREFIX":"Now","FINISH_CLASS":"Finish class","CUE_CLASS_COMPLETE":"Class complete","SECTION_FORMAT":"{{count}} {{section}}"},"CLIENTS":{"TITLE":"Notas de clientes","NAME":"Nombre","NOTE":"Nota"},"SETTINGS":{"TITLE":"Ajustes","LANGUAGE":"Idioma","THEME":"Tema","DISCLAIMER":"FloSmith is a planning tool for instructors. Always adjust flow choices to the class in front of you.","ACCOUNT_TITLE":"Account","ACCOUNT_SUBTITLE":"Save your instructor email for future sync and export workflows.","EMAIL_PLACEHOLDER":"name@studio.com","EMAIL_SAVED":"Saved: {{email}}","SAVE_EMAIL":"Save Email","ABOUT_TITLE":"About FloSmith","ABOUT_BODY_1":"FloSmith helps Pilates instructors shape reusable class structures, keep client context close, and estimate class timing before stepping into the studio.","ABOUT_BODY_2":"Use Programs to preview reusable flows, Exercises to pull single movements, and Home as your day-of-class workspace."}}}
+{
+  "APP": {
+    "TITLE": "FloSmith"
+  },
+  "COMMON": {
+    "ADD": "Agregar",
+    "DELETE": "Eliminar",
+    "LOAD": "Cargar",
+    "DUPLICATE": "Duplicar",
+    "ALL": "Todos",
+    "CLEAR": "Limpiar",
+    "WARMUP": "Calentamiento",
+    "CORE": "Centro",
+    "COOLDOWN": "Vuelta a la calma",
+    "START": "Iniciar",
+    "RESUME": "Reanudar",
+    "PAUSE": "Pausa",
+    "NEXT": "Siguiente",
+    "RESET": "Reiniciar",
+    "BEGINNER": "Principiante",
+    "INTERMEDIATE": "Intermedio",
+    "ADVANCED": "Avanzado"
+  },
+  "NAV": {
+    "HOME": "Descubrir",
+    "FLOW": "Plan",
+    "LIBRARY": "Biblioteca",
+    "TEMPLATES": "Programas",
+    "SAVED": "Guardados",
+    "TIMER": "Temporizador",
+    "CLIENTS": "Clientes",
+    "SETTINGS": "Perfil"
+  },
+  "PAGES": {
+    "HOME": {
+      "TITLE": "Espacio del instructor",
+      "SUBTITLE": "Planifica clases con confianza",
+      "DESCRIPTION": "Crea secuencias, mide tiempos y guarda notas para cada cliente."
+    },
+    "FLOW_BUILDER": {
+      "TITLE": "Plan de clase",
+      "LIST_MODE": "Lista",
+      "TIMELINE_MODE": "Cronologia",
+      "TOTAL": "Total",
+      "INTRO": "Este es tu plan de clase. Crea y reordena la secuencia de hoy, y comienza la clase cuando estes listo.",
+      "SEARCH_PLACEHOLDER": "Buscar y tocar para agregar",
+      "RECENT_ARIA": "Ejercicios agregados recientemente",
+      "QUICK_ADD_ARIA": "Toca para agregar ejercicios",
+      "ADD_TO_PLAN": "Agregar al plan",
+      "NO_MATCHES": "Sin resultados. Prueba una busqueda mas amplia.",
+      "START_CLASS": "Iniciar clase",
+      "START_HINT": "Cuando la secuencia este lista, toca Iniciar clase.",
+      "EMPTY_TITLE": "Aun no hay ejercicios",
+      "EMPTY_COPY": "Agrega un primer ejercicio o carga un programa para comenzar la estructura de la clase.",
+      "MOVE_UP": "Subir",
+      "MOVE_DOWN": "Bajar",
+      "BLOCK_TIMING": "{{duration}}s + {{transition}}s de transicion + {{rest}}s de descanso"
+    },
+    "LIBRARY": {
+      "TITLE": "Ejercicios",
+      "SEARCH": "Buscar ejercicios",
+      "FLOW_BADGE": "Plan {{count}}",
+      "INTRO": "Usa esta pagina para encontrar ejercicios individuales y agregarlos a tu plan uno por uno.",
+      "GROUP_TITLE": "Agrupar ejercicios",
+      "GROUP_HINT": "Elige una forma de agrupar y luego un valor.",
+      "GROUP_APPARATUS": "Aparato",
+      "GROUP_BODY_FOCUS": "Enfoque corporal",
+      "GROUP_CLASS_PLACEMENT": "Ubicacion en la clase",
+      "GROUP_DIFFICULTY": "Dificultad",
+      "ADD_TO_PLAN": "Agregar al plan de clase",
+      "EMPTY_STATE": "No hay ejercicios para esta configuracion. Cambia el modo o amplia filtros de seccion/nivel.",
+      "TOAST_ADDED": "{{name}} agregado ({{count}} en el plan)",
+      "TOAST_VIEW_PLAN": "Ver plan"
+    },
+    "TEMPLATES": {
+      "TITLE": "Programas",
+      "APPLY": "Cargar plan completo",
+      "INTRO": "Usa esta pagina para cargar un programa preconstruido completo en tu plan en un paso.",
+      "SEARCH_PLACEHOLDER": "Buscar plantillas de clase",
+      "APPLYING": "Aplicando...",
+      "APPLIED": "Aplicado",
+      "EMPTY_STATE": "No hay programas que coincidan con la busqueda. Amplia objetivo, nivel o equipo.",
+      "BEST_FOR_PREFIX": "Ideal para",
+      "BEST_FOR_FALLBACK": "planificacion general de clases",
+      "TOAST_APPLY_ERROR": "No se pudo cargar esa plantilla.",
+      "TOAST_APPLY_SUCCESS": "{{name}} aplicado."
+    },
+    "SAVED_FLOWS": {
+      "TITLE": "Flujos guardados",
+      "NAME": "Nombre del flujo",
+      "SAVE": "Guardar flujo actual"
+    },
+    "TIMER": {
+      "TITLE": "Temporizador",
+      "TOTAL": "Tiempo estimado",
+      "PRESET": "Preajuste",
+      "TRANSITION": "Transicion por defecto",
+      "REST": "Descanso por defecto",
+      "SUMMARY_EXERCISES": "Ejercicios",
+      "SUMMARY_SECTIONS": "Secciones",
+      "SUMMARY_ACTIVE": "Activo",
+      "SUMMARY_TRANSIT_REST": "Transicion + Descanso",
+      "EMPTY_TITLE": "No hay plan de clase cargado",
+      "EMPTY_COPY": "Ve a Plan de clase, agrega ejercicios y luego vuelve para iniciar.",
+      "START_CLASS": "Iniciar clase",
+      "STARTS_WITH": "Comienza con {{name}}.",
+      "COMPLETE_TITLE": "Clase completada",
+      "COMPLETE_COPY": "Excelente trabajo. Reinicia para ejecutar la clase de nuevo.",
+      "RESET_CLASS": "Reiniciar clase",
+      "PHASE_EXERCISE": "Ejercicio",
+      "PHASE_TRANSITION": "Transicion",
+      "PHASE_REST": "Descanso",
+      "POSITION": "Ejercicio {{current}} de {{total}}",
+      "REMAINING": "Tiempo restante de clase: {{time}}",
+      "UP_NEXT": "Siguiente: {{name}}",
+      "OUTLINE_TITLE": "Esquema de clase",
+      "OUTLINE_ITEMS": "{{count}} elementos",
+      "OUTLINE_SHOW_ALL": "Mostrar todo",
+      "OUTLINE_COLLAPSE": "Contraer",
+      "OUTLINE_HELP": "Toca un ejercicio para saltar mientras el temporizador esta activo.",
+      "OUTLINE_MORE": "+{{count}} ejercicios mas",
+      "NOW_PREFIX": "Ahora",
+      "FINISH_CLASS": "Finalizar clase",
+      "CUE_CLASS_COMPLETE": "Clase completada",
+      "SECTION_FORMAT": "{{count}} {{section}}"
+    },
+    "CLIENTS": {
+      "TITLE": "Notas de clientes",
+      "NAME": "Nombre",
+      "NOTE": "Nota"
+    },
+    "SETTINGS": {
+      "TITLE": "Ajustes",
+      "LANGUAGE": "Idioma",
+      "THEME": "Tema",
+      "DISCLAIMER": "FloSmith es una herramienta de planificacion para instructores. Ajusta siempre el flujo a la clase real.",
+      "ACCOUNT_TITLE": "Cuenta",
+      "ACCOUNT_SUBTITLE": "Guarda tu email de instructor para futuros flujos de sincronizacion y exportacion.",
+      "EMAIL_PLACEHOLDER": "name@studio.com",
+      "EMAIL_SAVED": "Guardado: {{email}}",
+      "SAVE_EMAIL": "Guardar email",
+      "ABOUT_TITLE": "Acerca de FloSmith",
+      "ABOUT_BODY_1": "FloSmith ayuda a instructores de pilates a crear estructuras reutilizables, mantener contexto de clientes y estimar tiempos antes de entrar al estudio.",
+      "ABOUT_BODY_2": "Usa Programas para previsualizar flujos reutilizables, Ejercicios para movimientos individuales y Descubrir como tu espacio diario."
+    }
+  }
+}
