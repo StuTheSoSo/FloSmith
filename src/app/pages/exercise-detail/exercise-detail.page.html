@@ -1,7 +1,7 @@
 <ion-header translucent>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/library"></ion-back-button>
+      <ion-button fill="clear" color="primary" (click)="goBack()">‹ Back</ion-button>
     </ion-buttons>
     <ion-title>{{ exercise?.name || ('PAGES.LIBRARY.TITLE' | translate) }}</ion-title>
   </ion-toolbar>
@@ -99,6 +99,41 @@
                 <li>{{ item }}</li>
               }
             </ul>
+          </div>
+        }
+
+        @if (exercise.whereToFeel) {
+          <div class="tag-block">
+            <strong>Where To Feel It</strong>
+            <p>{{ exercise.whereToFeel }}</p>
+          </div>
+        }
+
+        @if (exercise.selfCheck) {
+          <div class="tag-block">
+            <strong>Self Check</strong>
+            <p>{{ exercise.selfCheck }}</p>
+          </div>
+        }
+
+        @if (exercise.transitionIn) {
+          <div class="tag-block">
+            <strong>Transition In</strong>
+            <p>{{ exercise.transitionIn }}</p>
+          </div>
+        }
+
+        @if (exercise.transitionOut) {
+          <div class="tag-block">
+            <strong>Transition Out</strong>
+            <p>{{ exercise.transitionOut }}</p>
+          </div>
+        }
+
+        @if (exercise.instructorNote) {
+          <div class="tag-block">
+            <strong>Instructor Note</strong>
+            <p>{{ exercise.instructorNote }}</p>
           </div>
         }
 

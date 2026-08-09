@@ -82,7 +82,7 @@ export class ProgramDetailPage {
       return;
     }
 
-    this.router.navigate(['/exercise', exerciseId]);
+    this.router.navigate(['/exercise', exerciseId], { state: { backUrl: `/programs/${this.templateId}` } });
   }
 
   private whenToUse(exercise?: Exercise): string {

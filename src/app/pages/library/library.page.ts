@@ -117,7 +117,7 @@ export class LibraryPage {
   }
 
   openExercise(exerciseId: string): void {
-    this.router.navigate(['/exercise', exerciseId]);
+    this.router.navigate(['/exercise', exerciseId], { state: { backUrl: '/library' } });
   }
 
   setActiveGroup(group: 'apparatus' | 'focus' | 'section' | 'level'): void {

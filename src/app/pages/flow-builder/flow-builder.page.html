@@ -13,7 +13,40 @@
 <ion-content [fullscreen]="true">
   <div class="page-shell ion-padding-horizontal">
   <section class="panel">
-    <p class="panel-intro">{{ 'PAGES.FLOW_BUILDER.INTRO' | translate }}</p>
+    <div class="builder-hero">
+      <div>
+        <p class="eyebrow">Class Builder</p>
+        <h2>Shape the plan before you teach.</h2>
+        <p class="panel-intro">{{ 'PAGES.FLOW_BUILDER.INTRO' | translate }}</p>
+      </div>
+      <ion-button routerLink="/programs" fill="outline">Load Program</ion-button>
+    </div>
+
+    <div class="planning-strip" aria-label="Class planning summary">
+      <article>
+        <span>Total</span>
+        <strong>{{ totalLabel() }}</strong>
+      </article>
+      <article>
+        <span>Exercises</span>
+        <strong>{{ blocks().length }}</strong>
+      </article>
+      <article>
+        <span>Active Work</span>
+        <strong>{{ activeTimeLabel() }}</strong>
+      </article>
+      <article>
+        <span>Target</span>
+        <strong>{{ targetDeltaLabel() }}</strong>
+      </article>
+    </div>
+
+    <div class="target-row" aria-label="Class length target">
+      <span>Class length</span>
+      @for (minutes of [30, 45, 50, 60]; track minutes) {
+        <ion-chip [class.selected]="targetMinutes() === minutes" (click)="targetMinutes.set(minutes)">{{ minutes }} min</ion-chip>
+      }
+    </div>
 
     <ion-segment [value]="mode()" (ionChange)="setMode($any($event).detail.value)">
       <ion-segment-button value="list">
@@ -30,6 +63,7 @@
         (ionInput)="addQuery.set($any($event).detail.value ?? '')"
         [placeholder]="'PAGES.FLOW_BUILDER.SEARCH_PLACEHOLDER' | translate"
       ></ion-searchbar>
+      <p class="search-helper">Search by exercise, apparatus, focus area, or level. Tap any result to add it to the end of the plan.</p>
 
       @if (!addQuery().trim() && recentExercises().length > 0) {
         <div class="recent-row" [attr.aria-label]="'PAGES.FLOW_BUILDER.RECENT_ARIA' | translate">
@@ -49,7 +83,7 @@
                 · {{ suggestedTimingLabel(exercise.id, exercise.durationSeconds) }}
               }
             </span>
-            <span class="add-mark">{{ 'PAGES.FLOW_BUILDER.ADD_TO_PLAN' | translate }}</span>
+            <span class="add-mark">+</span>
           </button>
         }
 
@@ -62,35 +96,72 @@
 
   <section class="panel">
     <div class="flow-header">
-      <h3>{{ 'PAGES.FLOW_BUILDER.TOTAL' | translate }}: {{ totalLabel() }}</h3>
+      <div>
+        <h3>Today's Sequence</h3>
+        <p>{{ timingDetailLabel() }}</p>
+      </div>
       <ion-button class="start-flow-btn" [disabled]="blocks().length === 0" (click)="startFlow()">{{ 'PAGES.FLOW_BUILDER.START_CLASS' | translate }}</ion-button>
     </div>
-    <p class="start-flow-hint">{{ 'PAGES.FLOW_BUILDER.START_HINT' | translate }}</p>
 
     @if (blocks().length === 0) {
       <ion-card class="empty-flow-card">
         <ion-card-content>
           <p class="empty-title">{{ 'PAGES.FLOW_BUILDER.EMPTY_TITLE' | translate }}</p>
           <p class="empty-copy">{{ 'PAGES.FLOW_BUILDER.EMPTY_COPY' | translate }}</p>
+          <div class="empty-actions">
+            <ion-button routerLink="/programs">Load Program</ion-button>
+            <ion-button fill="outline" routerLink="/library">Browse Library</ion-button>
+          </div>
         </ion-card-content>
       </ion-card>
     } @else if (mode() === 'list') {
-      <ion-list>
-        @for (block of blocks(); track block.id; let i = $index) {
-          <ion-item>
-            <ion-label>
-              <h2>{{ block.exerciseName }}</h2>
-              <p>{{ 'PAGES.FLOW_BUILDER.BLOCK_TIMING' | translate:{ duration: block.durationSeconds, transition: block.transitionSeconds, rest: block.restSeconds } }}</p>
-              @if (suggestedTimingLabel(block.exerciseId, block.durationSeconds)) {
-                <p class="suggested-timing">Suggested: {{ suggestedTimingLabel(block.exerciseId, block.durationSeconds) }}</p>
+      <div class="section-plan">
+        @for (group of sectionGroups(); track group.id) {
+          <section class="section-group">
+            <header>
+              <h4>{{ group.label }}</h4>
+              <span>{{ group.blocks.length }} exercise{{ group.blocks.length === 1 ? '' : 's' }}</span>
+            </header>
+            @if (group.blocks.length === 0) {
+              <p class="section-empty">No {{ group.label.toLowerCase() }} work yet.</p>
+            } @else {
+              @for (block of group.blocks; track block.id) {
+                @let i = blocks().indexOf(block);
+                <article class="plan-item">
+                  <div class="plan-index">{{ i + 1 }}</div>
+                  <div class="plan-main">
+                    <strong>{{ block.exerciseName }}</strong>
+                    <p>{{ blockTotalLabel(block) }} total · {{ block.transitionSeconds }}s transition · {{ block.restSeconds }}s rest</p>
+                    @if (suggestedTimingLabel(block.exerciseId, block.durationSeconds)) {
+                      <p class="suggested-timing">Suggested: {{ suggestedTimingLabel(block.exerciseId, block.durationSeconds) }}</p>
+                    }
+                  </div>
+                  <div class="duration-stepper" aria-label="Adjust exercise duration">
+                    <ion-button fill="clear" size="small" (click)="adjustDuration(block, -15)" [disabled]="block.durationSeconds <= 15" aria-label="Shorten exercise">
+                      <ion-icon name="remove-outline"></ion-icon>
+                    </ion-button>
+                    <span>{{ blockDurationLabel(block) }}</span>
+                    <ion-button fill="clear" size="small" (click)="adjustDuration(block, 15)" aria-label="Lengthen exercise">
+                      <ion-icon name="add-outline"></ion-icon>
+                    </ion-button>
+                  </div>
+                  <div class="plan-actions">
+                    <ion-button fill="clear" size="small" (click)="moveUp(i)" [disabled]="i === 0" aria-label="Move earlier">
+                      <ion-icon name="chevron-up-outline"></ion-icon>
+                    </ion-button>
+                    <ion-button fill="clear" size="small" (click)="moveDown(i)" [disabled]="i === blocks().length - 1" aria-label="Move later">
+                      <ion-icon name="chevron-down-outline"></ion-icon>
+                    </ion-button>
+                    <ion-button fill="clear" size="small" color="danger" (click)="remove(block.id)" aria-label="Remove exercise">
+                      <ion-icon name="trash-outline"></ion-icon>
+                    </ion-button>
+                  </div>
+                </article>
               }
-            </ion-label>
-            <ion-button fill="clear" (click)="moveUp(i)" [disabled]="i === 0">{{ 'PAGES.FLOW_BUILDER.MOVE_UP' | translate }}</ion-button>
-            <ion-button fill="clear" (click)="moveDown(i)" [disabled]="i === blocks().length - 1">{{ 'PAGES.FLOW_BUILDER.MOVE_DOWN' | translate }}</ion-button>
-            <ion-button fill="clear" color="danger" (click)="remove(block.id)">×</ion-button>
-          </ion-item>
+            }
+          </section>
         }
-      </ion-list>
+      </div>
     } @else {
       <div class="timeline">
         @for (block of blocks(); track block.id) {

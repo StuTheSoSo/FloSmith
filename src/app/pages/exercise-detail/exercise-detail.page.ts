@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
@@ -14,11 +15,17 @@ import { LibraryService } from '../../services/library.service';
 })
 export class ExerciseDetailPage {
   private readonly route = inject(ActivatedRoute);
+  private readonly location = inject(Location);
   private readonly libraryService = inject(LibraryService);
   private readonly flowService = inject(FlowService);
 
   readonly exerciseId = this.route.snapshot.paramMap.get('id') ?? '';
   readonly exercise = this.libraryService.findById(this.exerciseId);
+  readonly backHref: string = (window.history.state?.backUrl as string | undefined) ?? '/library';
+
+  goBack(): void {
+    this.location.back();
+  }
 
   addToFlow(): void {
     if (!this.exercise) {

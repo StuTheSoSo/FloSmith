@@ -19,6 +19,10 @@ export class FlowService {
     this.currentBlocks.update((blocks) => blocks.filter((block) => block.id !== blockId));
   }
 
+  updateBlock(blockId: string, patch: Partial<FlowBlock>): void {
+    this.currentBlocks.update((blocks) => blocks.map((block) => block.id === blockId ? { ...block, ...patch } : block));
+  }
+
   moveBlock(fromIndex: number, toIndex: number): void {
     this.currentBlocks.update((blocks) => {
       if (toIndex < 0 || toIndex >= blocks.length || fromIndex === toIndex) {
