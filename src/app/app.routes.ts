@@ -11,6 +11,8 @@ export const routes: Routes = [
 	{ path: 'saved-flows', loadComponent: () => import('./pages/saved-flows/saved-flows.page').then((m) => m.SavedFlowsPage) },
 	{ path: 'timer', loadComponent: () => import('./pages/timer/timer.page').then((m) => m.TimerPage) },
 	{ path: 'clients', loadComponent: () => import('./pages/clients/clients.page').then((m) => m.ClientsPage) },
+	{ path: 'welcome', loadComponent: () => import('./pages/welcome/welcome.page').then((m) => m.WelcomePage) },
+	{ path: 'help', loadComponent: () => import('./pages/help/help.page').then((m) => m.HelpPage) },
 	{ path: 'settings', loadComponent: () => import('./pages/settings/settings.page').then((m) => m.SettingsPage) },
 	{ path: '**', redirectTo: '' }
 ];

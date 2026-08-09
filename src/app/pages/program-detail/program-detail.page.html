@@ -13,7 +13,9 @@
       <ion-card-header>
         <div class="program-level-row">
           <ion-badge color="primary">{{ template.level }}</ion-badge>
+          <!-- Paid-only app: hide Free/Pro tier badge for now.
           <ion-badge color="medium">{{ template.accessLevel ?? 'Pro' }}</ion-badge>
+          -->
           <span class="program-length">{{ template.recommendedClassLengthMinutes }} min</span>
         </div>
         <ion-card-title>{{ template.name }}</ion-card-title>

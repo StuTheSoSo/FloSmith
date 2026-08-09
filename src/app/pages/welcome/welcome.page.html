@@ -1,0 +1,50 @@
+<ion-content fullscreen class="onboarding-shell ion-padding">
+  <section class="onboarding-wrap">
+    <aside class="onboarding-rail" aria-label="Tutorial steps">
+      <p class="rail-eyebrow">FloSmith Onboarding</p>
+      <h1>Build Better Classes Faster</h1>
+      <p class="rail-intro">A short setup tour to make daily teaching flow clearer from the first session.</p>
+
+      <div class="step-list">
+        @for (step of steps; track $index) {
+          <div class="step-item" [class.active]="$index === stepIndex()">
+            <span class="step-dot">{{ $index + 1 }}</span>
+            <div>
+              <strong>{{ step.title }}</strong>
+              <p>{{ step.subtitle }}</p>
+            </div>
+          </div>
+        }
+      </div>
+    </aside>
+
+    <article class="onboarding-card">
+      <p class="onboarding-step">Step {{ stepIndex() + 1 }} of {{ steps.length }}</p>
+      <h2>{{ currentStep().title }}</h2>
+      <h3>{{ currentStep().subtitle }}</h3>
+      <p class="step-detail">{{ currentStep().detail }}</p>
+
+      <ul class="points">
+        @for (point of currentStep().points; track point) {
+          <li>{{ point }}</li>
+        }
+      </ul>
+
+      <div class="onboarding-progress" aria-hidden="true">
+        @for (step of steps; track $index) {
+          <span [class.active]="$index <= stepIndex()"></span>
+        }
+      </div>
+
+      <div class="onboarding-actions">
+        <ion-button fill="clear" color="medium" (click)="skip()">Skip</ion-button>
+        <ion-button fill="outline" [disabled]="stepIndex() === 0" (click)="previousStep()">Back</ion-button>
+        @if (!isLastStep()) {
+          <ion-button (click)="nextStep()">Next</ion-button>
+        } @else {
+          <ion-button (click)="finish()">Start Planning</ion-button>
+        }
+      </div>
+    </article>
+  </section>
+</ion-content>

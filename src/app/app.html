@@ -3,16 +3,18 @@
     <router-outlet></router-outlet>
   </div>
 
-  <ion-footer translucent>
-    <ion-toolbar class="tab-toolbar">
-      <div class="tab-row">
-        @for (item of navItems; track item.path) {
-          <button class="tab-btn" [class.selected]="isTabActive(item.path)" (click)="navigate(item.path)">
-            <ion-icon [name]="item.icon"></ion-icon>
-            <span>{{ item.labelKey | translate }}</span>
-          </button>
-        }
-      </div>
-    </ion-toolbar>
-  </ion-footer>
+  @if (isPrimaryNavVisible()) {
+    <ion-footer translucent>
+      <ion-toolbar class="tab-toolbar">
+        <div class="tab-row">
+          @for (item of navItems; track item.path) {
+            <button class="tab-btn" [class.selected]="isTabActive(item.path)" (click)="navigate(item.path)">
+              <ion-icon [name]="item.icon"></ion-icon>
+              <span>{{ item.labelKey | translate }}</span>
+            </button>
+          }
+        </div>
+      </ion-toolbar>
+    </ion-footer>
+  }
 </ion-app>

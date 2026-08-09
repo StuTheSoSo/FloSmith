@@ -5,6 +5,7 @@ import { addIcons } from 'ionicons';
 import { homeOutline, libraryOutline, listOutline, settingsOutline, trashOutline } from 'ionicons/icons';
 import { TranslatePipe } from '@ngx-translate/core';
 import { LanguageService } from './services/language.service';
+import { OnboardingService } from './services/onboarding.service';
 import { PreferencesService } from './services/preferences.service';
 
 interface NavItem {
@@ -23,6 +24,7 @@ export class App {
   private readonly router = inject(Router);
   private readonly languageService = inject(LanguageService);
   private readonly preferencesService = inject(PreferencesService);
+  private readonly onboarding = inject(OnboardingService);
   private readonly defaultTheme = 'theme-coral';
   private readonly allowedThemes = new Set(['theme-coral', 'theme-sea', 'theme-grove']);
 
@@ -46,6 +48,12 @@ export class App {
 
     this.languageService.init();
     this.applySavedTheme();
+
+    if (!this.onboarding.hasCompleted()) {
+      queueMicrotask(() => {
+        this.router.navigateByUrl('/welcome');
+      });
+    }
   }
 
   isTabActive(path: string): boolean {
@@ -59,6 +67,11 @@ export class App {
 
   navigate(path: string): void {
     this.router.navigateByUrl(path);
+  }
+
+  isPrimaryNavVisible(): boolean {
+    const url = this.router.url || '/';
+    return !url.startsWith('/welcome');
   }
 
   private applySavedTheme(): void {

@@ -9,9 +9,59 @@
   gap: 1rem;
 }
 
+.filter-group {
+  display: grid;
+  gap: 0.65rem;
+  padding: 0.95rem;
+  border: 1.5px solid var(--flo-border);
+  border-radius: 18px;
+  background: linear-gradient(145deg, color-mix(in srgb, #ffffff 88%, var(--flo-surface-a) 12%), color-mix(in srgb, #ffffff 74%, var(--flo-surface-b) 26%));
+}
+
+.filter-group h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--flo-brand-ink);
+  letter-spacing: 0.01em;
+}
+
+.filter-group p {
+  margin: 0;
+  color: var(--flo-ink-2);
+  font-size: 0.86rem;
+  font-weight: 600;
+}
+
+.subfilter-block {
+  display: grid;
+  gap: 0.45rem;
+  padding-top: 0.45rem;
+  border-top: 1px dashed color-mix(in srgb, var(--flo-border) 70%, #ffffff 30%);
+}
+
+.subfilter-block h4 {
+  margin: 0;
+  text-align: center;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+  color: color-mix(in srgb, var(--flo-brand-ink) 82%, var(--ion-color-primary) 18%);
+}
+
+.chip-row {
+  margin-top: 0.15rem;
+}
+
+.group-separator {
+  width: 100%;
+  height: 1px;
+  margin: 0.2rem 0 0.15rem;
+  background: linear-gradient(90deg, transparent 0%, color-mix(in srgb, var(--flo-border) 82%, #ffffff 18%) 18%, color-mix(in srgb, var(--flo-border) 82%, #ffffff 18%) 82%, transparent 100%);
+}
+
 .browse-mode-row {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 0.5rem;
 }
 
@@ -31,6 +81,10 @@
   gap: 0.5rem;
 }
 
+ion-chip {
+  border-width: 1.5px;
+}
+
 ion-chip.selected {
   background: linear-gradient(90deg, var(--ion-color-primary) 60%, var(--ion-color-tertiary) 100%) !important;
   color: #fff !important;
@@ -41,10 +95,43 @@ ion-chip.selected {
   min-height: 100%;
 }
 
+.result-group-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.35rem 0.2rem 0.15rem;
+  margin-top: 0.4rem;
+  border-bottom: 1px solid var(--flo-border);
+}
+
+.result-group-header h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  color: var(--flo-brand-ink);
+  letter-spacing: 0.01em;
+}
+
+.result-group-header span {
+  color: var(--flo-ink-2);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
 .results-summary,
 .empty-state {
   color: var(--flo-brand-ink);
   font-weight: 600;
+}
+
+.results-summary {
+  margin: 0.2rem 0 0;
+  padding: 0.6rem 0.75rem;
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--flo-surface-b) 70%, #ffffff 30%);
+  border: 1px dashed var(--flo-border);
 }
 
 .exercise-focus,

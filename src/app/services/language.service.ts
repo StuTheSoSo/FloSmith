@@ -33,6 +33,7 @@ export class LanguageService {
 
   init(): void {
     this.translate.addLangs(this.supportedLocales.map((locale) => locale.code));
+    this.translate.setDefaultLang('en');
     const preferred = this.preferences.getPreferences().locale;
     const browser = navigator.language;
     const resolved = this.resolveLocale(preferred || browser || 'en');
@@ -54,11 +55,13 @@ export class LanguageService {
   }
 
   private resolveLocale(code: string): string {
-    if (this.supportedLocales.some((item) => item.code === code)) {
-      return code;
+    const normalizedCode = code.replace('_', '-');
+
+    if (this.supportedLocales.some((item) => item.code === normalizedCode)) {
+      return normalizedCode;
     }
 
-    const lower = code.toLowerCase();
+    const lower = normalizedCode.toLowerCase();
     const prefixMatch = this.supportedLocales.find((item) => lower.startsWith(item.code.toLowerCase()));
     return prefixMatch?.code ?? 'en';
   }

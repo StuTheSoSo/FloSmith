@@ -9,19 +9,58 @@
 
 <ion-content fullscreen>
   <div class="programs-intro ion-padding-horizontal ion-padding-top page-shell">
-    <p class="intro-text">Choose a class structure by goal, equipment, or level, then load it straight into today’s session.</p>
+    <p class="intro-text">{{ 'PAGES.TEMPLATES.INTRO' | translate }}</p>
   </div>
 
   <div class="programs-search ion-padding-horizontal ion-padding-bottom page-shell">
     <ion-searchbar
       [value]="searchText()"
       (ionInput)="searchText.set($any($event).detail.value ?? '')"
-      placeholder="Search class templates"
+      [placeholder]="'PAGES.TEMPLATES.SEARCH_PLACEHOLDER' | translate"
       debounce="250"
       showCancelButton="focus"
       animated="true"
       class="program-searchbar">
     </ion-searchbar>
+
+    <section class="filter-group">
+      <h3>Filter Programs</h3>
+      <p>Choose one way to filter, then pick a value.</p>
+
+      <div class="chip-row mode-row">
+        <ion-chip [class.selected]="filterMode() === 'apparatus'" (click)="setFilterMode('apparatus')">Apparatus</ion-chip>
+        <ion-chip [class.selected]="filterMode() === 'focus'" (click)="setFilterMode('focus')">Body Focus</ion-chip>
+        <ion-chip [class.selected]="filterMode() === 'level'" (click)="setFilterMode('level')">Difficulty</ion-chip>
+      </div>
+
+      <div class="group-separator" aria-hidden="true"></div>
+
+      @if (filterMode() === 'apparatus') {
+        <div class="chip-row value-row">
+          @for (apparatus of apparatusOptions; track apparatus) {
+            <ion-chip [class.selected]="selectedApparatus() === apparatus" (click)="selectedApparatus.set(apparatus)">
+              {{ apparatus === 'all' ? ('COMMON.ALL' | translate) : apparatus }}
+            </ion-chip>
+          }
+        </div>
+      } @else if (filterMode() === 'focus') {
+        <div class="chip-row value-row">
+          @for (focus of focusOptions; track focus) {
+            <ion-chip [class.selected]="selectedFocus() === focus" (click)="selectedFocus.set(focus)">
+              {{ focus === 'all' ? ('COMMON.ALL' | translate) : focus }}
+            </ion-chip>
+          }
+        </div>
+      } @else {
+        <div class="chip-row value-row">
+          <ion-chip [class.selected]="selectedLevel() === 'all'" (click)="selectedLevel.set('all')">{{ 'COMMON.ALL' | translate }}</ion-chip>
+          <ion-chip [class.selected]="selectedLevel() === 'beginner'" (click)="selectedLevel.set('beginner')">Beginner</ion-chip>
+          <ion-chip [class.selected]="selectedLevel() === 'intermediate'" (click)="selectedLevel.set('intermediate')">Intermediate</ion-chip>
+          <ion-chip [class.selected]="selectedLevel() === 'advanced'" (click)="selectedLevel.set('advanced')">Advanced</ion-chip>
+        </div>
+      }
+    </section>
+
     <p class="results-summary">
       {{ resultCount }} program{{ resultCount === 1 ? '' : 's' }}
       @if (searchText().trim()) {
@@ -38,7 +77,9 @@
             <ion-card-header>
               <div class="program-level-row">
                 <ion-badge [color]="levelColor(template.level)">{{ template.level }}</ion-badge>
+                <!-- Paid-only app: hide Free/Pro tier badge for now.
                 <ion-badge [color]="accessColor(template.accessLevel)">{{ template.accessLevel ?? 'Pro' }}</ion-badge>
+                -->
                 <span class="program-length">{{ template.recommendedClassLengthMinutes }} min</span>
               </div>
               <ion-card-title>{{ template.name }}</ion-card-title>
@@ -55,8 +96,23 @@
                   <ion-chip outline color="primary" class="focus-chip">{{ area }}</ion-chip>
                 }
               </div>
+              <!-- Paid-only app: hide raw tags because they include Free/Pro tiers.
               <p class="program-tags">{{ template.tags.join(' • ') }}</p>
-              <ion-button expand="block" (click)="applyTemplate(template.id); $event.stopPropagation()">{{ 'PAGES.TEMPLATES.APPLY' | translate }}</ion-button>
+              -->
+              <p class="program-tags">{{ visibleTags(template).join(' • ') }}</p>
+              <ion-button
+                expand="block"
+                [disabled]="applyingTemplateId() === template.id || appliedTemplateId() === template.id"
+                (click)="applyTemplate(template.id); $event.stopPropagation()"
+              >
+                @if (applyingTemplateId() === template.id) {
+                  {{ 'PAGES.TEMPLATES.APPLYING' | translate }}
+                } @else if (appliedTemplateId() === template.id) {
+                  {{ 'PAGES.TEMPLATES.APPLIED' | translate }}
+                } @else {
+                  {{ 'PAGES.TEMPLATES.APPLY' | translate }}
+                }
+              </ion-button>
             </ion-card-content>
           </ion-card>
         </ion-col>
@@ -66,7 +122,7 @@
         <ion-col size="12">
           <ion-card>
             <ion-card-content>
-              <p class="empty-state">No programs match the current search. Try broadening the goal, level, or equipment.</p>
+              <p class="empty-state">{{ 'PAGES.TEMPLATES.EMPTY_STATE' | translate }}</p>
             </ion-card-content>
           </ion-card>
         </ion-col>

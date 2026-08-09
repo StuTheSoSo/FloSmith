@@ -1,0 +1,111 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Help Center</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen class="ion-padding page-shell">
+  <ion-card class="hero">
+    <ion-card-header>
+      <ion-card-title>Learn FloSmith Step by Step</ion-card-title>
+      <ion-card-subtitle>Your guided playbook for planning, teaching, and reusing classes.</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ol>
+        <li>Build your class in Class Plan with quick add and exercise search.</li>
+        <li>Use Exercises for precision or Programs for complete template loading.</li>
+        <li>Start Timer to run class phases and teach with pacing cues.</li>
+        <li>Save strong flows so future class prep takes minutes, not hours.</li>
+      </ol>
+      <div class="hero-actions">
+        <ion-button (click)="startTutorial()">Run First-Time Tutorial</ion-button>
+        <ion-button fill="outline" routerLink="/flow-builder">Start Building A Class</ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Core Workflows</ion-card-title>
+      <ion-card-subtitle>Follow these exact workflows to learn by doing.</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content class="workflow-grid">
+      @for (workflow of workflowGuides; track workflow.id) {
+        <article class="workflow-card">
+          <h3>{{ workflow.title }}</h3>
+          <p class="workflow-goal">{{ workflow.goal }}</p>
+          <ol>
+            @for (step of workflow.steps; track step) {
+              <li>{{ step }}</li>
+            }
+          </ol>
+          <ion-button fill="outline" (click)="openRoute(workflow.actionRoute)">{{ workflow.actionLabel }}</ion-button>
+        </article>
+      }
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Page-by-Page Training</ion-card-title>
+      <ion-card-subtitle>What each area does and what to practice there.</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-accordion-group>
+        @for (module of learningModules; track module.id) {
+          <ion-accordion [value]="module.id">
+            <ion-item slot="header" lines="none">
+              <ion-label>
+                <strong>{{ module.title }}</strong>
+                <p>{{ module.purpose }}</p>
+              </ion-label>
+            </ion-item>
+            <div class="module-copy" slot="content">
+              <ul>
+                @for (skill of module.skills; track skill) {
+                  <li>{{ skill }}</li>
+                }
+              </ul>
+              <ion-button size="small" fill="outline" (click)="openRoute(module.actionRoute)">{{ module.actionLabel }}</ion-button>
+            </div>
+          </ion-accordion>
+        }
+      </ion-accordion-group>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>FAQ</ion-card-title>
+      <ion-card-subtitle>Fast answers to common setup and class-run questions.</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-accordion-group>
+        @for (faq of faqs; track faq.id) {
+          <ion-accordion [value]="faq.id">
+            <ion-item slot="header" lines="none">
+              <ion-label>{{ faq.question }}</ion-label>
+            </ion-item>
+            <div class="faq-copy" slot="content">{{ faq.answer }}</div>
+          </ion-accordion>
+        }
+      </ion-accordion-group>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Need A Fresh Start?</ion-card-title>
+      <ion-card-subtitle>Replay onboarding or jump right into building class plans.</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content class="quick-links">
+      <ion-button (click)="startTutorial()">Replay Tutorial</ion-button>
+      <ion-button fill="outline" routerLink="/flow-builder">Go to Class Plan</ion-button>
+      <ion-button fill="outline" routerLink="/programs">Go to Programs</ion-button>
+      <ion-button fill="outline" routerLink="/timer">Go to Timer</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -13,7 +13,7 @@
 <ion-content [fullscreen]="true">
   <div class="page-shell ion-padding-horizontal">
   <section class="panel">
-    <p class="panel-intro">Build the session in the order you want to teach it. Switch views anytime to compare structure and timing.</p>
+    <p class="panel-intro">{{ 'PAGES.FLOW_BUILDER.INTRO' | translate }}</p>
 
     <ion-segment [value]="mode()" (ionChange)="setMode($any($event).detail.value)">
       <ion-segment-button value="list">
@@ -24,24 +24,54 @@
       </ion-segment-button>
     </ion-segment>
 
-    <div class="add-row">
-      <ion-select [value]="selectedExerciseId()" (ionChange)="selectedExerciseId.set($any($event).detail.value)">
-        @for (exercise of libraryExercises; track exercise.id) {
-          <ion-select-option [value]="exercise.id">{{ exercise.name }}</ion-select-option>
+    <div class="add-panel">
+      <ion-searchbar
+        [value]="addQuery()"
+        (ionInput)="addQuery.set($any($event).detail.value ?? '')"
+        [placeholder]="'PAGES.FLOW_BUILDER.SEARCH_PLACEHOLDER' | translate"
+      ></ion-searchbar>
+
+      @if (!addQuery().trim() && recentExercises().length > 0) {
+        <div class="recent-row" [attr.aria-label]="'PAGES.FLOW_BUILDER.RECENT_ARIA' | translate">
+          @for (exercise of recentExercises(); track exercise.id) {
+            <ion-chip (click)="addExercise(exercise.id)">{{ exercise.name }}</ion-chip>
+          }
+        </div>
+      }
+
+      <div class="quick-add-list" [attr.aria-label]="'PAGES.FLOW_BUILDER.QUICK_ADD_ARIA' | translate">
+        @for (exercise of quickAddExercises(); track exercise.id) {
+          <button class="quick-add-item" type="button" (click)="addExercise(exercise.id)">
+            <span class="name">{{ exercise.name }}</span>
+            <span class="meta">
+              {{ exercise.apparatus }} · {{ exercise.level }}
+              @if (suggestedTimingLabel(exercise.id, exercise.durationSeconds)) {
+                · {{ suggestedTimingLabel(exercise.id, exercise.durationSeconds) }}
+              }
+            </span>
+            <span class="add-mark">{{ 'PAGES.FLOW_BUILDER.ADD_TO_PLAN' | translate }}</span>
+          </button>
         }
-      </ion-select>
-      <ion-button (click)="addSelectedExercise()">{{ 'COMMON.ADD' | translate }}</ion-button>
+
+        @if (quickAddExercises().length === 0) {
+          <p class="quick-add-empty">{{ 'PAGES.FLOW_BUILDER.NO_MATCHES' | translate }}</p>
+        }
+      </div>
     </div>
   </section>
 
   <section class="panel">
-    <h3>{{ 'PAGES.FLOW_BUILDER.TOTAL' | translate }}: {{ totalLabel() }}</h3>
+    <div class="flow-header">
+      <h3>{{ 'PAGES.FLOW_BUILDER.TOTAL' | translate }}: {{ totalLabel() }}</h3>
+      <ion-button class="start-flow-btn" [disabled]="blocks().length === 0" (click)="startFlow()">{{ 'PAGES.FLOW_BUILDER.START_CLASS' | translate }}</ion-button>
+    </div>
+    <p class="start-flow-hint">{{ 'PAGES.FLOW_BUILDER.START_HINT' | translate }}</p>
 
     @if (blocks().length === 0) {
       <ion-card class="empty-flow-card">
         <ion-card-content>
-          <p class="empty-title">No exercises yet</p>
-          <p class="empty-copy">Add a first exercise or load a program to start shaping the class structure.</p>
+          <p class="empty-title">{{ 'PAGES.FLOW_BUILDER.EMPTY_TITLE' | translate }}</p>
+          <p class="empty-copy">{{ 'PAGES.FLOW_BUILDER.EMPTY_COPY' | translate }}</p>
         </ion-card-content>
       </ion-card>
     } @else if (mode() === 'list') {
@@ -50,10 +80,13 @@
           <ion-item>
             <ion-label>
               <h2>{{ block.exerciseName }}</h2>
-              <p>{{ block.durationSeconds }}s + {{ block.transitionSeconds }}s transition + {{ block.restSeconds }}s rest</p>
+              <p>{{ 'PAGES.FLOW_BUILDER.BLOCK_TIMING' | translate:{ duration: block.durationSeconds, transition: block.transitionSeconds, rest: block.restSeconds } }}</p>
+              @if (suggestedTimingLabel(block.exerciseId, block.durationSeconds)) {
+                <p class="suggested-timing">Suggested: {{ suggestedTimingLabel(block.exerciseId, block.durationSeconds) }}</p>
+              }
             </ion-label>
-            <ion-button fill="clear" (click)="moveUp(i)" [disabled]="i === 0">Up</ion-button>
-            <ion-button fill="clear" (click)="moveDown(i)" [disabled]="i === blocks().length - 1">Down</ion-button>
+            <ion-button fill="clear" (click)="moveUp(i)" [disabled]="i === 0">{{ 'PAGES.FLOW_BUILDER.MOVE_UP' | translate }}</ion-button>
+            <ion-button fill="clear" (click)="moveDown(i)" [disabled]="i === blocks().length - 1">{{ 'PAGES.FLOW_BUILDER.MOVE_DOWN' | translate }}</ion-button>
             <ion-button fill="clear" color="danger" (click)="remove(block.id)">×</ion-button>
           </ion-item>
         }

@@ -9,7 +9,7 @@
 
 <ion-content fullscreen class="ion-padding page-shell">
   <ion-card class="disclaimer-card ion-padding">
-    <strong>FloSmith is a planning tool for instructors. Always adjust flow choices to the class in front of you.</strong>
+    <strong>{{ 'PAGES.SETTINGS.DISCLAIMER' | translate }}</strong>
   </ion-card>
 
   <ion-card>
@@ -44,27 +44,38 @@
 
   <ion-card>
     <ion-card-header>
-      <ion-card-title>Account</ion-card-title>
-      <ion-card-subtitle>Save your instructor email for future sync and export workflows.</ion-card-subtitle>
+      <ion-card-title>{{ 'PAGES.SETTINGS.ACCOUNT_TITLE' | translate }}</ion-card-title>
+      <ion-card-subtitle>{{ 'PAGES.SETTINGS.ACCOUNT_SUBTITLE' | translate }}</ion-card-subtitle>
     </ion-card-header>
     <ion-card-content>
       <ion-item lines="none">
-        <ion-input type="email" [value]="emailInput()" (ionInput)="emailInput.set($any($event).detail.value ?? '')" placeholder="name@studio.com"></ion-input>
+        <ion-input type="email" [value]="emailInput()" (ionInput)="emailInput.set($any($event).detail.value ?? '')" [placeholder]="'PAGES.SETTINGS.EMAIL_PLACEHOLDER' | translate"></ion-input>
       </ion-item>
       @if (savedEmail()) {
-        <div class="email-saved-note">Saved: {{ savedEmail() }}</div>
+        <div class="email-saved-note">{{ 'PAGES.SETTINGS.EMAIL_SAVED' | translate:{ email: savedEmail() } }}</div>
       }
-      <ion-button expand="block" class="ion-margin-top" (click)="saveEmail()">Save Email</ion-button>
+      <ion-button expand="block" class="ion-margin-top" (click)="saveEmail()">{{ 'PAGES.SETTINGS.SAVE_EMAIL' | translate }}</ion-button>
     </ion-card-content>
   </ion-card>
 
   <ion-card>
     <ion-card-header>
-      <ion-card-title>About FloSmith</ion-card-title>
+      <ion-card-title>{{ 'PAGES.SETTINGS.ABOUT_TITLE' | translate }}</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      <p>FloSmith helps Pilates instructors shape reusable class structures, keep client context close, and estimate class timing before stepping into the studio.</p>
-      <p>Use Programs to preview reusable flows, Library to pull exercises, and Home as your day-of-class workspace.</p>
+      <p>{{ 'PAGES.SETTINGS.ABOUT_BODY_1' | translate }}</p>
+      <p>{{ 'PAGES.SETTINGS.ABOUT_BODY_2' | translate }}</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Help & Tutorial</ion-card-title>
+      <ion-card-subtitle>Learn the workflow and restart onboarding any time.</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content class="help-actions">
+      <ion-button expand="block" fill="outline" (click)="openHelpCenter()">Open Help Center</ion-button>
+      <ion-button expand="block" (click)="restartTutorial()">Run First-Time Tutorial Again</ion-button>
     </ion-card-content>
   </ion-card>
 </ion-content>

@@ -18,17 +18,108 @@
   margin: 0;
 }
 
+.flow-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.flow-header h3 {
+  margin: 0;
+}
+
+.start-flow-btn {
+  --border-radius: 12px;
+  font-weight: 800;
+}
+
+.start-flow-hint {
+  margin: 0.4rem 0 0;
+  color: var(--flo-ink-2);
+  font-size: 0.86rem;
+  font-weight: 600;
+}
+
 .panel-intro {
   color: var(--flo-ink-2);
   margin-bottom: 10px;
 }
 
-.add-row {
+.add-panel {
   margin-top: 10px;
   display: grid;
-  grid-template-columns: 1fr auto;
   gap: 8px;
-  align-items: center;
+}
+
+.add-panel ion-searchbar {
+  --background: rgba(255, 255, 255, 0.92);
+  --border-radius: 14px;
+  border: 1px solid var(--flo-border);
+}
+
+.recent-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.recent-row ion-chip {
+  cursor: pointer;
+}
+
+.quick-add-list {
+  display: grid;
+  gap: 0.45rem;
+  max-height: 240px;
+  overflow: auto;
+  padding-right: 2px;
+}
+
+.quick-add-item {
+  border: 1px solid var(--flo-border);
+  background: color-mix(in srgb, var(--flo-surface-b) 82%, #ffffff 18%);
+  border-radius: 12px;
+  padding: 0.65rem 0.75rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    'name add'
+    'meta add';
+  row-gap: 0.2rem;
+  text-align: left;
+  color: var(--flo-brand-ink);
+}
+
+.quick-add-item .name {
+  grid-area: name;
+  font-weight: 700;
+}
+
+.quick-add-item .meta {
+  grid-area: meta;
+  font-size: 0.82rem;
+  color: var(--flo-ink-2);
+}
+
+.quick-add-item .add-mark {
+  grid-area: add;
+  align-self: center;
+  font-weight: 800;
+  color: var(--ion-color-primary);
+}
+
+.quick-add-empty {
+  margin: 0;
+  color: var(--flo-ink-2);
+  font-weight: 600;
+}
+
+.suggested-timing {
+  margin-top: 2px;
+  color: var(--ion-color-primary);
+  font-size: 0.78rem;
+  font-weight: 700;
 }
 
 .timeline {
@@ -70,4 +161,15 @@
 
 .meta {
   color: var(--flo-ink-2);
+}
+
+@media (max-width: 640px) {
+  .flow-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .start-flow-btn {
+    width: 100%;
+  }
 }

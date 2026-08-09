@@ -7,6 +7,53 @@
   width: 100%;
 }
 
+.filter-group {
+  margin-top: 0.65rem;
+  display: grid;
+  gap: 0.65rem;
+  padding: 0.95rem;
+  border: 1.5px solid var(--flo-border);
+  border-radius: 18px;
+  background: linear-gradient(145deg, color-mix(in srgb, #ffffff 88%, var(--flo-surface-a) 12%), color-mix(in srgb, #ffffff 74%, var(--flo-surface-b) 26%));
+}
+
+.filter-group h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--flo-brand-ink);
+}
+
+.filter-group p {
+  margin: 0;
+  color: var(--flo-ink-2);
+  font-size: 0.86rem;
+  font-weight: 600;
+}
+
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.group-separator {
+  width: 100%;
+  height: 1px;
+  margin: 0.1rem 0;
+  background: linear-gradient(90deg, transparent 0%, color-mix(in srgb, var(--flo-border) 82%, #ffffff 18%) 18%, color-mix(in srgb, var(--flo-border) 82%, #ffffff 18%) 82%, transparent 100%);
+}
+
+ion-chip {
+  border-width: 1.5px;
+}
+
+ion-chip.selected {
+  background: linear-gradient(90deg, var(--ion-color-primary) 60%, var(--ion-color-tertiary) 100%) !important;
+  color: #fff !important;
+  border-color: var(--ion-color-tertiary) !important;
+}
+
 .results-summary,
 .empty-state {
   color: var(--flo-brand-ink);

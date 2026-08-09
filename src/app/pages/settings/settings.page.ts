@@ -1,7 +1,9 @@
 import { Component, inject, signal } from '@angular/core';
+import { Router } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 import { TranslatePipe } from '@ngx-translate/core';
 import { LanguageService } from '../../services/language.service';
+import { OnboardingService } from '../../services/onboarding.service';
 import { PreferencesService } from '../../services/preferences.service';
 
 @Component({
@@ -12,8 +14,10 @@ import { PreferencesService } from '../../services/preferences.service';
   styleUrl: './settings.page.scss'
 })
 export class SettingsPage {
+  private readonly router = inject(Router);
   private readonly languageService = inject(LanguageService);
   private readonly preferences = inject(PreferencesService);
+  private readonly onboarding = inject(OnboardingService);
 
   readonly locales = this.languageService.supportedLocales;
   readonly locale = signal(this.preferences.getPreferences().locale);
@@ -43,5 +47,14 @@ export class SettingsPage {
     const email = this.emailInput().trim();
     localStorage.setItem('flosmith.email', email);
     this.savedEmail.set(email);
+  }
+
+  openHelpCenter(): void {
+    this.router.navigateByUrl('/help');
+  }
+
+  restartTutorial(): void {
+    this.onboarding.reset();
+    this.router.navigateByUrl('/welcome');
   }
 }

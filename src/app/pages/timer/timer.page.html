@@ -20,6 +20,108 @@
     </ion-item>
     <p>{{ 'PAGES.TIMER.TRANSITION' | translate }}: {{ selectedPreset().defaultTransitionSeconds }}s</p>
     <p>{{ 'PAGES.TIMER.REST' | translate }}: {{ selectedPreset().defaultRestSeconds }}s</p>
+
+    @if (blocks().length > 0) {
+      <div class="summary-grid" aria-label="Class summary">
+        <article>
+          <span>{{ 'PAGES.TIMER.SUMMARY_EXERCISES' | translate }}</span>
+          <strong>{{ exerciseCount() }}</strong>
+        </article>
+        <article>
+          <span>{{ 'PAGES.TIMER.SUMMARY_SECTIONS' | translate }}</span>
+          <strong>{{ sectionCountLabel() }}</strong>
+        </article>
+        <article>
+          <span>{{ 'PAGES.TIMER.SUMMARY_ACTIVE' | translate }}</span>
+          <strong>{{ exerciseTotalLabel() }}</strong>
+        </article>
+        <article>
+          <span>{{ 'PAGES.TIMER.SUMMARY_TRANSIT_REST' | translate }}</span>
+          <strong>{{ transitionTotalLabel() }} + {{ restTotalLabel() }}</strong>
+        </article>
+      </div>
+    }
+
+    @if (blocks().length === 0) {
+      <ion-card class="empty-card">
+        <ion-card-content>
+          <p class="empty-title">{{ 'PAGES.TIMER.EMPTY_TITLE' | translate }}</p>
+          <p class="empty-copy">{{ 'PAGES.TIMER.EMPTY_COPY' | translate }}</p>
+        </ion-card-content>
+      </ion-card>
+    } @else {
+      <div class="start-panel">
+        @if (!hasStarted() && !isComplete()) {
+          <ion-button expand="block" size="large" class="start-btn" (click)="startOrResume()">{{ 'PAGES.TIMER.START_CLASS' | translate }}</ion-button>
+          <p class="session-hint">{{ 'PAGES.TIMER.STARTS_WITH' | translate:{ name: blocks()[0].exerciseName } }}</p>
+        } @else if (isComplete()) {
+          <ion-card class="done-card">
+            <ion-card-content>
+              <p class="empty-title">{{ 'PAGES.TIMER.COMPLETE_TITLE' | translate }}</p>
+              <p class="empty-copy">{{ 'PAGES.TIMER.COMPLETE_COPY' | translate }}</p>
+            </ion-card-content>
+          </ion-card>
+          <ion-button expand="block" (click)="reset()">{{ 'PAGES.TIMER.RESET_CLASS' | translate }}</ion-button>
+        } @else {
+          <div class="live-status">
+            @if (liveCueText()) {
+              <p class="now-cue">{{ liveCueText() }}</p>
+            }
+            <p class="position">{{ currentPositionLabel() }}</p>
+            <p class="phase-label">{{ phaseLabel() }}</p>
+            <h3>{{ currentBlock().exerciseName }}</h3>
+            <p class="time-left">{{ phaseTimeLabel() }}</p>
+            <ion-progress-bar [value]="phaseProgress()"></ion-progress-bar>
+            <p class="remaining">{{ 'PAGES.TIMER.REMAINING' | translate:{ time: totalRemainingLabel() } }}</p>
+            <ion-progress-bar [value]="classProgress()" color="secondary"></ion-progress-bar>
+            <p class="session-hint">{{ 'PAGES.TIMER.UP_NEXT' | translate:{ name: upNextExercise() } }}</p>
+          </div>
+
+          <div class="controls-row">
+            @if (isRunning()) {
+              <ion-button (click)="pause()">{{ 'COMMON.PAUSE' | translate }}</ion-button>
+            } @else {
+              <ion-button (click)="startOrResume()">{{ 'COMMON.RESUME' | translate }}</ion-button>
+            }
+            <ion-button fill="outline" (click)="skipToNext()">{{ 'COMMON.NEXT' | translate }}</ion-button>
+            <ion-button fill="clear" color="medium" (click)="reset()">{{ 'COMMON.RESET' | translate }}</ion-button>
+          </div>
+        }
+
+        <div class="outline-panel">
+          <div class="outline-header">
+            <h4>{{ 'PAGES.TIMER.OUTLINE_TITLE' | translate }}</h4>
+            <div class="outline-actions">
+              <span>{{ 'PAGES.TIMER.OUTLINE_ITEMS' | translate:{ count: blocks().length } }}</span>
+              <ion-button fill="clear" size="small" (click)="toggleOutlineExpanded()">
+                {{ outlineExpanded() ? ('PAGES.TIMER.OUTLINE_COLLAPSE' | translate) : ('PAGES.TIMER.OUTLINE_SHOW_ALL' | translate) }}
+              </ion-button>
+            </div>
+          </div>
+          <p class="outline-help">{{ 'PAGES.TIMER.OUTLINE_HELP' | translate }}</p>
+          <div class="outline-list">
+            @for (item of outlinePreview(); track item.index) {
+              <button
+                type="button"
+                class="outline-item"
+                [class.current]="currentIndex() + 1 === item.index"
+                [disabled]="!canJumpInOutline()"
+                (click)="jumpToExercise(item.index - 1)"
+              >
+                <span class="index">{{ item.index }}</span>
+                <div>
+                  <strong>{{ item.name }}</strong>
+                  <p>{{ item.durationLabel }}</p>
+                </div>
+              </button>
+            }
+            @if (hiddenOutlineCount() > 0) {
+              <p class="outline-more">{{ 'PAGES.TIMER.OUTLINE_MORE' | translate:{ count: hiddenOutlineCount() } }}</p>
+            }
+          </div>
+        </div>
+      </div>
+    }
   </section>
   </div>
 </ion-content>
