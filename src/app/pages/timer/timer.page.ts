@@ -25,7 +25,7 @@ export class TimerPage implements OnDestroy {
   private cueTimeoutId: ReturnType<typeof setTimeout> | null = null;
   private audioContext: AudioContext | null = null;
   private trackedExerciseBlockId: string | null = null;
-  private trackedExerciseElapsedSeconds = 0;
+  private statsVersion = signal(0);
 
   readonly presets = this.timerService.presets;
   readonly selectedPresetId = signal(this.preferences.getPreferences().timerPresetId);
@@ -34,23 +34,37 @@ export class TimerPage implements OnDestroy {
   readonly isComplete = signal(false);
   readonly outlineExpanded = signal(false);
   readonly currentIndex = signal(0);
-  readonly currentPhase = signal<'exercise' | 'transition' | 'rest'>('exercise');
-  readonly phaseSecondsRemaining = signal(0);
+  readonly currentExerciseElapsedSeconds = signal(0);
   readonly liveCueText = signal('');
 
   readonly blocks = computed(() => this.flowService.currentBlocks());
+  readonly selectedPreset = computed(() => this.presets.find((preset) => preset.id === this.selectedPresetId()) ?? this.presets[0]);
+  readonly currentBlock = computed(() => this.blocks()[this.currentIndex()] ?? null);
+  readonly exerciseCount = computed(() => this.blocks().length);
 
   readonly totalLabel = computed(() => {
     const total = this.timerService.calculateTotalSeconds(this.flowService.currentBlocks());
     return this.timerService.formatSeconds(total);
   });
 
-  readonly selectedPreset = computed(() => {
-    return this.presets.find((preset) => preset.id === this.selectedPresetId()) ?? this.presets[0];
+  readonly currentExerciseElapsedLabel = computed(() => this.timerService.formatSeconds(this.currentExerciseElapsedSeconds()));
+
+  readonly currentAverageLabel = computed(() => {
+    this.statsVersion();
+    const block = this.currentBlock();
+    if (!block) {
+      return '--:--';
+    }
+
+    const average = this.exerciseTimingService.getAverage(block.exerciseId);
+    return average === null ? '--:--' : this.timerService.formatSeconds(Math.round(average));
   });
 
-  readonly currentBlock = computed(() => this.blocks()[this.currentIndex()] ?? null);
-  readonly exerciseCount = computed(() => this.blocks().length);
+  readonly currentSampleCount = computed(() => {
+    this.statsVersion();
+    const block = this.currentBlock();
+    return block ? this.exerciseTimingService.getSampleCount(block.exerciseId) : 0;
+  });
 
   readonly sectionCountLabel = computed(() => {
     const counts = this.blocks().reduce((acc, block) => {
@@ -76,63 +90,28 @@ export class TimerPage implements OnDestroy {
   readonly transitionTotalLabel = computed(() => this.timerService.formatSeconds(this.blocks().reduce((sum, block) => sum + block.transitionSeconds, 0)));
   readonly restTotalLabel = computed(() => this.timerService.formatSeconds(this.blocks().reduce((sum, block) => sum + block.restSeconds, 0)));
 
-  readonly phaseLabel = computed(() => {
-    const phase = this.currentPhase();
-    if (phase === 'exercise') {
-      return this.translate.instant('PAGES.TIMER.PHASE_EXERCISE');
-    }
-
-    if (phase === 'transition') {
-      return this.translate.instant('PAGES.TIMER.PHASE_TRANSITION');
-    }
-
-    return this.translate.instant('PAGES.TIMER.PHASE_REST');
-  });
-
-  readonly phaseTimeLabel = computed(() => this.timerService.formatSeconds(this.phaseSecondsRemaining()));
-
-  readonly currentPhaseTotalSeconds = computed(() => {
-    const block = this.currentBlock();
-    if (!block) {
-      return 1;
-    }
-
-    return Math.max(this.phaseDuration(block, this.currentPhase()), 1);
-  });
-
-  readonly phaseProgress = computed(() => {
-    const total = this.currentPhaseTotalSeconds();
-    const remaining = Math.min(this.phaseSecondsRemaining(), total);
-    const done = Math.max(total - remaining, 0);
-    return done / total;
-  });
-
   readonly totalRemainingLabel = computed(() => {
     if (!this.hasStarted()) {
       return this.totalLabel();
     }
 
     const blocks = this.blocks();
-    const currentIndex = this.currentIndex();
-
-    if (blocks.length === 0 || currentIndex >= blocks.length) {
+    const index = this.currentIndex();
+    if (blocks.length === 0 || index >= blocks.length) {
       return '0:00';
     }
 
-    let remaining = this.phaseSecondsRemaining();
-    for (let index = currentIndex + 1; index < blocks.length; index += 1) {
-      const block = blocks[index];
+    let remaining = 0;
+    const current = blocks[index];
+    remaining += Math.max(current.durationSeconds - this.currentExerciseElapsedSeconds(), 0);
+    remaining += current.transitionSeconds + current.restSeconds;
+
+    for (let i = index + 1; i < blocks.length; i += 1) {
+      const block = blocks[i];
       remaining += block.durationSeconds + block.transitionSeconds + block.restSeconds;
     }
 
-    const current = blocks[currentIndex];
-    if (this.currentPhase() === 'exercise') {
-      remaining += current.transitionSeconds + current.restSeconds;
-    } else if (this.currentPhase() === 'transition') {
-      remaining += current.restSeconds;
-    }
-
-    return this.timerService.formatSeconds(Math.max(remaining, 0));
+    return this.timerService.formatSeconds(remaining);
   });
 
   readonly totalRemainingSeconds = computed(() => {
@@ -141,25 +120,22 @@ export class TimerPage implements OnDestroy {
     }
 
     const blocks = this.blocks();
-    const currentIndex = this.currentIndex();
-    if (blocks.length === 0 || currentIndex >= blocks.length) {
+    const index = this.currentIndex();
+    if (blocks.length === 0 || index >= blocks.length) {
       return 0;
     }
 
-    let remaining = this.phaseSecondsRemaining();
-    for (let index = currentIndex + 1; index < blocks.length; index += 1) {
-      const block = blocks[index];
+    let remaining = 0;
+    const current = blocks[index];
+    remaining += Math.max(current.durationSeconds - this.currentExerciseElapsedSeconds(), 0);
+    remaining += current.transitionSeconds + current.restSeconds;
+
+    for (let i = index + 1; i < blocks.length; i += 1) {
+      const block = blocks[i];
       remaining += block.durationSeconds + block.transitionSeconds + block.restSeconds;
     }
 
-    const current = blocks[currentIndex];
-    if (this.currentPhase() === 'exercise') {
-      remaining += current.transitionSeconds + current.restSeconds;
-    } else if (this.currentPhase() === 'transition') {
-      remaining += current.restSeconds;
-    }
-
-    return Math.max(remaining, 0);
+    return remaining;
   });
 
   readonly classProgress = computed(() => {
@@ -173,8 +149,10 @@ export class TimerPage implements OnDestroy {
       return this.translate.instant('PAGES.TIMER.POSITION', { current: 0, total: this.blocks().length });
     }
 
-    const index = Math.min(this.currentIndex() + 1, this.blocks().length);
-    return this.translate.instant('PAGES.TIMER.POSITION', { current: index, total: this.blocks().length });
+    return this.translate.instant('PAGES.TIMER.POSITION', {
+      current: Math.min(this.currentIndex() + 1, this.blocks().length),
+      total: this.blocks().length
+    });
   });
 
   readonly upNextExercise = computed(() => {
@@ -190,20 +168,29 @@ export class TimerPage implements OnDestroy {
     return this.blocks()[nextIndex]?.exerciseName ?? this.translate.instant('PAGES.TIMER.FINISH_CLASS');
   });
 
+  readonly nextButtonLabel = computed(() => {
+    const isLast = this.currentIndex() >= this.blocks().length - 1;
+    return isLast ? this.translate.instant('PAGES.TIMER.FINISH_CLASS') : 'Next Exercise';
+  });
+
   readonly canJumpInOutline = computed(() => this.hasStarted() && !this.isComplete());
 
   readonly outlinePreview = computed(() => {
     const source = this.outlineExpanded() ? this.blocks() : this.blocks().slice(0, 6);
-    const items = source.map((block, index) => ({
+    return source.map((block, index) => ({
       index: index + 1,
       name: block.exerciseName,
       durationLabel: this.blockDurationLabel(block)
     }));
-
-    return items;
   });
 
   readonly hiddenOutlineCount = computed(() => Math.max(this.blocks().length - this.outlinePreview().length, 0));
+  readonly canToggleOutline = computed(() => this.blocks().length > 6);
+  readonly outlineToggleLabel = computed(() =>
+    this.outlineExpanded()
+      ? this.translate.instant('PAGES.TIMER.OUTLINE_COLLAPSE')
+      : this.translate.instant('PAGES.TIMER.OUTLINE_SHOW_ALL')
+  );
 
   ngOnDestroy(): void {
     this.stopInterval();
@@ -223,17 +210,9 @@ export class TimerPage implements OnDestroy {
     if (!this.hasStarted()) {
       this.hasStarted.set(true);
       this.currentIndex.set(0);
-      this.currentPhase.set('exercise');
-      this.phaseSecondsRemaining.set(this.phaseDuration(this.blocks()[0], 'exercise'));
-      this.showNowCue(this.blocks()[0].exerciseName);
+      this.currentExerciseElapsedSeconds.set(0);
       this.beginExerciseTracking(this.blocks()[0]);
-    }
-
-    if (this.phaseSecondsRemaining() <= 0) {
-      const block = this.currentBlock();
-      if (block) {
-        this.phaseSecondsRemaining.set(this.phaseDuration(block, this.currentPhase()));
-      }
+      this.showNowCue(this.blocks()[0].exerciseName);
     }
 
     this.isRunning.set(true);
@@ -252,8 +231,7 @@ export class TimerPage implements OnDestroy {
     this.isComplete.set(false);
     this.outlineExpanded.set(false);
     this.currentIndex.set(0);
-    this.currentPhase.set('exercise');
-    this.phaseSecondsRemaining.set(0);
+    this.currentExerciseElapsedSeconds.set(0);
     this.resetExerciseTracking();
   }
 
@@ -262,7 +240,7 @@ export class TimerPage implements OnDestroy {
       return;
     }
 
-    this.advancePhaseOrBlock();
+    this.advanceToNextExercise();
   }
 
   toggleOutlineExpanded(): void {
@@ -281,10 +259,9 @@ export class TimerPage implements OnDestroy {
 
     this.commitTrackedExerciseSample();
     this.currentIndex.set(index);
-    this.currentPhase.set('exercise');
-    this.phaseSecondsRemaining.set(this.phaseDuration(blocks[index], 'exercise'));
-    this.showNowCue(`${this.translate.instant('PAGES.TIMER.NOW_PREFIX')}: ${blocks[index].exerciseName}`, 2000);
+    this.currentExerciseElapsedSeconds.set(0);
     this.beginExerciseTracking(blocks[index]);
+    this.showNowCue(`${this.translate.instant('PAGES.TIMER.NOW_PREFIX')}: ${blocks[index].exerciseName}`, 2000);
   }
 
   private ensureInterval(): void {
@@ -293,21 +270,11 @@ export class TimerPage implements OnDestroy {
     }
 
     this.intervalId = setInterval(() => {
-      if (!this.isRunning()) {
+      if (!this.isRunning() || this.isComplete() || !this.hasStarted()) {
         return;
       }
 
-      if (this.currentPhase() === 'exercise' && this.trackedExerciseBlockId) {
-        this.trackedExerciseElapsedSeconds += 1;
-      }
-
-      const next = this.phaseSecondsRemaining() - 1;
-      if (next > 0) {
-        this.phaseSecondsRemaining.set(next);
-        return;
-      }
-
-      this.advancePhaseOrBlock();
+      this.currentExerciseElapsedSeconds.update((value) => value + 1);
     }, 1000);
   }
 
@@ -320,59 +287,20 @@ export class TimerPage implements OnDestroy {
     this.intervalId = null;
   }
 
-  private advancePhaseOrBlock(): void {
-    const block = this.currentBlock();
-    if (!block) {
-      this.finishClass();
-      return;
-    }
-
-    const phase = this.currentPhase();
-    if (phase === 'exercise') {
-      this.commitTrackedExerciseSample();
-      this.currentPhase.set('transition');
-      this.phaseSecondsRemaining.set(this.phaseDuration(block, 'transition'));
-      this.emitPhaseFeedback();
-      if (this.phaseSecondsRemaining() <= 0) {
-        this.advancePhaseOrBlock();
-      }
-      return;
-    }
-
-    if (phase === 'transition') {
-      this.currentPhase.set('rest');
-      this.phaseSecondsRemaining.set(this.phaseDuration(block, 'rest'));
-      this.emitPhaseFeedback();
-      if (this.phaseSecondsRemaining() <= 0) {
-        this.advancePhaseOrBlock();
-      }
-      return;
-    }
-
+  private advanceToNextExercise(): void {
+    this.commitTrackedExerciseSample();
     const nextIndex = this.currentIndex() + 1;
+
     if (nextIndex >= this.blocks().length) {
       this.finishClass();
       return;
     }
 
     this.currentIndex.set(nextIndex);
-    this.currentPhase.set('exercise');
-    this.phaseSecondsRemaining.set(this.phaseDuration(this.blocks()[nextIndex], 'exercise'));
+    this.currentExerciseElapsedSeconds.set(0);
     this.beginExerciseTracking(this.blocks()[nextIndex]);
     this.emitPhaseFeedback();
     this.showNowCue(this.blocks()[nextIndex].exerciseName);
-  }
-
-  private phaseDuration(block: { durationSeconds: number; transitionSeconds: number; restSeconds: number }, phase: 'exercise' | 'transition' | 'rest'): number {
-    if (phase === 'exercise') {
-      return block.durationSeconds;
-    }
-
-    if (phase === 'transition') {
-      return block.transitionSeconds;
-    }
-
-    return block.restSeconds;
   }
 
   private blockDurationLabel(block: FlowBlock): string {
@@ -383,7 +311,6 @@ export class TimerPage implements OnDestroy {
     this.stopInterval();
     this.isRunning.set(false);
     this.isComplete.set(true);
-    this.phaseSecondsRemaining.set(0);
     this.commitTrackedExerciseSample();
     this.resetExerciseTracking();
     this.emitPhaseFeedback(true);
@@ -392,7 +319,7 @@ export class TimerPage implements OnDestroy {
 
   private beginExerciseTracking(block: FlowBlock): void {
     this.trackedExerciseBlockId = block.id;
-    this.trackedExerciseElapsedSeconds = 0;
+    this.currentExerciseElapsedSeconds.set(0);
   }
 
   private commitTrackedExerciseSample(): void {
@@ -402,8 +329,10 @@ export class TimerPage implements OnDestroy {
       return;
     }
 
-    if (this.trackedExerciseElapsedSeconds > 0) {
-      this.exerciseTimingService.recordSample(block.exerciseId, this.trackedExerciseElapsedSeconds);
+    const elapsed = this.currentExerciseElapsedSeconds();
+    if (elapsed > 0) {
+      this.exerciseTimingService.recordSample(block.exerciseId, elapsed);
+      this.statsVersion.update((value) => value + 1);
     }
 
     this.resetExerciseTracking();
@@ -411,7 +340,6 @@ export class TimerPage implements OnDestroy {
 
   private resetExerciseTracking(): void {
     this.trackedExerciseBlockId = null;
-    this.trackedExerciseElapsedSeconds = 0;
   }
 
   private emitPhaseFeedback(isComplete = false): void {

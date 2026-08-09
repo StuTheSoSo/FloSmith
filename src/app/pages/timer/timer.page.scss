@@ -105,6 +105,13 @@
   font-weight: 700;
 }
 
+.timing-meta {
+  margin: 0;
+  color: var(--flo-ink-2);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
 .live-status h3 {
   margin: 0;
   color: var(--flo-brand-ink);
@@ -147,6 +154,16 @@
   display: flex;
   align-items: center;
   gap: 0.3rem;
+}
+
+.outline-toggle-btn {
+  border: 0;
+  background: transparent;
+  color: var(--ion-color-primary);
+  font-weight: 700;
+  font-size: 0.85rem;
+  line-height: 1;
+  padding: 0.2rem 0.25rem;
 }
 
 .outline-header h4,

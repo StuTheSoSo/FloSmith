@@ -68,10 +68,10 @@
               <p class="now-cue">{{ liveCueText() }}</p>
             }
             <p class="position">{{ currentPositionLabel() }}</p>
-            <p class="phase-label">{{ phaseLabel() }}</p>
             <h3>{{ currentBlock().exerciseName }}</h3>
-            <p class="time-left">{{ phaseTimeLabel() }}</p>
-            <ion-progress-bar [value]="phaseProgress()"></ion-progress-bar>
+            <p class="phase-label">{{ 'PAGES.TIMER.PHASE_EXERCISE' | translate }}</p>
+            <p class="time-left">{{ currentExerciseElapsedLabel() }}</p>
+            <p class="timing-meta">Average: {{ currentAverageLabel() }} ({{ currentSampleCount() }} samples)</p>
             <p class="remaining">{{ 'PAGES.TIMER.REMAINING' | translate:{ time: totalRemainingLabel() } }}</p>
             <ion-progress-bar [value]="classProgress()" color="secondary"></ion-progress-bar>
             <p class="session-hint">{{ 'PAGES.TIMER.UP_NEXT' | translate:{ name: upNextExercise() } }}</p>
@@ -83,7 +83,7 @@
             } @else {
               <ion-button (click)="startOrResume()">{{ 'COMMON.RESUME' | translate }}</ion-button>
             }
-            <ion-button fill="outline" (click)="skipToNext()">{{ 'COMMON.NEXT' | translate }}</ion-button>
+            <ion-button fill="outline" (click)="skipToNext()">{{ nextButtonLabel() }}</ion-button>
             <ion-button fill="clear" color="medium" (click)="reset()">{{ 'COMMON.RESET' | translate }}</ion-button>
           </div>
         }
@@ -93,9 +93,11 @@
             <h4>{{ 'PAGES.TIMER.OUTLINE_TITLE' | translate }}</h4>
             <div class="outline-actions">
               <span>{{ 'PAGES.TIMER.OUTLINE_ITEMS' | translate:{ count: blocks().length } }}</span>
-              <ion-button fill="clear" size="small" (click)="toggleOutlineExpanded()">
-                {{ outlineExpanded() ? ('PAGES.TIMER.OUTLINE_COLLAPSE' | translate) : ('PAGES.TIMER.OUTLINE_SHOW_ALL' | translate) }}
-              </ion-button>
+              @if (canToggleOutline()) {
+                <button type="button" class="outline-toggle-btn" (click)="toggleOutlineExpanded()">
+                  {{ outlineToggleLabel() }}
+                </button>
+              }
             </div>
           </div>
           <p class="outline-help">{{ 'PAGES.TIMER.OUTLINE_HELP' | translate }}</p>
