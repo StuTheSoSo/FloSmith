@@ -12,13 +12,13 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
         androidResources {
-            // Added :._* to ignore macOS metadata files that cause build failures on external drives
             ignoreAssetsPattern = '!.svn:!.git:!.ds_store:!*.scc:.*:!CVS:!thumbs.db:!picasa.ini:!*~:._*'
         }
     }
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true // Enabled for Play Store release
+            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
