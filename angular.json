@@ -32,6 +32,16 @@
                 "glob": "**/*",
                 "input": "src/assets",
                 "output": "assets"
+              },
+              {
+                "glob": "privacy-policy.html",
+                "input": "src/assets",
+                "output": "/"
+              },
+              {
+                "glob": "support.html",
+                "input": "src/assets",
+                "output": "/"
               }
             ],
             "styles": [

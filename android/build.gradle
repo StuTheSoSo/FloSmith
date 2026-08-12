@@ -1,29 +1,83 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
-    
     repositories {
         google()
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:8.13.0'
+        classpath 'com.android.tools.build:gradle:9.0.1'
         classpath 'com.google.gms:google-services:4.4.4'
-
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
     }
 }
 
 apply from: "variables.gradle"
 
+// Redirect build directory to local storage to avoid macOS metadata issues on external drives
+def localBuildBase = new File(System.getProperty("java.io.tmpdir"), "flosmith-android-build")
+
 allprojects {
+    // Each project gets its own subdirectory in the local temp build folder
+    buildDir = new File(localBuildBase, project.path.replace(':', '/'))
+
     repositories {
         google()
         mavenCentral()
     }
+
+    // Force every project to ignore macOS metadata files during all phases of the build
+    afterEvaluate { project ->
+        if (project.hasProperty('android')) {
+            project.android {
+                def ignorePattern = "!.svn:!.git:!.ds_store:!*.scc:.*:!CVS:!thumbs.db:!picasa.ini:!*~:._*"
+                try {
+                    aaptOptions.ignoreAssetsPattern = ignorePattern
+                } catch (Exception e) {}
+
+                try {
+                    androidResources.ignoreAssetsPattern = ignorePattern
+                } catch (Exception e) {}
+
+                packaging {
+                    resources {
+                        excludes += "**/._*"
+                        excludes += "**/.DS_Store"
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Aggressive task to delete macOS metadata files using Ant (more reliable in Gradle scripts)
+task deleteMetadata {
+    doLast {
+        println "Cleaning up macOS metadata files..."
+        // Use Ant to delete as it handles hidden files and patterns very reliably
+        ant.delete(defaultexcludes: false, quiet: true, includeemptydirs: true) {
+            fileset(dir: "${rootProject.projectDir}/..", includes: "**/._*")
+            fileset(dir: "${rootProject.projectDir}/..", includes: "**/.DS_Store")
+        }
+
+        // Try dot_clean if available
+        try {
+            ant.exec(executable: 'dot_clean', dir: "${rootProject.projectDir}/..", failonerror: false) {
+                arg(value: '-m')
+                arg(value: '.')
+            }
+        } catch (Exception ignored) {}
+    }
+}
+
+// Hook metadata cleanup into the build lifecycle
+allprojects {
+    tasks.matching { it.name == "preBuild" }.configureEach {
+        it.dependsOn ":deleteMetadata"
+    }
 }
 
 task clean(type: Delete) {
+    dependsOn deleteMetadata
+    delete localBuildBase
     delete rootProject.buildDir
 }
