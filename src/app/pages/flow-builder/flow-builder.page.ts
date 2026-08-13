@@ -1,4 +1,4 @@
-import { Component, computed, inject, signal } from '@angular/core';
+import { Component, ElementRef, QueryList, ViewChildren, computed, inject, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
@@ -26,6 +26,7 @@ interface FlowSectionGroup {
   styleUrl: './flow-builder.page.scss'
 })
 export class FlowBuilderPage {
+  @ViewChildren('planItemEl') planItemEls!: QueryList<ElementRef<HTMLElement>>;
   private readonly router = inject(Router);
   private readonly flowService = inject(FlowService);
   private readonly libraryService = inject(LibraryService);
@@ -166,11 +167,58 @@ export class FlowBuilderPage {
   }
 
   moveUp(index: number): void {
-    this.flowService.moveBlock(index, index - 1);
+    this.flipMove(index, index - 1);
   }
 
   moveDown(index: number): void {
-    this.flowService.moveBlock(index, index + 1);
+    this.flipMove(index, index + 1);
+  }
+
+  private flipMove(from: number, to: number): void {
+    const items = this.planItemEls.toArray();
+    const fromEl = items[from]?.nativeElement;
+    const toEl = items[to]?.nativeElement;
+
+    // Capture positions BEFORE the swap
+    const fromTop = fromEl?.getBoundingClientRect().top ?? 0;
+    const toTop = toEl?.getBoundingClientRect().top ?? 0;
+
+    // Perform the data swap immediately
+    this.flowService.moveBlock(from, to);
+
+    // After Angular re-renders, apply inverted transforms then animate to zero
+    requestAnimationFrame(() => {
+      const items2 = this.planItemEls.toArray();
+      // After swap: the element that was at 'from' is now at position 'to' in DOM
+      const movedEl = items2[to]?.nativeElement;
+      const displacedEl = items2[from]?.nativeElement;
+      if (!movedEl || !displacedEl) return;
+
+      const movedNewTop = movedEl.getBoundingClientRect().top;
+      const displacedNewTop = displacedEl.getBoundingClientRect().top;
+
+      const movedDy = fromTop - movedNewTop;
+      const displacedDy = toTop - displacedNewTop;
+
+      // Jump to old visual positions instantly
+      movedEl.style.transition = 'none';
+      displacedEl.style.transition = 'none';
+      movedEl.style.transform = `translateY(${movedDy}px)`;
+      displacedEl.style.transform = `translateY(${displacedDy}px)`;
+
+      // Animate to natural (new) positions
+      requestAnimationFrame(() => {
+        const ease = 'transform 0.28s cubic-bezier(0.4, 0, 0.2, 1)';
+        movedEl.style.transition = ease;
+        displacedEl.style.transition = ease;
+        movedEl.style.transform = '';
+        displacedEl.style.transform = '';
+        setTimeout(() => {
+          movedEl.style.transition = '';
+          displacedEl.style.transition = '';
+        }, 300);
+      });
+    });
   }
 
   remove(blockId: string): void {

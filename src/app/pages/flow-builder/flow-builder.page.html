@@ -12,14 +12,10 @@
 
 <ion-content [fullscreen]="true">
   <div class="page-shell ion-padding-horizontal">
-  <section class="panel">
-    <div class="builder-hero">
-      <div>
-        <p class="eyebrow">Class Builder</p>
-        <h2>Shape the plan before you teach.</h2>
-        <p class="panel-intro">{{ 'PAGES.FLOW_BUILDER.INTRO' | translate }}</p>
-      </div>
-      <ion-button routerLink="/programs" fill="outline">Load Program</ion-button>
+  <section class="panel panel--prep">
+    <div class="prep-header">
+      <span class="prep-label">Shape Your Class</span>
+      <ion-button routerLink="/programs" fill="clear" size="small">Load Program</ion-button>
     </div>
 
     <div class="planning-strip" aria-label="Class planning summary">
@@ -32,7 +28,7 @@
         <strong>{{ blocks().length }}</strong>
       </article>
       <article>
-        <span>Active Work</span>
+        <span>Active</span>
         <strong>{{ activeTimeLabel() }}</strong>
       </article>
       <article>
@@ -42,9 +38,9 @@
     </div>
 
     <div class="target-row" aria-label="Class length target">
-      <span>Class length</span>
+      <span>Target</span>
       @for (minutes of [30, 45, 50, 60]; track minutes) {
-        <ion-chip [class.selected]="targetMinutes() === minutes" (click)="targetMinutes.set(minutes)">{{ minutes }} min</ion-chip>
+        <ion-chip [class.selected]="targetMinutes() === minutes" (click)="targetMinutes.set(minutes)">{{ minutes }}m</ion-chip>
       }
     </div>
 
@@ -63,7 +59,6 @@
         (ionInput)="addQuery.set($any($event).detail.value ?? '')"
         [placeholder]="'PAGES.FLOW_BUILDER.SEARCH_PLACEHOLDER' | translate"
       ></ion-searchbar>
-      <p class="search-helper">Search by exercise, apparatus, focus area, or level. Tap any result to add it to the end of the plan.</p>
 
       @if (!addQuery().trim() && recentExercises().length > 0) {
         <div class="recent-row" [attr.aria-label]="'PAGES.FLOW_BUILDER.RECENT_ARIA' | translate">
@@ -95,12 +90,12 @@
   </section>
 
   <section class="panel">
+    <ion-button class="start-flow-btn start-flow-btn--top" expand="block" [disabled]="blocks().length === 0" (click)="startFlow()">{{ 'PAGES.FLOW_BUILDER.START_CLASS' | translate }}</ion-button>
     <div class="flow-header">
       <div>
         <h3>Today's Sequence</h3>
         <p>{{ timingDetailLabel() }}</p>
       </div>
-      <ion-button class="start-flow-btn" [disabled]="blocks().length === 0" (click)="startFlow()">{{ 'PAGES.FLOW_BUILDER.START_CLASS' | translate }}</ion-button>
     </div>
 
     @if (blocks().length === 0) {
@@ -127,7 +122,7 @@
             } @else {
               @for (block of group.blocks; track block.id) {
                 @let i = blocks().indexOf(block);
-                <article class="plan-item">
+                <article #planItemEl class="plan-item">
                   <div class="plan-index">{{ i + 1 }}</div>
                   <div class="plan-main">
                     <strong>{{ block.exerciseName }}</strong>

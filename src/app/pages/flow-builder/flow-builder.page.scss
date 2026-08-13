@@ -41,19 +41,39 @@
   text-transform: uppercase;
 }
 
+.panel--prep {
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+}
+
+.prep-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.prep-label {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--flo-ink-2);
+}
+
 .planning-strip {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 0.55rem;
-  margin: 0.95rem 0 0.7rem;
+  gap: 0.4rem;
+  margin: 0.4rem 0 0.5rem;
 }
 
 .planning-strip article {
-  min-height: 74px;
+  min-height: 52px;
   border: 1px solid var(--flo-border);
-  border-radius: 14px;
+  border-radius: 10px;
   background: color-mix(in srgb, var(--flo-surface-b) 82%, #ffffff 18%);
-  padding: 0.7rem;
+  padding: 0.45rem 0.5rem;
   display: grid;
   align-content: space-between;
 }
@@ -113,6 +133,11 @@
 .start-flow-btn {
   --border-radius: 12px;
   font-weight: 800;
+}
+
+.start-flow-btn--top {
+  display: block;
+  margin-bottom: 1rem;
 }
 
 .start-flow-hint {
