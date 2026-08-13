@@ -1,11 +1,11 @@
 import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'com.flosmith.app', // Ensure this matches your package name in the Play Console
+  appId: 'com.flosmith.app',
   appName: 'FloSmith',
   webDir: 'dist/FloSmithApp/browser',
   server: {
-    androidScheme: 'https' // Recommended for production
+    androidScheme: 'http' // Switched to http to troubleshoot blank screen issues
   },
   plugins: {
     Keyboard: {
@@ -15,7 +15,7 @@ const config: CapacitorConfig = {
   },
   android: {
     buildOptions: {
-      releaseType: 'bundle', // Mandatory for new Play Store apps (.aab)
+      releaseType: 'bundle',
     }
   }
 };
