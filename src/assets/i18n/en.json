@@ -22,9 +22,9 @@
     "ADVANCED": "Advanced"
   },
   "NAV": {
-    "HOME": "Discover",
-    "FLOW": "Plan",
-    "LIBRARY": "Library",
+    "HOME": "Build",
+    "FLOW": "Flows",
+    "LIBRARY": "Exercises",
     "TEMPLATES": "Programs",
     "SAVED": "Saved",
     "TIMER": "Timer",

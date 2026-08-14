@@ -13,6 +13,10 @@
               <span>{{ item.labelKey | translate }}</span>
             </button>
           }
+          <button class="tab-btn" [class.selected]="isTabActive('/settings')" (click)="navigate('/settings')">
+            <ion-icon name="settings-outline"></ion-icon>
+            <span>{{ 'NAV.SETTINGS' | translate }}</span>
+          </button>
         </div>
       </ion-toolbar>
     </ion-footer>

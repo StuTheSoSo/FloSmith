@@ -93,4 +93,5 @@ export interface AppPreferences {
   locale: string;
   composerMode: ComposerMode;
   timerPresetId: string;
+  instructorName?: string;
 }

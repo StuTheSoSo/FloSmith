@@ -24,6 +24,8 @@ export class SettingsPage {
   readonly theme = signal(this.preferences.getPreferences().theme);
   readonly savedEmail = signal(localStorage.getItem('flosmith.email') ?? '');
   readonly emailInput = signal(this.savedEmail());
+  readonly instructorName = signal(this.preferences.getPreferences().instructorName ?? '');
+  readonly nameSaved = signal(false);
 
   readonly themes = [
     { value: 'theme-coral', label: 'Coral' },
@@ -47,6 +49,12 @@ export class SettingsPage {
     const email = this.emailInput().trim();
     localStorage.setItem('flosmith.email', email);
     this.savedEmail.set(email);
+  }
+
+  saveName(): void {
+    this.preferences.updatePreferences({ instructorName: this.instructorName().trim() });
+    this.nameSaved.set(true);
+    setTimeout(() => this.nameSaved.set(false), 2000);
   }
 
   openHelpCenter(): void {

@@ -4,9 +4,12 @@ declare module 'ionicons' {
 
 declare module 'ionicons/icons' {
   export const addOutline: string;
+  export const albumsOutline: string;
+  export const barbellOutline: string;
   export const chevronDownOutline: string;
   export const chevronUpOutline: string;
   export const homeOutline: string;
+  export const layersOutline: string;
   export const libraryOutline: string;
   export const listOutline: string;
   export const peopleOutline: string;

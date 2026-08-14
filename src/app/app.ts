@@ -2,7 +2,7 @@ import { Component, inject } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 import { Router, RouterOutlet } from '@angular/router';
 import { addIcons } from 'ionicons';
-import { homeOutline, libraryOutline, listOutline, settingsOutline, trashOutline } from 'ionicons/icons';
+import { homeOutline, layersOutline, barbellOutline, albumsOutline, settingsOutline, trashOutline } from 'ionicons/icons';
 import { TranslatePipe } from '@ngx-translate/core';
 import { LanguageService } from './services/language.service';
 import { OnboardingService } from './services/onboarding.service';
@@ -29,19 +29,18 @@ export class App {
   private readonly allowedThemes = new Set(['theme-coral', 'theme-sea', 'theme-grove']);
 
   readonly navItems: NavItem[] = [
-    { labelKey: 'NAV.HOME', path: '/', icon: 'home-outline' },
-    { labelKey: 'NAV.TEMPLATES', path: '/programs', icon: 'list-outline' },
-    { labelKey: 'NAV.LIBRARY', path: '/library', icon: 'library-outline' },
-    { labelKey: 'NAV.FLOW', path: '/flow-builder', icon: 'create-outline' },
-    { labelKey: 'NAV.SETTINGS', path: '/settings', icon: 'settings-outline' }
+    { labelKey: 'NAV.HOME',      path: '/',        icon: 'home-outline'    },
+    { labelKey: 'NAV.FLOW',      path: '/flows',   icon: 'layers-outline'  },
+    { labelKey: 'NAV.LIBRARY',   path: '/library', icon: 'barbell-outline' },
+    { labelKey: 'NAV.TEMPLATES', path: '/programs',icon: 'albums-outline'  },
   ];
 
   constructor() {
     addIcons({
-      'create-outline': listOutline,
+      'albums-outline': albumsOutline,
+      'barbell-outline': barbellOutline,
       'home-outline': homeOutline,
-      'library-outline': libraryOutline,
-      'list-outline': listOutline,
+      'layers-outline': layersOutline,
       'settings-outline': settingsOutline,
       'trash-outline': trashOutline
     });

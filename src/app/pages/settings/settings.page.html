@@ -44,6 +44,26 @@
 
   <ion-card>
     <ion-card-header>
+      <ion-card-title>Your Name</ion-card-title>
+      <ion-card-subtitle>Used for your personal greeting in the app.</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item lines="none">
+        <ion-input
+          type="text"
+          [value]="instructorName()"
+          (ionInput)="instructorName.set($any($event).detail.value ?? '')"
+          placeholder="e.g. Stu"
+        ></ion-input>
+      </ion-item>
+      <ion-button expand="block" class="ion-margin-top" (click)="saveName()">
+        {{ nameSaved() ? '✓ Saved' : 'Save Name' }}
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
       <ion-card-title>{{ 'PAGES.SETTINGS.ACCOUNT_TITLE' | translate }}</ion-card-title>
       <ion-card-subtitle>{{ 'PAGES.SETTINGS.ACCOUNT_SUBTITLE' | translate }}</ion-card-subtitle>
     </ion-card-header>

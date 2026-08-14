@@ -1,15 +1,15 @@
 import { Routes } from '@angular/router';
 
 export const routes: Routes = [
-	{ path: '', loadComponent: () => import('./pages/home.page').then((m) => m.HomePage) },
-	{ path: 'discover', redirectTo: '', pathMatch: 'full' },
-	{ path: 'flow-builder', loadComponent: () => import('./pages/flow-builder/flow-builder.page').then((m) => m.FlowBuilderPage) },
+	{ path: '', loadComponent: () => import('./pages/flow-builder/flow-builder.page').then((m) => m.FlowBuilderPage) },
+	{ path: 'flows', loadComponent: () => import('./pages/flows/flows.page').then((m) => m.FlowsPage) },
+	{ path: 'flow-builder', redirectTo: '', pathMatch: 'full' },
 	{ path: 'library', loadComponent: () => import('./pages/library/library.page').then((m) => m.LibraryPage) },
 	{ path: 'exercise/:id', loadComponent: () => import('./pages/exercise-detail/exercise-detail.page').then((m) => m.ExerciseDetailPage) },
 	{ path: 'programs', loadComponent: () => import('./pages/templates/templates.page').then((m) => m.TemplatesPage) },
 	{ path: 'programs/:id', loadComponent: () => import('./pages/program-detail/program-detail.page').then((m) => m.ProgramDetailPage) },
 	{ path: 'templates', redirectTo: 'programs', pathMatch: 'full' },
-	{ path: 'saved-flows', loadComponent: () => import('./pages/saved-flows/saved-flows.page').then((m) => m.SavedFlowsPage) },
+	{ path: 'saved-flows', redirectTo: '', pathMatch: 'full' },
 	{ path: 'timer', loadComponent: () => import('./pages/timer/timer.page').then((m) => m.TimerPage) },
 	{ path: 'clients', loadComponent: () => import('./pages/clients/clients.page').then((m) => m.ClientsPage) },
 	{ path: 'welcome', loadComponent: () => import('./pages/welcome/welcome.page').then((m) => m.WelcomePage) },
